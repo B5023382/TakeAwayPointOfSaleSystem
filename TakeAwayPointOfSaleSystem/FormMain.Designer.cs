@@ -167,7 +167,6 @@ namespace TakeAwayPointOfSaleSystem
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges87 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges88 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges89 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges90 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pageMain = new Bunifu.UI.WinForms.BunifuPages();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -234,6 +233,14 @@ namespace TakeAwayPointOfSaleSystem
             this.totalPricePerDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabAddress = new System.Windows.Forms.TabPage();
             this.dgvCustomer = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.houseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerData = new TakeAwayPointOfSaleSystem.customerData();
             this.btnSaveOrder = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtNote = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtDeliverTime = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -305,7 +312,6 @@ namespace TakeAwayPointOfSaleSystem
             this.btnQ = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnLeftShift = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnTab = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSideMinus = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMultiply = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDivid = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -326,15 +332,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnwave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCloseAddress = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dockMain = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.customerData = new TakeAwayPointOfSaleSystem.customerData();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new TakeAwayPointOfSaleSystem.customerDataTableAdapters.CustomerTableAdapter();
-            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.houseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pageMain.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
@@ -350,9 +348,9 @@ namespace TakeAwayPointOfSaleSystem
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.tabAddress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
-            this.bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerData)).BeginInit();
+            this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pageMain
@@ -2447,6 +2445,63 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvCustomer.TabIndex = 19;
             this.dgvCustomer.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // customerName
+            // 
+            this.customerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.customerName.DataPropertyName = "name";
+            this.customerName.HeaderText = "Custmoer Name";
+            this.customerName.Name = "customerName";
+            this.customerName.Width = 151;
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.phoneNumber.DataPropertyName = "telephone";
+            this.phoneNumber.HeaderText = "Telephone Number";
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.Width = 173;
+            // 
+            // houseNo
+            // 
+            this.houseNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.houseNo.DataPropertyName = "houseNo";
+            this.houseNo.HeaderText = "House No";
+            this.houseNo.Name = "houseNo";
+            this.houseNo.Width = 106;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.DataPropertyName = "address";
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            // 
+            // postcode
+            // 
+            this.postcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.postcode.DataPropertyName = "postcode";
+            this.postcode.HeaderText = "PostCode";
+            this.postcode.Name = "postcode";
+            this.postcode.Width = 103;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.customerData;
+            // 
+            // customerData
+            // 
+            this.customerData.DataSetName = "customerData";
+            this.customerData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnSaveOrder
             // 
             this.btnSaveOrder.AllowToggling = false;
@@ -3284,7 +3339,6 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuGradientPanel2.Controls.Add(this.btnQ);
             this.bunifuGradientPanel2.Controls.Add(this.btnLeftShift);
             this.bunifuGradientPanel2.Controls.Add(this.btnCap);
-            this.bunifuGradientPanel2.Controls.Add(this.btnTab);
             this.bunifuGradientPanel2.Controls.Add(this.btnSideMinus);
             this.bunifuGradientPanel2.Controls.Add(this.btnMultiply);
             this.bunifuGradientPanel2.Controls.Add(this.btnDivid);
@@ -4291,6 +4345,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEnter.TextMarginLeft = 0;
             this.btnEnter.UseDefaultRadiusAndThickness = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnRightShift
             // 
@@ -4322,7 +4377,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnRightShift.IconMarginLeft = 11;
             this.btnRightShift.IconPadding = 10;
             this.btnRightShift.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnRightShift.IdleBorderColor = System.Drawing.Color.White;
+            this.btnRightShift.IdleBorderColor = System.Drawing.Color.Gold;
             this.btnRightShift.IdleBorderRadius = 1;
             this.btnRightShift.IdleBorderThickness = 1;
             this.btnRightShift.IdleFillColor = System.Drawing.Color.Black;
@@ -4331,7 +4386,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnRightShift.IndicateFocus = false;
             this.btnRightShift.Location = new System.Drawing.Point(794, 180);
             this.btnRightShift.Name = "btnRightShift";
-            this.btnRightShift.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btnRightShift.onHoverState.BorderColor = System.Drawing.Color.Gold;
             this.btnRightShift.onHoverState.BorderRadius = 1;
             this.btnRightShift.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnRightShift.onHoverState.BorderThickness = 1;
@@ -4339,7 +4394,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnRightShift.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnRightShift.onHoverState.IconLeftImage = null;
             this.btnRightShift.onHoverState.IconRightImage = null;
-            this.btnRightShift.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnRightShift.OnIdleState.BorderColor = System.Drawing.Color.Gold;
             this.btnRightShift.OnIdleState.BorderRadius = 1;
             this.btnRightShift.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnRightShift.OnIdleState.BorderThickness = 1;
@@ -4347,7 +4402,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnRightShift.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnRightShift.OnIdleState.IconLeftImage = null;
             this.btnRightShift.OnIdleState.IconRightImage = null;
-            this.btnRightShift.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btnRightShift.OnPressedState.BorderColor = System.Drawing.Color.Gold;
             this.btnRightShift.OnPressedState.BorderRadius = 1;
             this.btnRightShift.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnRightShift.OnPressedState.BorderThickness = 1;
@@ -4360,6 +4415,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnRightShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRightShift.TextMarginLeft = 0;
             this.btnRightShift.UseDefaultRadiusAndThickness = true;
+            this.btnRightShift.Click += new System.EventHandler(this.btnRightShift_Click);
             // 
             // btnHash
             // 
@@ -6249,6 +6305,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSpace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSpace.TextMarginLeft = 0;
             this.btnSpace.UseDefaultRadiusAndThickness = true;
+            this.btnSpace.Click += new System.EventHandler(this.btnSpace_Click);
             // 
             // btnX
             // 
@@ -6707,7 +6764,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnRightSlace.IdleIconLeftImage = null;
             this.btnRightSlace.IdleIconRightImage = null;
             this.btnRightSlace.IndicateFocus = false;
-            this.btnRightSlace.Location = new System.Drawing.Point(68, 180);
+            this.btnRightSlace.Location = new System.Drawing.Point(2, 60);
             this.btnRightSlace.Name = "btnRightSlace";
             this.btnRightSlace.onHoverState.BorderColor = System.Drawing.Color.White;
             this.btnRightSlace.onHoverState.BorderRadius = 1;
@@ -6903,14 +6960,14 @@ namespace TakeAwayPointOfSaleSystem
             this.btnLeftShift.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnLeftShift.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnLeftShift.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnLeftShift.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnLeftShift.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Hover;
             this.btnLeftShift.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLeftShift.ForeColor = System.Drawing.Color.White;
             this.btnLeftShift.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnLeftShift.IconMarginLeft = 11;
             this.btnLeftShift.IconPadding = 10;
             this.btnLeftShift.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnLeftShift.IdleBorderColor = System.Drawing.Color.White;
+            this.btnLeftShift.IdleBorderColor = System.Drawing.Color.Gold;
             this.btnLeftShift.IdleBorderRadius = 1;
             this.btnLeftShift.IdleBorderThickness = 1;
             this.btnLeftShift.IdleFillColor = System.Drawing.Color.Black;
@@ -6919,7 +6976,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnLeftShift.IndicateFocus = false;
             this.btnLeftShift.Location = new System.Drawing.Point(2, 180);
             this.btnLeftShift.Name = "btnLeftShift";
-            this.btnLeftShift.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btnLeftShift.onHoverState.BorderColor = System.Drawing.Color.Gold;
             this.btnLeftShift.onHoverState.BorderRadius = 1;
             this.btnLeftShift.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnLeftShift.onHoverState.BorderThickness = 1;
@@ -6927,7 +6984,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnLeftShift.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnLeftShift.onHoverState.IconLeftImage = null;
             this.btnLeftShift.onHoverState.IconRightImage = null;
-            this.btnLeftShift.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnLeftShift.OnIdleState.BorderColor = System.Drawing.Color.Gold;
             this.btnLeftShift.OnIdleState.BorderRadius = 1;
             this.btnLeftShift.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnLeftShift.OnIdleState.BorderThickness = 1;
@@ -6935,7 +6992,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnLeftShift.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnLeftShift.OnIdleState.IconLeftImage = null;
             this.btnLeftShift.OnIdleState.IconRightImage = null;
-            this.btnLeftShift.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btnLeftShift.OnPressedState.BorderColor = System.Drawing.Color.Gold;
             this.btnLeftShift.OnPressedState.BorderRadius = 1;
             this.btnLeftShift.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnLeftShift.OnPressedState.BorderThickness = 1;
@@ -6943,11 +7000,12 @@ namespace TakeAwayPointOfSaleSystem
             this.btnLeftShift.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnLeftShift.OnPressedState.IconLeftImage = null;
             this.btnLeftShift.OnPressedState.IconRightImage = null;
-            this.btnLeftShift.Size = new System.Drawing.Size(60, 60);
+            this.btnLeftShift.Size = new System.Drawing.Size(126, 60);
             this.btnLeftShift.TabIndex = 20;
             this.btnLeftShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLeftShift.TextMarginLeft = 0;
             this.btnLeftShift.UseDefaultRadiusAndThickness = true;
+            this.btnLeftShift.Click += new System.EventHandler(this.btnLeftShift_Click);
             // 
             // btnCap
             // 
@@ -6979,7 +7037,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCap.IconMarginLeft = 11;
             this.btnCap.IconPadding = 10;
             this.btnCap.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnCap.IdleBorderColor = System.Drawing.Color.White;
+            this.btnCap.IdleBorderColor = System.Drawing.Color.Gold;
             this.btnCap.IdleBorderRadius = 1;
             this.btnCap.IdleBorderThickness = 1;
             this.btnCap.IdleFillColor = System.Drawing.Color.Black;
@@ -6988,7 +7046,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCap.IndicateFocus = false;
             this.btnCap.Location = new System.Drawing.Point(2, 120);
             this.btnCap.Name = "btnCap";
-            this.btnCap.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btnCap.onHoverState.BorderColor = System.Drawing.Color.Gold;
             this.btnCap.onHoverState.BorderRadius = 1;
             this.btnCap.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCap.onHoverState.BorderThickness = 1;
@@ -6996,7 +7054,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCap.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnCap.onHoverState.IconLeftImage = null;
             this.btnCap.onHoverState.IconRightImage = null;
-            this.btnCap.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnCap.OnIdleState.BorderColor = System.Drawing.Color.Gold;
             this.btnCap.OnIdleState.BorderRadius = 1;
             this.btnCap.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCap.OnIdleState.BorderThickness = 1;
@@ -7004,7 +7062,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCap.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnCap.OnIdleState.IconLeftImage = null;
             this.btnCap.OnIdleState.IconRightImage = null;
-            this.btnCap.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btnCap.OnPressedState.BorderColor = System.Drawing.Color.Gold;
             this.btnCap.OnPressedState.BorderRadius = 1;
             this.btnCap.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCap.OnPressedState.BorderThickness = 1;
@@ -7017,75 +7075,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCap.TextMarginLeft = 0;
             this.btnCap.UseDefaultRadiusAndThickness = true;
-            // 
-            // btnTab
-            // 
-            this.btnTab.AllowToggling = false;
-            this.btnTab.AnimationSpeed = 200;
-            this.btnTab.AutoGenerateColors = false;
-            this.btnTab.BackColor = System.Drawing.Color.Transparent;
-            this.btnTab.BackColor1 = System.Drawing.Color.Black;
-            this.btnTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTab.BackgroundImage")));
-            this.btnTab.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnTab.ButtonText = "Tab";
-            this.btnTab.ButtonTextMarginLeft = 0;
-            this.btnTab.ColorContrastOnClick = 45;
-            this.btnTab.ColorContrastOnHover = 45;
-            this.btnTab.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges71.BottomLeft = true;
-            borderEdges71.BottomRight = true;
-            borderEdges71.TopLeft = true;
-            borderEdges71.TopRight = true;
-            this.btnTab.CustomizableEdges = borderEdges71;
-            this.btnTab.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnTab.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnTab.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnTab.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnTab.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnTab.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTab.ForeColor = System.Drawing.Color.White;
-            this.btnTab.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnTab.IconMarginLeft = 11;
-            this.btnTab.IconPadding = 10;
-            this.btnTab.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnTab.IdleBorderColor = System.Drawing.Color.White;
-            this.btnTab.IdleBorderRadius = 1;
-            this.btnTab.IdleBorderThickness = 1;
-            this.btnTab.IdleFillColor = System.Drawing.Color.Black;
-            this.btnTab.IdleIconLeftImage = null;
-            this.btnTab.IdleIconRightImage = null;
-            this.btnTab.IndicateFocus = false;
-            this.btnTab.Location = new System.Drawing.Point(2, 60);
-            this.btnTab.Name = "btnTab";
-            this.btnTab.onHoverState.BorderColor = System.Drawing.Color.White;
-            this.btnTab.onHoverState.BorderRadius = 1;
-            this.btnTab.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnTab.onHoverState.BorderThickness = 1;
-            this.btnTab.onHoverState.FillColor = System.Drawing.Color.Black;
-            this.btnTab.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnTab.onHoverState.IconLeftImage = null;
-            this.btnTab.onHoverState.IconRightImage = null;
-            this.btnTab.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnTab.OnIdleState.BorderRadius = 1;
-            this.btnTab.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnTab.OnIdleState.BorderThickness = 1;
-            this.btnTab.OnIdleState.FillColor = System.Drawing.Color.Black;
-            this.btnTab.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnTab.OnIdleState.IconLeftImage = null;
-            this.btnTab.OnIdleState.IconRightImage = null;
-            this.btnTab.OnPressedState.BorderColor = System.Drawing.Color.White;
-            this.btnTab.OnPressedState.BorderRadius = 1;
-            this.btnTab.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnTab.OnPressedState.BorderThickness = 1;
-            this.btnTab.OnPressedState.FillColor = System.Drawing.Color.Black;
-            this.btnTab.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnTab.OnPressedState.IconLeftImage = null;
-            this.btnTab.OnPressedState.IconRightImage = null;
-            this.btnTab.Size = new System.Drawing.Size(60, 60);
-            this.btnTab.TabIndex = 18;
-            this.btnTab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTab.TextMarginLeft = 0;
-            this.btnTab.UseDefaultRadiusAndThickness = true;
+            this.btnCap.Click += new System.EventHandler(this.btnCap_Click);
             // 
             // btnSideMinus
             // 
@@ -7101,11 +7091,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSideMinus.ColorContrastOnClick = 45;
             this.btnSideMinus.ColorContrastOnHover = 45;
             this.btnSideMinus.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges72.BottomLeft = true;
-            borderEdges72.BottomRight = true;
-            borderEdges72.TopLeft = true;
-            borderEdges72.TopRight = true;
-            this.btnSideMinus.CustomizableEdges = borderEdges72;
+            borderEdges71.BottomLeft = true;
+            borderEdges71.BottomRight = true;
+            borderEdges71.TopLeft = true;
+            borderEdges71.TopRight = true;
+            this.btnSideMinus.CustomizableEdges = borderEdges71;
             this.btnSideMinus.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSideMinus.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnSideMinus.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7171,11 +7161,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnMultiply.ColorContrastOnClick = 45;
             this.btnMultiply.ColorContrastOnHover = 45;
             this.btnMultiply.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges73.BottomLeft = true;
-            borderEdges73.BottomRight = true;
-            borderEdges73.TopLeft = true;
-            borderEdges73.TopRight = true;
-            this.btnMultiply.CustomizableEdges = borderEdges73;
+            borderEdges72.BottomLeft = true;
+            borderEdges72.BottomRight = true;
+            borderEdges72.TopLeft = true;
+            borderEdges72.TopRight = true;
+            this.btnMultiply.CustomizableEdges = borderEdges72;
             this.btnMultiply.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMultiply.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnMultiply.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7241,11 +7231,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnDivid.ColorContrastOnClick = 45;
             this.btnDivid.ColorContrastOnHover = 45;
             this.btnDivid.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges74.BottomLeft = true;
-            borderEdges74.BottomRight = true;
-            borderEdges74.TopLeft = true;
-            borderEdges74.TopRight = true;
-            this.btnDivid.CustomizableEdges = borderEdges74;
+            borderEdges73.BottomLeft = true;
+            borderEdges73.BottomRight = true;
+            borderEdges73.TopLeft = true;
+            borderEdges73.TopRight = true;
+            this.btnDivid.CustomizableEdges = borderEdges73;
             this.btnDivid.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDivid.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnDivid.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7311,11 +7301,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnClear.ColorContrastOnClick = 45;
             this.btnClear.ColorContrastOnHover = 45;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges75.BottomLeft = true;
-            borderEdges75.BottomRight = true;
-            borderEdges75.TopLeft = true;
-            borderEdges75.TopRight = true;
-            this.btnClear.CustomizableEdges = borderEdges75;
+            borderEdges74.BottomLeft = true;
+            borderEdges74.BottomRight = true;
+            borderEdges74.TopLeft = true;
+            borderEdges74.TopRight = true;
+            this.btnClear.CustomizableEdges = borderEdges74;
             this.btnClear.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnClear.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnClear.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7365,6 +7355,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClear.TextMarginLeft = 0;
             this.btnClear.UseDefaultRadiusAndThickness = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBackspace
             // 
@@ -7380,11 +7371,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnBackspace.ColorContrastOnClick = 45;
             this.btnBackspace.ColorContrastOnHover = 45;
             this.btnBackspace.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges76.BottomLeft = true;
-            borderEdges76.BottomRight = true;
-            borderEdges76.TopLeft = true;
-            borderEdges76.TopRight = true;
-            this.btnBackspace.CustomizableEdges = borderEdges76;
+            borderEdges75.BottomLeft = true;
+            borderEdges75.BottomRight = true;
+            borderEdges75.TopLeft = true;
+            borderEdges75.TopRight = true;
+            this.btnBackspace.CustomizableEdges = borderEdges75;
             this.btnBackspace.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBackspace.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnBackspace.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7434,6 +7425,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBackspace.TextMarginLeft = 0;
             this.btnBackspace.UseDefaultRadiusAndThickness = true;
+            this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 
             // btnEquat
             // 
@@ -7449,11 +7441,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnEquat.ColorContrastOnClick = 45;
             this.btnEquat.ColorContrastOnHover = 45;
             this.btnEquat.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges77.BottomLeft = true;
-            borderEdges77.BottomRight = true;
-            borderEdges77.TopLeft = true;
-            borderEdges77.TopRight = true;
-            this.btnEquat.CustomizableEdges = borderEdges77;
+            borderEdges76.BottomLeft = true;
+            borderEdges76.BottomRight = true;
+            borderEdges76.TopLeft = true;
+            borderEdges76.TopRight = true;
+            this.btnEquat.CustomizableEdges = borderEdges76;
             this.btnEquat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEquat.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnEquat.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7519,11 +7511,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnMinus.ColorContrastOnClick = 45;
             this.btnMinus.ColorContrastOnHover = 45;
             this.btnMinus.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges78.BottomLeft = true;
-            borderEdges78.BottomRight = true;
-            borderEdges78.TopLeft = true;
-            borderEdges78.TopRight = true;
-            this.btnMinus.CustomizableEdges = borderEdges78;
+            borderEdges77.BottomLeft = true;
+            borderEdges77.BottomRight = true;
+            borderEdges77.TopLeft = true;
+            borderEdges77.TopRight = true;
+            this.btnMinus.CustomizableEdges = borderEdges77;
             this.btnMinus.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMinus.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnMinus.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7589,11 +7581,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn0.ColorContrastOnClick = 45;
             this.btn0.ColorContrastOnHover = 45;
             this.btn0.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges79.BottomLeft = true;
-            borderEdges79.BottomRight = true;
-            borderEdges79.TopLeft = true;
-            borderEdges79.TopRight = true;
-            this.btn0.CustomizableEdges = borderEdges79;
+            borderEdges78.BottomLeft = true;
+            borderEdges78.BottomRight = true;
+            borderEdges78.TopLeft = true;
+            borderEdges78.TopRight = true;
+            this.btn0.CustomizableEdges = borderEdges78;
             this.btn0.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn0.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn0.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7659,11 +7651,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn1.ColorContrastOnClick = 45;
             this.btn1.ColorContrastOnHover = 45;
             this.btn1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges80.BottomLeft = true;
-            borderEdges80.BottomRight = true;
-            borderEdges80.TopLeft = true;
-            borderEdges80.TopRight = true;
-            this.btn1.CustomizableEdges = borderEdges80;
+            borderEdges79.BottomLeft = true;
+            borderEdges79.BottomRight = true;
+            borderEdges79.TopLeft = true;
+            borderEdges79.TopRight = true;
+            this.btn1.CustomizableEdges = borderEdges79;
             this.btn1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn1.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7729,11 +7721,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn2.ColorContrastOnClick = 45;
             this.btn2.ColorContrastOnHover = 45;
             this.btn2.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges81.BottomLeft = true;
-            borderEdges81.BottomRight = true;
-            borderEdges81.TopLeft = true;
-            borderEdges81.TopRight = true;
-            this.btn2.CustomizableEdges = borderEdges81;
+            borderEdges80.BottomLeft = true;
+            borderEdges80.BottomRight = true;
+            borderEdges80.TopLeft = true;
+            borderEdges80.TopRight = true;
+            this.btn2.CustomizableEdges = borderEdges80;
             this.btn2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn2.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7799,11 +7791,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn3.ColorContrastOnClick = 45;
             this.btn3.ColorContrastOnHover = 45;
             this.btn3.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges82.BottomLeft = true;
-            borderEdges82.BottomRight = true;
-            borderEdges82.TopLeft = true;
-            borderEdges82.TopRight = true;
-            this.btn3.CustomizableEdges = borderEdges82;
+            borderEdges81.BottomLeft = true;
+            borderEdges81.BottomRight = true;
+            borderEdges81.TopLeft = true;
+            borderEdges81.TopRight = true;
+            this.btn3.CustomizableEdges = borderEdges81;
             this.btn3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn3.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7869,11 +7861,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn4.ColorContrastOnClick = 45;
             this.btn4.ColorContrastOnHover = 45;
             this.btn4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges83.BottomLeft = true;
-            borderEdges83.BottomRight = true;
-            borderEdges83.TopLeft = true;
-            borderEdges83.TopRight = true;
-            this.btn4.CustomizableEdges = borderEdges83;
+            borderEdges82.BottomLeft = true;
+            borderEdges82.BottomRight = true;
+            borderEdges82.TopLeft = true;
+            borderEdges82.TopRight = true;
+            this.btn4.CustomizableEdges = borderEdges82;
             this.btn4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn4.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn4.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -7939,11 +7931,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn5.ColorContrastOnClick = 45;
             this.btn5.ColorContrastOnHover = 45;
             this.btn5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges84.BottomLeft = true;
-            borderEdges84.BottomRight = true;
-            borderEdges84.TopLeft = true;
-            borderEdges84.TopRight = true;
-            this.btn5.CustomizableEdges = borderEdges84;
+            borderEdges83.BottomLeft = true;
+            borderEdges83.BottomRight = true;
+            borderEdges83.TopLeft = true;
+            borderEdges83.TopRight = true;
+            this.btn5.CustomizableEdges = borderEdges83;
             this.btn5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn5.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn5.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -8009,11 +8001,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn6.ColorContrastOnClick = 45;
             this.btn6.ColorContrastOnHover = 45;
             this.btn6.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges85.BottomLeft = true;
-            borderEdges85.BottomRight = true;
-            borderEdges85.TopLeft = true;
-            borderEdges85.TopRight = true;
-            this.btn6.CustomizableEdges = borderEdges85;
+            borderEdges84.BottomLeft = true;
+            borderEdges84.BottomRight = true;
+            borderEdges84.TopLeft = true;
+            borderEdges84.TopRight = true;
+            this.btn6.CustomizableEdges = borderEdges84;
             this.btn6.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn6.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn6.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -8079,11 +8071,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn7.ColorContrastOnClick = 45;
             this.btn7.ColorContrastOnHover = 45;
             this.btn7.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges86.BottomLeft = true;
-            borderEdges86.BottomRight = true;
-            borderEdges86.TopLeft = true;
-            borderEdges86.TopRight = true;
-            this.btn7.CustomizableEdges = borderEdges86;
+            borderEdges85.BottomLeft = true;
+            borderEdges85.BottomRight = true;
+            borderEdges85.TopLeft = true;
+            borderEdges85.TopRight = true;
+            this.btn7.CustomizableEdges = borderEdges85;
             this.btn7.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn7.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn7.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -8149,11 +8141,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn8.ColorContrastOnClick = 45;
             this.btn8.ColorContrastOnHover = 45;
             this.btn8.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges87.BottomLeft = true;
-            borderEdges87.BottomRight = true;
-            borderEdges87.TopLeft = true;
-            borderEdges87.TopRight = true;
-            this.btn8.CustomizableEdges = borderEdges87;
+            borderEdges86.BottomLeft = true;
+            borderEdges86.BottomRight = true;
+            borderEdges86.TopLeft = true;
+            borderEdges86.TopRight = true;
+            this.btn8.CustomizableEdges = borderEdges86;
             this.btn8.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn8.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn8.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -8219,11 +8211,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btn9.ColorContrastOnClick = 45;
             this.btn9.ColorContrastOnHover = 45;
             this.btn9.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges88.BottomLeft = true;
-            borderEdges88.BottomRight = true;
-            borderEdges88.TopLeft = true;
-            borderEdges88.TopRight = true;
-            this.btn9.CustomizableEdges = borderEdges88;
+            borderEdges87.BottomLeft = true;
+            borderEdges87.BottomRight = true;
+            borderEdges87.TopLeft = true;
+            borderEdges87.TopRight = true;
+            this.btn9.CustomizableEdges = borderEdges87;
             this.btn9.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn9.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn9.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -8289,11 +8281,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnwave.ColorContrastOnClick = 45;
             this.btnwave.ColorContrastOnHover = 45;
             this.btnwave.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges89.BottomLeft = true;
-            borderEdges89.BottomRight = true;
-            borderEdges89.TopLeft = true;
-            borderEdges89.TopRight = true;
-            this.btnwave.CustomizableEdges = borderEdges89;
+            borderEdges88.BottomLeft = true;
+            borderEdges88.BottomRight = true;
+            borderEdges88.TopLeft = true;
+            borderEdges88.TopRight = true;
+            this.btnwave.CustomizableEdges = borderEdges88;
             this.btnwave.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnwave.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnwave.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -8360,11 +8352,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCloseAddress.ColorContrastOnClick = 45;
             this.btnCloseAddress.ColorContrastOnHover = 45;
             this.btnCloseAddress.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges90.BottomLeft = true;
-            borderEdges90.BottomRight = true;
-            borderEdges90.TopLeft = true;
-            borderEdges90.TopRight = true;
-            this.btnCloseAddress.CustomizableEdges = borderEdges90;
+            borderEdges89.BottomLeft = true;
+            borderEdges89.BottomRight = true;
+            borderEdges89.TopLeft = true;
+            borderEdges89.TopRight = true;
+            this.btnCloseAddress.CustomizableEdges = borderEdges89;
             this.btnCloseAddress.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCloseAddress.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnCloseAddress.DisabledFillColor = System.Drawing.Color.Red;
@@ -8456,66 +8448,9 @@ namespace TakeAwayPointOfSaleSystem
             this.dockMain.TitleBarOptions.TitleBarControl = null;
             this.dockMain.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // customerData
-            // 
-            this.customerData.DataSetName = "customerData";
-            this.customerData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.customerData;
-            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // customerName
-            // 
-            this.customerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.customerName.DataPropertyName = "name";
-            this.customerName.HeaderText = "Custmoer Name";
-            this.customerName.Name = "customerName";
-            this.customerName.Width = 151;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.phoneNumber.DataPropertyName = "telephone";
-            this.phoneNumber.HeaderText = "Telephone Number";
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.Width = 173;
-            // 
-            // houseNo
-            // 
-            this.houseNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.houseNo.DataPropertyName = "houseNo";
-            this.houseNo.HeaderText = "House No";
-            this.houseNo.Name = "houseNo";
-            this.houseNo.Width = 106;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            // 
-            // postcode
-            // 
-            this.postcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.postcode.DataPropertyName = "postcode";
-            this.postcode.HeaderText = "PostCode";
-            this.postcode.Name = "postcode";
-            this.postcode.Width = 103;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmMain
             // 
@@ -8548,9 +8483,9 @@ namespace TakeAwayPointOfSaleSystem
             this.tabAddress.ResumeLayout(false);
             this.tabAddress.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
-            this.bunifuGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerData)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -8660,7 +8595,6 @@ namespace TakeAwayPointOfSaleSystem
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn9;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnwave;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCap;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTab;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLeftShift;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSideEqual;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;

@@ -14,7 +14,7 @@ namespace TakeAwayPointOfSaleSystem
 {
     public partial class FrmMain : Form
     {
-        onScreenKeyboard onKeyboard = new onScreenKeyboard();
+        onScreenKeyboard onKeyboard;
         //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private string connectionString =
             "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\LocalDatabase.mdf;Integrated Security=True";
@@ -23,6 +23,7 @@ namespace TakeAwayPointOfSaleSystem
         public FrmMain()
         {
             InitializeComponent();
+
             for (int i = 0; i < 20; i++)
             {
                 BunifuButton b = new BunifuButton();
@@ -41,7 +42,7 @@ namespace TakeAwayPointOfSaleSystem
                 flpDishMenu.Controls.Add(b);
             }
 
-           
+            onKeyboard = new onScreenKeyboard(btnLeftShift, btnRightShift);
         }
 
         private void btnAllDish_Click(object sender, EventArgs e)
@@ -134,6 +135,41 @@ namespace TakeAwayPointOfSaleSystem
             onKeyboard.keyboard_click(sender, e);
         }
 
+        private void btnSpace_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_space();
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_enter();
+        }
+
+        private void btnBackspace_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_backspace();
+        }
+
+        private void btnCap_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_capsLock(sender, e);
+        }
+
+        private void btnLeftShift_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_shift();
+        }
+
+        private void btnRightShift_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_shift();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            onKeyboard.press_clear();
+        }
+
         private void textbox_select(object sender, EventArgs e)
         {
             onKeyboard.setCotrol((Control) sender);
@@ -184,5 +220,6 @@ namespace TakeAwayPointOfSaleSystem
             this.customerTableAdapter.Fill(this.customerData.Customer);
 
         }
+
     }
 }
