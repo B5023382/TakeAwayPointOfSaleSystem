@@ -2796,6 +2796,7 @@ namespace TakeAwayPointOfSaleSystem
             this.txtDeliverFee.TextPlaceholder = "Enter text";
             this.txtDeliverFee.UseSystemPasswordChar = false;
             this.txtDeliverFee.WordWrap = true;
+            this.txtDeliverFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeliverFee_KeyPress);
             this.txtDeliverFee.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtPostcode
@@ -3166,6 +3167,7 @@ namespace TakeAwayPointOfSaleSystem
             this.txtTelephone.TextPlaceholder = "Enter Phone Number";
             this.txtTelephone.UseSystemPasswordChar = false;
             this.txtTelephone.WordWrap = true;
+            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             this.txtTelephone.Click += new System.EventHandler(this.textbox_select);
             // 
             // bunifuLabel31
