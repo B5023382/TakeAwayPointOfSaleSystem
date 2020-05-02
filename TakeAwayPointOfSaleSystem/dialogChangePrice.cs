@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace TakeAwayPointOfSaleSystem
 {
-    public partial class frmManagement : Form
+    public partial class dialogChangePrice : Form
     {
-        public frmManagement()
+        public dialogChangePrice()
         {
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
-            Program.ShowMainForm();
-            this.Close();
+
         }
     }
 }

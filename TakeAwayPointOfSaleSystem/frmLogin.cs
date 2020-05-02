@@ -78,8 +78,8 @@ namespace TakeAwayPointOfSaleSystem
                         sqlRead.Close();
                         SqlCommand sqlCommand = new SqlCommand("AddUser", sqlCon);
                         sqlCommand.CommandType = CommandType.StoredProcedure;
-                        sqlCommand.Parameters.AddWithValue("@username", txtNewUserName.Text.Trim());
-                        sqlCommand.Parameters.AddWithValue("@password", txtNewPassword.Text.Trim());
+                        sqlCommand.Parameters.AddWithValue("@username", txtNewUserName.Text.Substring(0, 49));
+                        sqlCommand.Parameters.AddWithValue("@password", txtNewPassword.Text.Substring(0, 49));
                         sqlCommand.Parameters.AddWithValue("@role", role);
                         sqlCommand.ExecuteNonQuery();
 
@@ -111,11 +111,14 @@ namespace TakeAwayPointOfSaleSystem
                 sqlCommand.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
 
                 SqlDataReader dr = sqlCommand.ExecuteReader();
-                if (dr.HasRows)
+                if (dr.HasRows && dr.Read())
                 {
-                    var mainForm = new FrmMain();
+
+                    string role = dr.GetValue(3).ToString();
+                    
+                    var mainForm = new FrmMain(txtUsername.Text.Trim(), role);
                     Program.SetMainForm(mainForm);
-                    Program.ShowMainForm();
+                    Program.ShowForm();
                     this.Close();
                 }
                 else

@@ -7,20 +7,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
+using Timer = System.Windows.Forms.Timer;
 
 namespace TakeAwayPointOfSaleSystem
 {
     public partial class FrmMain : Form
     {
-        onScreenKeyboard onKeyboard;
+        
         //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private string connectionString =
             "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\LocalDatabase.mdf;Integrated Security=True";
-
+        Timer myTimer = new Timer{Interval = 1000};
  
-        public FrmMain()
+        public FrmMain(string username, string role)
         {
             InitializeComponent();
 
@@ -42,7 +44,21 @@ namespace TakeAwayPointOfSaleSystem
                 flpDishMenu.Controls.Add(b);
             }
 
-            onKeyboard = new onScreenKeyboard(btnLeftShift, btnRightShift);
+            lblUsername.Text = username;
+            lblRole.Text = role;
+            lblDate.Text = DateTime.Now.Date.ToString("yyyy-M-d dddd");
+
+        }
+
+        private void Form_load(object sender, EventArgs e)
+        {
+            myTimer.Tick += (o, args) => { lblTime.Text = DateTime.Now.ToString("h:mm:ss tt"); };
+            myTimer.Start();
+        }
+
+        private void common_button_click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnAllDish_Click(object sender, EventArgs e)
@@ -115,11 +131,6 @@ namespace TakeAwayPointOfSaleSystem
 
         }
 
-        private void common_button_click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCloseCommon_Click(object sender, EventArgs e)
         {
             pagMenuPage.SetPage(0);
@@ -127,122 +138,31 @@ namespace TakeAwayPointOfSaleSystem
 
         private void panAddressBar_click(object sender, EventArgs e)
         {
-            pageMain.SetPage(1);
-        }
-
-        private void keyboard_click(object sender, EventArgs e)
-        {
-            onKeyboard.keyboard_click(sender, e);
-        }
-
-        private void btnSpace_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_space();
-        }
-
-        private void btnEnter_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_enter();
-        }
-
-        private void btnBackspace_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_backspace();
-        }
-
-        private void btnCap_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_capsLock(sender, e);
-        }
-
-        private void btnLeftShift_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_shift();
-        }
-
-        private void btnRightShift_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_shift();
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_clear();
-        }
-
-        private void textbox_select(object sender, EventArgs e)
-        {
-            onKeyboard.setCotrol((Control) sender);
-        }
-
-        private void btnSaveOrder_Click(object sender, EventArgs e)
-        {
-            lblAddress.Text = txtHouseNo.Text + " " + txtAddress.Text;
-            lblDeliverFee.Text = txtDeliverFee.Text;
-            lblDeliverTime.Text = txtDeliverTime.Text;
-            lblName.Text = txtName.Text;
-            lblNote.Text = txtNote.Text;
-            lblPostcode.Text = txtPostcode.Text;
-            lblTelphone.Text = txtTelephone.Text;
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlCommand addCustomer = new SqlCommand("AddCustomer", sqlCon);
-                addCustomer.CommandType = CommandType.StoredProcedure;
-                addCustomer.Parameters.AddWithValue("@telephone", txtTelephone.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@name", txtName.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@houseNo", txtHouseNo.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@address", txtAddress.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@postcode", txtPostcode.Text.Trim().ToUpper());
-                addCustomer.Parameters.AddWithValue("@id", 0);
-                addCustomer.ExecuteNonQuery();
-                customerData.Customer.AcceptChanges();
-                dgvCustomer.Update();
-
-            }
-            pageMain.SetPage(0);
-        }
-
-        private void btnCloseAddress_Click(object sender, EventArgs e)
-        {
-            pageMain.SetPage(0);
+            var addressForm = new frmAddress();
+            Program.SetActiveForm(addressForm);
+            Program.ShowForm();
+            this.Hide();
         }
 
         private void btnManagement_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'customerData.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.customerData.Customer);
-
-        }
-
-        private void txtDeliverFee_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if(ch == 46 && txtDeliverFee.Text.IndexOf('.') != -1)
+            if (lblRole.Text.Equals("admin"))
             {
-                e.Handled = true;
-                return;
+                var managementForm = new frmManagement();
+                Program.SetActiveForm(managementForm);
+                Program.ShowForm();
+                this.Hide();
             }
-
-            if(!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            else
             {
-                e.Handled = true;
+                MessageBox.Show("Your don't have management permission, Please change to admin account", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
-        private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnPayment_Click(object sender, EventArgs e)
         {
-            char ch = e.KeyChar;
-            if (!Char.IsDigit(ch))
-            {
-                e.Handled = true;
-            }
+
         }
     }
 }

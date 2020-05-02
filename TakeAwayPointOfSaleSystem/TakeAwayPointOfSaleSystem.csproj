@@ -149,11 +149,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dialogChangePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogChangePrice.Designer.cs">
+      <DependentUpon>dialogChangePrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddress.Designer.cs">
+      <DependentUpon>frmAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -184,11 +196,20 @@
     <Compile Include="testForm.Designer.cs">
       <DependentUpon>testForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dialogChangePrice.resx">
+      <DependentUpon>dialogChangePrice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddress.resx">
+      <DependentUpon>frmAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagement.resx">
+      <DependentUpon>frmManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
