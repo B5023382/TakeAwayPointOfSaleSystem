@@ -104,17 +104,23 @@ namespace TakeAwayPointOfSaleSystem
             }
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            using (dialogChangePrice d = new dialogChangePrice(' ', "Search Dish"))
+            {
+                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                   
+                }
+            }
+        }
+
         private void btnCancelOrder_Click(object sender, EventArgs e)
         {
 
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
         {
 
         }

@@ -237,6 +237,7 @@
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliverFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -5306,6 +5307,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
             this.bunifuGradientPanel1.Controls.Add(this.btnSearchByPhone);
             this.bunifuGradientPanel1.Controls.Add(this.dgvCustomer);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel31);
@@ -5464,7 +5466,7 @@
             this.bunifuLabel30.AutoEllipsis = false;
             this.bunifuLabel30.CursorType = null;
             this.bunifuLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel30.Location = new System.Drawing.Point(26, 361);
+            this.bunifuLabel30.Location = new System.Drawing.Point(26, 347);
             this.bunifuLabel30.Name = "bunifuLabel30";
             this.bunifuLabel30.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel30.Size = new System.Drawing.Size(122, 27);
@@ -5478,7 +5480,7 @@
             this.bunifuLabel29.AutoEllipsis = false;
             this.bunifuLabel29.CursorType = null;
             this.bunifuLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel29.Location = new System.Drawing.Point(20, 313);
+            this.bunifuLabel29.Location = new System.Drawing.Point(20, 300);
             this.bunifuLabel29.Name = "bunifuLabel29";
             this.bunifuLabel29.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel29.Size = new System.Drawing.Size(128, 27);
@@ -6355,6 +6357,38 @@
             this.deliverFee.Name = "deliverFee";
             this.deliverFee.ReadOnly = true;
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.ActiveImage = null;
+            this.bunifuImageButton1.AllowAnimations = true;
+            this.bunifuImageButton1.AllowBuffering = false;
+            this.bunifuImageButton1.AllowZooming = true;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.FadeWhenInactive = false;
+            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.ImageLocation = null;
+            this.bunifuImageButton1.ImageMargin = 40;
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(10, -1);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(50, 39);
+            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
+            this.bunifuImageButton1.Location = new System.Drawing.Point(516, 255);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Rotation = 0;
+            this.bunifuImageButton1.ShowActiveImage = true;
+            this.bunifuImageButton1.ShowCursorChanges = true;
+            this.bunifuImageButton1.ShowImageBorders = true;
+            this.bunifuImageButton1.ShowSizeMarkers = false;
+            this.bunifuImageButton1.Size = new System.Drawing.Size(50, 39);
+            this.bunifuImageButton1.TabIndex = 41;
+            this.bunifuImageButton1.ToolTipText = "";
+            this.bunifuImageButton1.WaitOnLoad = false;
+            this.bunifuImageButton1.Zoom = 40;
+            this.bunifuImageButton1.ZoomSpeed = 10;
+            // 
             // frmAddress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6476,5 +6510,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn postcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverFee;
+        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
     }
 }
