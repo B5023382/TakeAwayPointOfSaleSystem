@@ -19,7 +19,7 @@ namespace TakeAwayPointOfSaleSystem
         
         //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\LocalDatabase.mdf;Integrated Security=True";
+            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
 
@@ -84,7 +84,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnChangePrice_Click(object sender, EventArgs e)
         {
-            using (dialogChangePrice d = new dialogChangePrice('.', "Change Price"))
+            using (dialogChangePrice d = new dialogChangePrice('.', "Change Price", null))
             {
                 if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -95,7 +95,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSetTime_Click(object sender, EventArgs e)
         {
-            using (dialogChangePrice d = new dialogChangePrice(':', "Set Time"))
+            using (dialogChangePrice d = new dialogChangePrice(':', "Set Time", "Clear"))
             {
                 if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -106,7 +106,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            using (dialogChangePrice d = new dialogChangePrice(' ', "Search Dish"))
+            using (dialogChangePrice d = new dialogChangePrice(' ', "Search Dish", "Clear"))
             {
                 if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {

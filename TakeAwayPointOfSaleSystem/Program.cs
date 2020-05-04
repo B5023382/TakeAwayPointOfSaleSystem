@@ -19,11 +19,9 @@ namespace TakeAwayPointOfSaleSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
-            //mainContext.MainForm = new frmLogin();
             mainContext.MainForm = new FrmMain("Wei", "admin");
             mainPage = (FrmMain)mainContext.MainForm;
-            mainContext.MainForm = new frmAddress();
+            //mainContext.MainForm = new frmLogin();
             Application.Run(mainContext);
         }
 

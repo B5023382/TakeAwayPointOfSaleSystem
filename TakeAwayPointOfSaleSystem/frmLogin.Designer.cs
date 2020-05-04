@@ -56,10 +56,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseSet = new TakeAwayPointOfSaleSystem.DatabaseSet();
-            this.accountsTableAdapter = new TakeAwayPointOfSaleSystem.DatabaseSetTableAdapters.AccountsTableAdapter();
             this.dockLogin = new Bunifu.UI.WinForms.BunifuFormDock();
             this.lblPoint = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -85,9 +81,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnExit = new Bunifu.UI.WinForms.BunifuImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseSet)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.pagLogin.SuspendLayout();
             this.tabLogin.SuspendLayout();
@@ -99,25 +92,6 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "Accounts";
-            this.accountsBindingSource.DataSource = this.databaseSetBindingSource;
-            // 
-            // databaseSetBindingSource
-            // 
-            this.databaseSetBindingSource.DataSource = this.databaseSet;
-            this.databaseSetBindingSource.Position = 0;
-            // 
-            // databaseSet
-            // 
-            this.databaseSet.DataSetName = "DatabaseSet";
-            this.databaseSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountsTableAdapter
-            // 
-            this.accountsTableAdapter.ClearBeforeFill = true;
             // 
             // dockLogin
             // 
@@ -222,10 +196,10 @@
             this.pagLogin.Location = new System.Drawing.Point(356, 106);
             this.pagLogin.Multiline = true;
             this.pagLogin.Name = "pagLogin";
-            this.pagLogin.Page = this.tabRegister;
-            this.pagLogin.PageIndex = 1;
-            this.pagLogin.PageName = "tabRegister";
-            this.pagLogin.PageTitle = "register";
+            this.pagLogin.Page = this.tabLogin;
+            this.pagLogin.PageIndex = 0;
+            this.pagLogin.PageName = "tabLogin";
+            this.pagLogin.PageTitle = "log_in";
             this.pagLogin.SelectedIndex = 0;
             this.pagLogin.Size = new System.Drawing.Size(416, 373);
             this.pagLogin.TabIndex = 10;
@@ -431,7 +405,7 @@
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtPassword.Lines = new string[0];
             this.txtPassword.Location = new System.Drawing.Point(20, 155);
-            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.MaxLength = 50;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
             this.txtPassword.Multiline = false;
@@ -506,7 +480,7 @@
             this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Lines = new string[0];
             this.txtUsername.Location = new System.Drawing.Point(20, 69);
-            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.MaxLength = 50;
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsername.Modified = false;
             this.txtUsername.Multiline = false;
@@ -823,7 +797,7 @@
             this.txtProductKey.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProductKey.Lines = new string[0];
             this.txtProductKey.Location = new System.Drawing.Point(23, 200);
-            this.txtProductKey.MaxLength = 32767;
+            this.txtProductKey.MaxLength = 50;
             this.txtProductKey.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProductKey.Modified = false;
             this.txtProductKey.Multiline = false;
@@ -907,7 +881,7 @@
             this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPassword.Lines = new string[0];
             this.txtNewPassword.Location = new System.Drawing.Point(23, 120);
-            this.txtNewPassword.MaxLength = 32767;
+            this.txtNewPassword.MaxLength = 50;
             this.txtNewPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewPassword.Modified = false;
             this.txtNewPassword.Multiline = false;
@@ -981,7 +955,7 @@
             this.txtNewUserName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewUserName.Lines = new string[0];
             this.txtNewUserName.Location = new System.Drawing.Point(23, 40);
-            this.txtNewUserName.MaxLength = 32767;
+            this.txtNewUserName.MaxLength = 50;
             this.txtNewUserName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewUserName.Modified = false;
             this.txtNewUserName.Multiline = false;
@@ -1097,9 +1071,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Point of Sale System";
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseSet)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.pagLogin.ResumeLayout(false);
@@ -1114,10 +1085,6 @@
 
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.BindingSource databaseSetBindingSource;
-        private DatabaseSet databaseSet;
-        private System.Windows.Forms.BindingSource accountsBindingSource;
-        private DatabaseSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
         private Bunifu.UI.WinForms.BunifuFormDock dockLogin;
         private System.Windows.Forms.Label lblPoint;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;

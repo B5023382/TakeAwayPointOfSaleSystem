@@ -210,6 +210,7 @@
             this.btn9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnwave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnSearchByPhone = new Bunifu.UI.WinForms.BunifuImageButton();
             this.dgvCustomer = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuLabel31 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -237,7 +238,6 @@
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliverFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -5338,6 +5338,38 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1280, 475);
             this.bunifuGradientPanel1.TabIndex = 3;
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.ActiveImage = null;
+            this.bunifuImageButton1.AllowAnimations = true;
+            this.bunifuImageButton1.AllowBuffering = false;
+            this.bunifuImageButton1.AllowZooming = true;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.FadeWhenInactive = false;
+            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.ImageLocation = null;
+            this.bunifuImageButton1.ImageMargin = 40;
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(10, -1);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(50, 39);
+            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
+            this.bunifuImageButton1.Location = new System.Drawing.Point(516, 255);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Rotation = 0;
+            this.bunifuImageButton1.ShowActiveImage = true;
+            this.bunifuImageButton1.ShowCursorChanges = true;
+            this.bunifuImageButton1.ShowImageBorders = true;
+            this.bunifuImageButton1.ShowSizeMarkers = false;
+            this.bunifuImageButton1.Size = new System.Drawing.Size(50, 39);
+            this.bunifuImageButton1.TabIndex = 41;
+            this.bunifuImageButton1.ToolTipText = "";
+            this.bunifuImageButton1.WaitOnLoad = false;
+            this.bunifuImageButton1.Zoom = 40;
+            this.bunifuImageButton1.ZoomSpeed = 10;
+            // 
             // btnSearchByPhone
             // 
             this.btnSearchByPhone.ActiveImage = null;
@@ -6309,7 +6341,7 @@
             // customerName
             // 
             this.customerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.customerName.DataPropertyName = "name";
+            this.customerName.DataPropertyName = "customerName";
             this.customerName.HeaderText = "Custmoer Name";
             this.customerName.Name = "customerName";
             this.customerName.ReadOnly = true;
@@ -6318,7 +6350,7 @@
             // phoneNumber
             // 
             this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.phoneNumber.DataPropertyName = "telephone";
+            this.phoneNumber.DataPropertyName = "phoneNumber";
             this.phoneNumber.HeaderText = "Telephone Number";
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.ReadOnly = true;
@@ -6356,38 +6388,6 @@
             this.deliverFee.HeaderText = "Deliver Fee";
             this.deliverFee.Name = "deliverFee";
             this.deliverFee.ReadOnly = true;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 40;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(10, -1);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(50, 39);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(516, 255);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(50, 39);
-            this.bunifuImageButton1.TabIndex = 41;
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 40;
-            this.bunifuImageButton1.ZoomSpeed = 10;
             // 
             // frmAddress
             // 
@@ -6503,6 +6503,7 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtName;
         private Bunifu.UI.WinForms.BunifuTextBox txtTelephone;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCloseAddress;
+        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerId;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
@@ -6510,6 +6511,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn postcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverFee;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
     }
 }

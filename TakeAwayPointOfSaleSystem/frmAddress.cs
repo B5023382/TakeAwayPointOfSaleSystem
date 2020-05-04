@@ -18,7 +18,7 @@ namespace TakeAwayPointOfSaleSystem
 
         //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\LocalDatabase.mdf;Integrated Security=True";
+            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         public frmAddress()
         {
             InitializeComponent();
@@ -116,11 +116,11 @@ namespace TakeAwayPointOfSaleSystem
                     sqlCon.Open();
                     SqlCommand addCustomer = new SqlCommand("AddCustomer", sqlCon);
                     addCustomer.CommandType = CommandType.StoredProcedure;
-                    addCustomer.Parameters.AddWithValue("@telephone", txtTelephone.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@phone", txtTelephone.Text.Trim());
                     addCustomer.Parameters.AddWithValue("@name", txtName.Text.Trim());
                     addCustomer.Parameters.AddWithValue("@houseNo", txtHouseNo.Text.Trim());
                     addCustomer.Parameters.AddWithValue("@address", txtAddress.Text.Trim());
-                    addCustomer.Parameters.AddWithValue("@postcode", txtPostcode.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@postcode", txtPostcode.Text.Trim().ToUpper());
                     addCustomer.Parameters.AddWithValue("@deliverFee", txtDeliverFee.Text.Trim());
                     addCustomer.ExecuteNonQuery();
                 }
@@ -160,7 +160,7 @@ namespace TakeAwayPointOfSaleSystem
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    SqlDataAdapter getCustomer = new SqlDataAdapter("SELECT * FROM Customer WHERE telephone = " + txtTelephone.Text, sqlCon);
+                    SqlDataAdapter getCustomer = new SqlDataAdapter("SELECT * FROM Customer WHERE phoneNumber = " + txtTelephone.Text, sqlCon);
                     //SqlDataAdapter getCustomer = new SqlDataAdapter("SELECT * FROM Customer", sqlCon);
                     DataSet customerDetail = new DataSet();
                     getCustomer.Fill(customerDetail);

@@ -17,7 +17,8 @@ namespace TakeAwayPointOfSaleSystem
     {
         //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\LocalDatabase.mdf;Integrated Security=True";
+            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+
 
         private string productKey = "ABCDEF";
 
@@ -52,7 +53,7 @@ namespace TakeAwayPointOfSaleSystem
                 {
                     sqlCon.Open();
 
-                    string comText = "SELECT * FROM Accounts WHERE Username = '" + txtNewUserName.Text.Trim() + "'";
+                    string comText = "SELECT * FROM SoftwareUser WHERE Username = '" + txtNewUserName.Text.Trim() + "'";
                     SqlCommand checkUsername = new SqlCommand(comText, sqlCon);
 
                     SqlDataReader sqlRead = checkUsername.ExecuteReader();
@@ -78,8 +79,8 @@ namespace TakeAwayPointOfSaleSystem
                         sqlRead.Close();
                         SqlCommand sqlCommand = new SqlCommand("AddUser", sqlCon);
                         sqlCommand.CommandType = CommandType.StoredProcedure;
-                        sqlCommand.Parameters.AddWithValue("@username", txtNewUserName.Text.Substring(0, 49));
-                        sqlCommand.Parameters.AddWithValue("@password", txtNewPassword.Text.Substring(0, 49));
+                        sqlCommand.Parameters.AddWithValue("@username", txtNewUserName.Text.Trim());
+                        sqlCommand.Parameters.AddWithValue("@password", txtNewPassword.Text.Trim());
                         sqlCommand.Parameters.AddWithValue("@role", role);
                         sqlCommand.ExecuteNonQuery();
 
@@ -119,6 +120,10 @@ namespace TakeAwayPointOfSaleSystem
                     var mainForm = new FrmMain(txtUsername.Text.Trim(), role);
                     Program.SetMainForm(mainForm);
                     Program.ShowForm();
+                    foreach (var process in Process.GetProcessesByName("TabTip"))
+                    {
+                        process.Kill();
+                    }
                     this.Close();
                 }
                 else
@@ -172,11 +177,6 @@ namespace TakeAwayPointOfSaleSystem
         {
             string touchKeyboardPath = @"C:\Program Files\Common Files\Microsoft Shared\Ink\TabTip.exe";
             Process.Start(touchKeyboardPath);
-
-            //foreach (var process in Process.GetProcessesByName("TabTip"))
-            //{
-            //    process.Kill();
-            //}
         }
     }
 }

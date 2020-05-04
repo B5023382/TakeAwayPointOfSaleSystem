@@ -16,13 +16,21 @@ namespace TakeAwayPointOfSaleSystem
         public string newData { get; set; }
 
         private char symbol;
-        public dialogChangePrice(char s, string titleText)
+        public dialogChangePrice(char s, string titleText, string clearText)
         {
             InitializeComponent();
             symbol = s;
             btnSideDot.Text = s.ToString();
             lblTitle.Text = titleText;
+            if(clearText != null)
+            {
+                btnNormal.Text = clearText;
+            }
 
+            if (s == ' ')
+            {
+                btnSideDot.Enabled = false;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -61,6 +69,20 @@ namespace TakeAwayPointOfSaleSystem
         {
             txtNewPrice.Focus();
             SendKeys.Send("{BACKSPACE}");
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            BunifuButton btn = (BunifuButton) sender;
+            if (btn.Text == "Normal\r\n Price")
+            {
+
+            }
+            else
+            {
+                txtNewPrice.Text = "";
+            }
+
         }
     }
 }
