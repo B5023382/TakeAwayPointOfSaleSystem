@@ -129,6 +129,9 @@
         RK5CYII=
 </value>
   </data>
+  <data name="lblHouseNo.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
+  </data>
   <data name="lblPostcode.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
@@ -355,9 +358,22 @@
   <metadata name="customerData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>788, 17</value>
   </metadata>
+  <metadata name="customerData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>788, 17</value>
+  </metadata>
   <metadata name="dockMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>916, 17</value>
   </metadata>
+  <data name="btnSetTime.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHoAAAAtCAYAAABh0n+rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVHhe7dGxDYAwAMTATMLKsB9j0CeA5JIJjF9y992N
+        9qNtxzy3Y60yNk+YX+ivQ1mCOWh7MAdtD+ag7cEctD2Yg7YHc9D2YA7aHsxB24M5aHswB20P5qDtwRy0
+        PZiDtgdz0PZgDtoezEHbgzloezAHbQ/moO3BHLQ9mIO2B3PQ9mAO2h7MQduDOWh7MAdtD+ag7cEctD2Y
+        g7YHc9D2YA7aHsxB24M5aHswB20P5qDtwRy0PZiDtgdz0PZgDtoezEHbg/mB3uf1dShBjy3Mzb8xbiAd
+        3ZbM+lm3AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnSetMeal.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIwAAABBCAYAAAADtkxUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

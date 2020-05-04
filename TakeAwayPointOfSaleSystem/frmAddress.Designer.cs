@@ -212,11 +212,6 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnSearchByPhone = new Bunifu.UI.WinForms.BunifuImageButton();
             this.dgvCustomer = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.houseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuLabel31 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel30 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel29 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -235,6 +230,13 @@
             this.txtName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTelephone = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnCloseAddress = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.customerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.houseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliverFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -395,6 +397,7 @@
             this.btnSideEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSideEqual.TextMarginLeft = 0;
             this.btnSideEqual.UseDefaultRadiusAndThickness = true;
+            this.btnSideEqual.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnAdd
             // 
@@ -464,6 +467,7 @@
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd.TextMarginLeft = 0;
             this.btnAdd.UseDefaultRadiusAndThickness = true;
+            this.btnAdd.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSideDot
             // 
@@ -533,6 +537,7 @@
             this.btnSideDot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSideDot.TextMarginLeft = 0;
             this.btnSideDot.UseDefaultRadiusAndThickness = true;
+            this.btnSideDot.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide3
             // 
@@ -602,6 +607,7 @@
             this.btnSide3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide3.TextMarginLeft = 0;
             this.btnSide3.UseDefaultRadiusAndThickness = true;
+            this.btnSide3.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide6
             // 
@@ -671,6 +677,7 @@
             this.btnSide6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide6.TextMarginLeft = 0;
             this.btnSide6.UseDefaultRadiusAndThickness = true;
+            this.btnSide6.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide9
             // 
@@ -740,6 +747,7 @@
             this.btnSide9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide9.TextMarginLeft = 0;
             this.btnSide9.UseDefaultRadiusAndThickness = true;
+            this.btnSide9.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide2
             // 
@@ -809,6 +817,7 @@
             this.btnSide2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide2.TextMarginLeft = 0;
             this.btnSide2.UseDefaultRadiusAndThickness = true;
+            this.btnSide2.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide5
             // 
@@ -878,6 +887,7 @@
             this.btnSide5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide5.TextMarginLeft = 0;
             this.btnSide5.UseDefaultRadiusAndThickness = true;
+            this.btnSide5.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide8
             // 
@@ -947,6 +957,7 @@
             this.btnSide8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide8.TextMarginLeft = 0;
             this.btnSide8.UseDefaultRadiusAndThickness = true;
+            this.btnSide8.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide0
             // 
@@ -1016,6 +1027,7 @@
             this.btnSide0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide0.TextMarginLeft = 0;
             this.btnSide0.UseDefaultRadiusAndThickness = true;
+            this.btnSide0.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide1
             // 
@@ -1085,6 +1097,7 @@
             this.btnSide1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide1.TextMarginLeft = 0;
             this.btnSide1.UseDefaultRadiusAndThickness = true;
+            this.btnSide1.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide4
             // 
@@ -1154,6 +1167,7 @@
             this.btnSide4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide4.TextMarginLeft = 0;
             this.btnSide4.UseDefaultRadiusAndThickness = true;
+            this.btnSide4.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSide7
             // 
@@ -1223,6 +1237,7 @@
             this.btnSide7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSide7.TextMarginLeft = 0;
             this.btnSide7.UseDefaultRadiusAndThickness = true;
+            this.btnSide7.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnEnter
             // 
@@ -1292,6 +1307,7 @@
             this.btnEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEnter.TextMarginLeft = 0;
             this.btnEnter.UseDefaultRadiusAndThickness = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnRightShift
             // 
@@ -1361,6 +1377,7 @@
             this.btnRightShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRightShift.TextMarginLeft = 0;
             this.btnRightShift.UseDefaultRadiusAndThickness = true;
+            this.btnRightShift.Click += new System.EventHandler(this.btnLeftShift_Click);
             // 
             // btnHash
             // 
@@ -1430,6 +1447,7 @@
             this.btnHash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHash.TextMarginLeft = 0;
             this.btnHash.UseDefaultRadiusAndThickness = true;
+            this.btnHash.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnRightBrackt
             // 
@@ -1499,6 +1517,7 @@
             this.btnRightBrackt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRightBrackt.TextMarginLeft = 0;
             this.btnRightBrackt.UseDefaultRadiusAndThickness = true;
+            this.btnRightBrackt.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnLeftSlace
             // 
@@ -1568,6 +1587,7 @@
             this.btnLeftSlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLeftSlace.TextMarginLeft = 0;
             this.btnLeftSlace.UseDefaultRadiusAndThickness = true;
+            this.btnLeftSlace.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSingle
             // 
@@ -1637,6 +1657,7 @@
             this.btnSingle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSingle.TextMarginLeft = 0;
             this.btnSingle.UseDefaultRadiusAndThickness = true;
+            this.btnSingle.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnLeftBrackt
             // 
@@ -1706,6 +1727,7 @@
             this.btnLeftBrackt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLeftBrackt.TextMarginLeft = 0;
             this.btnLeftBrackt.UseDefaultRadiusAndThickness = true;
+            this.btnLeftBrackt.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnDot
             // 
@@ -1775,6 +1797,7 @@
             this.btnDot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDot.TextMarginLeft = 0;
             this.btnDot.UseDefaultRadiusAndThickness = true;
+            this.btnDot.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSemi
             // 
@@ -1785,7 +1808,7 @@
             this.btnSemi.BackColor1 = System.Drawing.Color.Black;
             this.btnSemi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSemi.BackgroundImage")));
             this.btnSemi.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSemi.ButtonText = ";";
+            this.btnSemi.ButtonText = ":";
             this.btnSemi.ButtonTextMarginLeft = 0;
             this.btnSemi.ColorContrastOnClick = 45;
             this.btnSemi.ColorContrastOnHover = 45;
@@ -1844,6 +1867,7 @@
             this.btnSemi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSemi.TextMarginLeft = 0;
             this.btnSemi.UseDefaultRadiusAndThickness = true;
+            this.btnSemi.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnP
             // 
@@ -1913,6 +1937,7 @@
             this.btnP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnP.TextMarginLeft = 0;
             this.btnP.UseDefaultRadiusAndThickness = true;
+            this.btnP.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnComa
             // 
@@ -1982,6 +2007,7 @@
             this.btnComa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnComa.TextMarginLeft = 0;
             this.btnComa.UseDefaultRadiusAndThickness = true;
+            this.btnComa.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnL
             // 
@@ -2051,6 +2077,7 @@
             this.btnL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnL.TextMarginLeft = 0;
             this.btnL.UseDefaultRadiusAndThickness = true;
+            this.btnL.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnO
             // 
@@ -2120,6 +2147,7 @@
             this.btnO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnO.TextMarginLeft = 0;
             this.btnO.UseDefaultRadiusAndThickness = true;
+            this.btnO.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnM
             // 
@@ -2189,6 +2217,7 @@
             this.btnM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnM.TextMarginLeft = 0;
             this.btnM.UseDefaultRadiusAndThickness = true;
+            this.btnM.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnK
             // 
@@ -2258,6 +2287,7 @@
             this.btnK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnK.TextMarginLeft = 0;
             this.btnK.UseDefaultRadiusAndThickness = true;
+            this.btnK.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnI
             // 
@@ -2327,6 +2357,7 @@
             this.btnI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnI.TextMarginLeft = 0;
             this.btnI.UseDefaultRadiusAndThickness = true;
+            this.btnI.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnN
             // 
@@ -2396,6 +2427,7 @@
             this.btnN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnN.TextMarginLeft = 0;
             this.btnN.UseDefaultRadiusAndThickness = true;
+            this.btnN.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnJ
             // 
@@ -2465,6 +2497,7 @@
             this.btnJ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnJ.TextMarginLeft = 0;
             this.btnJ.UseDefaultRadiusAndThickness = true;
+            this.btnJ.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnU
             // 
@@ -2534,6 +2567,7 @@
             this.btnU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnU.TextMarginLeft = 0;
             this.btnU.UseDefaultRadiusAndThickness = true;
+            this.btnU.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnB
             // 
@@ -2603,6 +2637,7 @@
             this.btnB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnB.TextMarginLeft = 0;
             this.btnB.UseDefaultRadiusAndThickness = true;
+            this.btnB.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnH
             // 
@@ -2672,6 +2707,7 @@
             this.btnH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnH.TextMarginLeft = 0;
             this.btnH.UseDefaultRadiusAndThickness = true;
+            this.btnH.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnY
             // 
@@ -2741,6 +2777,7 @@
             this.btnY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnY.TextMarginLeft = 0;
             this.btnY.UseDefaultRadiusAndThickness = true;
+            this.btnY.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnV
             // 
@@ -2810,6 +2847,7 @@
             this.btnV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnV.TextMarginLeft = 0;
             this.btnV.UseDefaultRadiusAndThickness = true;
+            this.btnV.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnG
             // 
@@ -2879,6 +2917,7 @@
             this.btnG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnG.TextMarginLeft = 0;
             this.btnG.UseDefaultRadiusAndThickness = true;
+            this.btnG.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnT
             // 
@@ -2948,6 +2987,7 @@
             this.btnT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnT.TextMarginLeft = 0;
             this.btnT.UseDefaultRadiusAndThickness = true;
+            this.btnT.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnC
             // 
@@ -3017,6 +3057,7 @@
             this.btnC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnC.TextMarginLeft = 0;
             this.btnC.UseDefaultRadiusAndThickness = true;
+            this.btnC.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnF
             // 
@@ -3086,6 +3127,7 @@
             this.btnF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnF.TextMarginLeft = 0;
             this.btnF.UseDefaultRadiusAndThickness = true;
+            this.btnF.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnR
             // 
@@ -3155,6 +3197,7 @@
             this.btnR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnR.TextMarginLeft = 0;
             this.btnR.UseDefaultRadiusAndThickness = true;
+            this.btnR.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnSpace
             // 
@@ -3224,6 +3267,7 @@
             this.btnSpace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSpace.TextMarginLeft = 0;
             this.btnSpace.UseDefaultRadiusAndThickness = true;
+            this.btnSpace.Click += new System.EventHandler(this.btnSpace_Click);
             // 
             // btnX
             // 
@@ -3293,6 +3337,7 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.TextMarginLeft = 0;
             this.btnX.UseDefaultRadiusAndThickness = true;
+            this.btnX.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnD
             // 
@@ -3362,6 +3407,7 @@
             this.btnD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnD.TextMarginLeft = 0;
             this.btnD.UseDefaultRadiusAndThickness = true;
+            this.btnD.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnE
             // 
@@ -3431,6 +3477,7 @@
             this.btnE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnE.TextMarginLeft = 0;
             this.btnE.UseDefaultRadiusAndThickness = true;
+            this.btnE.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnZ
             // 
@@ -3500,6 +3547,7 @@
             this.btnZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnZ.TextMarginLeft = 0;
             this.btnZ.UseDefaultRadiusAndThickness = true;
+            this.btnZ.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnS
             // 
@@ -3569,6 +3617,7 @@
             this.btnS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnS.TextMarginLeft = 0;
             this.btnS.UseDefaultRadiusAndThickness = true;
+            this.btnS.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnW
             // 
@@ -3638,6 +3687,7 @@
             this.btnW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnW.TextMarginLeft = 0;
             this.btnW.UseDefaultRadiusAndThickness = true;
+            this.btnW.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnRightSlace
             // 
@@ -3707,6 +3757,7 @@
             this.btnRightSlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRightSlace.TextMarginLeft = 0;
             this.btnRightSlace.UseDefaultRadiusAndThickness = true;
+            this.btnRightSlace.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnA
             // 
@@ -3776,6 +3827,7 @@
             this.btnA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnA.TextMarginLeft = 0;
             this.btnA.UseDefaultRadiusAndThickness = true;
+            this.btnA.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnQ
             // 
@@ -3845,6 +3897,7 @@
             this.btnQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQ.TextMarginLeft = 0;
             this.btnQ.UseDefaultRadiusAndThickness = true;
+            this.btnQ.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnLeftShift
             // 
@@ -3914,6 +3967,7 @@
             this.btnLeftShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLeftShift.TextMarginLeft = 0;
             this.btnLeftShift.UseDefaultRadiusAndThickness = true;
+            this.btnLeftShift.Click += new System.EventHandler(this.btnLeftShift_Click);
             // 
             // btnCap
             // 
@@ -3983,6 +4037,7 @@
             this.btnCap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCap.TextMarginLeft = 0;
             this.btnCap.UseDefaultRadiusAndThickness = true;
+            this.btnCap.Click += new System.EventHandler(this.btnCap_Click);
             // 
             // btnSideMinus
             // 
@@ -4052,6 +4107,7 @@
             this.btnSideMinus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSideMinus.TextMarginLeft = 0;
             this.btnSideMinus.UseDefaultRadiusAndThickness = true;
+            this.btnSideMinus.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnMultiply
             // 
@@ -4121,6 +4177,7 @@
             this.btnMultiply.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMultiply.TextMarginLeft = 0;
             this.btnMultiply.UseDefaultRadiusAndThickness = true;
+            this.btnMultiply.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnDivid
             // 
@@ -4190,6 +4247,7 @@
             this.btnDivid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDivid.TextMarginLeft = 0;
             this.btnDivid.UseDefaultRadiusAndThickness = true;
+            this.btnDivid.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnClear
             // 
@@ -4259,6 +4317,7 @@
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClear.TextMarginLeft = 0;
             this.btnClear.UseDefaultRadiusAndThickness = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBackspace
             // 
@@ -4328,6 +4387,7 @@
             this.btnBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBackspace.TextMarginLeft = 0;
             this.btnBackspace.UseDefaultRadiusAndThickness = true;
+            this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 
             // btnEquat
             // 
@@ -4397,6 +4457,7 @@
             this.btnEquat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEquat.TextMarginLeft = 0;
             this.btnEquat.UseDefaultRadiusAndThickness = true;
+            this.btnEquat.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnMinus
             // 
@@ -4466,6 +4527,7 @@
             this.btnMinus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMinus.TextMarginLeft = 0;
             this.btnMinus.UseDefaultRadiusAndThickness = true;
+            this.btnMinus.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn0
             // 
@@ -4535,6 +4597,7 @@
             this.btn0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn0.TextMarginLeft = 0;
             this.btn0.UseDefaultRadiusAndThickness = true;
+            this.btn0.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn1
             // 
@@ -4604,6 +4667,7 @@
             this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn1.TextMarginLeft = 0;
             this.btn1.UseDefaultRadiusAndThickness = true;
+            this.btn1.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn2
             // 
@@ -4673,6 +4737,7 @@
             this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn2.TextMarginLeft = 0;
             this.btn2.UseDefaultRadiusAndThickness = true;
+            this.btn2.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn3
             // 
@@ -4742,6 +4807,7 @@
             this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn3.TextMarginLeft = 0;
             this.btn3.UseDefaultRadiusAndThickness = true;
+            this.btn3.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn4
             // 
@@ -4811,6 +4877,7 @@
             this.btn4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn4.TextMarginLeft = 0;
             this.btn4.UseDefaultRadiusAndThickness = true;
+            this.btn4.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn5
             // 
@@ -4880,6 +4947,7 @@
             this.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn5.TextMarginLeft = 0;
             this.btn5.UseDefaultRadiusAndThickness = true;
+            this.btn5.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn6
             // 
@@ -4949,6 +5017,7 @@
             this.btn6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn6.TextMarginLeft = 0;
             this.btn6.UseDefaultRadiusAndThickness = true;
+            this.btn6.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn7
             // 
@@ -5018,6 +5087,7 @@
             this.btn7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn7.TextMarginLeft = 0;
             this.btn7.UseDefaultRadiusAndThickness = true;
+            this.btn7.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn8
             // 
@@ -5087,6 +5157,7 @@
             this.btn8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn8.TextMarginLeft = 0;
             this.btn8.UseDefaultRadiusAndThickness = true;
+            this.btn8.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btn9
             // 
@@ -5156,6 +5227,7 @@
             this.btn9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn9.TextMarginLeft = 0;
             this.btn9.UseDefaultRadiusAndThickness = true;
+            this.btn9.Click += new System.EventHandler(this.keyboard_click);
             // 
             // btnwave
             // 
@@ -5225,9 +5297,13 @@
             this.btnwave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnwave.TextMarginLeft = 0;
             this.btnwave.UseDefaultRadiusAndThickness = true;
+            this.btnwave.Click += new System.EventHandler(this.keyboard_click);
             // 
             // bunifuGradientPanel1
             // 
+            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.btnSearchByPhone);
@@ -5291,114 +5367,83 @@
             this.btnSearchByPhone.WaitOnLoad = false;
             this.btnSearchByPhone.Zoom = 40;
             this.btnSearchByPhone.ZoomSpeed = 10;
+            this.btnSearchByPhone.Click += new System.EventHandler(this.btnSearchByPhone_Click);
             // 
             // dgvCustomer
             // 
             this.dgvCustomer.AllowCustomTheming = false;
+            this.dgvCustomer.AllowUserToAddRows = false;
             this.dgvCustomer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(191)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCustomer.BackgroundColor = System.Drawing.Color.White;
             this.dgvCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomer.ColumnHeadersHeight = 40;
             this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.customerId,
             this.customerName,
             this.phoneNumber,
             this.houseNo,
             this.address,
-            this.postcode});
-            this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.postcode,
+            this.deliverFee});
+            this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(191)))));
             this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.dgvCustomer.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCustomer.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvCustomer.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvCustomer.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvCustomer.CurrentTheme.BackColor = System.Drawing.Color.Yellow;
+            this.dgvCustomer.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgvCustomer.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Yellow;
             this.dgvCustomer.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCustomer.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvCustomer.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvCustomer.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCustomer.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvCustomer.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.dgvCustomer.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvCustomer.CurrentTheme.Name = null;
-            this.dgvCustomer.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvCustomer.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
             this.dgvCustomer.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvCustomer.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvCustomer.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvCustomer.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.dgvCustomer.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomer.EnableHeadersVisualStyles = false;
-            this.dgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvCustomer.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgvCustomer.HeaderBackColor = System.Drawing.Color.Yellow;
             this.dgvCustomer.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvCustomer.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvCustomer.HeaderForeColor = System.Drawing.Color.Black;
             this.dgvCustomer.Location = new System.Drawing.Point(568, 12);
+            this.dgvCustomer.MultiSelect = false;
             this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowHeadersVisible = false;
             this.dgvCustomer.RowTemplate.Height = 40;
             this.dgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomer.Size = new System.Drawing.Size(698, 362);
             this.dgvCustomer.TabIndex = 39;
-            this.dgvCustomer.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // customerName
-            // 
-            this.customerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.customerName.DataPropertyName = "name";
-            this.customerName.HeaderText = "Custmoer Name";
-            this.customerName.Name = "customerName";
-            this.customerName.Width = 151;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.phoneNumber.DataPropertyName = "telephone";
-            this.phoneNumber.HeaderText = "Telephone Number";
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.Width = 173;
-            // 
-            // houseNo
-            // 
-            this.houseNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.houseNo.DataPropertyName = "houseNo";
-            this.houseNo.HeaderText = "House No";
-            this.houseNo.Name = "houseNo";
-            this.houseNo.Width = 106;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            // 
-            // postcode
-            // 
-            this.postcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.postcode.DataPropertyName = "postcode";
-            this.postcode.HeaderText = "PostCode";
-            this.postcode.Name = "postcode";
-            this.postcode.Width = 103;
+            this.dgvCustomer.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Yellow;
+            this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             // 
             // bunifuLabel31
             // 
@@ -5581,6 +5626,7 @@
             this.btnSaveOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSaveOrder.TextMarginLeft = 0;
             this.btnSaveOrder.UseDefaultRadiusAndThickness = true;
+            this.btnSaveOrder.Click += new System.EventHandler(this.btnSaveOrder_Click);
             // 
             // txtNote
             // 
@@ -5656,6 +5702,7 @@
             this.txtNote.TextPlaceholder = "Enter Note";
             this.txtNote.UseSystemPasswordChar = false;
             this.txtNote.WordWrap = true;
+            this.txtNote.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtDeliverTime
             // 
@@ -5729,6 +5776,8 @@
             this.txtDeliverTime.TextPlaceholder = "Enter Delivery Time";
             this.txtDeliverTime.UseSystemPasswordChar = false;
             this.txtDeliverTime.WordWrap = true;
+            this.txtDeliverTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeliverTime_KeyPress);
+            this.txtDeliverTime.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtDeliverFee
             // 
@@ -5803,6 +5852,8 @@
             this.txtDeliverFee.TextPlaceholder = "Enter text";
             this.txtDeliverFee.UseSystemPasswordChar = false;
             this.txtDeliverFee.WordWrap = true;
+            this.txtDeliverFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeliverFee_KeyPress);
+            this.txtDeliverFee.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtPostcode
             // 
@@ -5876,6 +5927,7 @@
             this.txtPostcode.TextPlaceholder = "Enter PostCode";
             this.txtPostcode.UseSystemPasswordChar = false;
             this.txtPostcode.WordWrap = true;
+            this.txtPostcode.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtAddress
             // 
@@ -5949,6 +6001,7 @@
             this.txtAddress.TextPlaceholder = "Enter Address";
             this.txtAddress.UseSystemPasswordChar = false;
             this.txtAddress.WordWrap = true;
+            this.txtAddress.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtHouseNo
             // 
@@ -6022,6 +6075,7 @@
             this.txtHouseNo.TextPlaceholder = "Enter House Number";
             this.txtHouseNo.UseSystemPasswordChar = false;
             this.txtHouseNo.WordWrap = true;
+            this.txtHouseNo.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtName
             // 
@@ -6095,6 +6149,7 @@
             this.txtName.TextPlaceholder = "Enter Customer Name";
             this.txtName.UseSystemPasswordChar = false;
             this.txtName.WordWrap = true;
+            this.txtName.Click += new System.EventHandler(this.textbox_select);
             // 
             // txtTelephone
             // 
@@ -6168,6 +6223,8 @@
             this.txtTelephone.TextPlaceholder = "Enter Phone Number";
             this.txtTelephone.UseSystemPasswordChar = false;
             this.txtTelephone.WordWrap = true;
+            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
+            this.txtTelephone.Click += new System.EventHandler(this.textbox_select);
             // 
             // btnCloseAddress
             // 
@@ -6238,6 +6295,65 @@
             this.btnCloseAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCloseAddress.TextMarginLeft = 0;
             this.btnCloseAddress.UseDefaultRadiusAndThickness = true;
+            this.btnCloseAddress.Click += new System.EventHandler(this.btnCloseAddress_Click);
+            // 
+            // customerId
+            // 
+            this.customerId.DataPropertyName = "Id";
+            this.customerId.HeaderText = "ID";
+            this.customerId.Name = "customerId";
+            this.customerId.ReadOnly = true;
+            // 
+            // customerName
+            // 
+            this.customerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.customerName.DataPropertyName = "name";
+            this.customerName.HeaderText = "Custmoer Name";
+            this.customerName.Name = "customerName";
+            this.customerName.ReadOnly = true;
+            this.customerName.Width = 151;
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.phoneNumber.DataPropertyName = "telephone";
+            this.phoneNumber.HeaderText = "Telephone Number";
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.ReadOnly = true;
+            this.phoneNumber.Width = 173;
+            // 
+            // houseNo
+            // 
+            this.houseNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.houseNo.DataPropertyName = "houseNo";
+            this.houseNo.HeaderText = "House No";
+            this.houseNo.Name = "houseNo";
+            this.houseNo.ReadOnly = true;
+            this.houseNo.Width = 106;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.DataPropertyName = "address";
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // postcode
+            // 
+            this.postcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.postcode.DataPropertyName = "postcode";
+            this.postcode.HeaderText = "PostCode";
+            this.postcode.Name = "postcode";
+            this.postcode.ReadOnly = true;
+            this.postcode.Width = 103;
+            // 
+            // deliverFee
+            // 
+            this.deliverFee.DataPropertyName = "deliverFee";
+            this.deliverFee.HeaderText = "Deliver Fee";
+            this.deliverFee.Name = "deliverFee";
+            this.deliverFee.ReadOnly = true;
             // 
             // frmAddress
             // 
@@ -6335,11 +6451,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuImageButton btnSearchByPhone;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn houseNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn postcode;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel31;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel30;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel29;
@@ -6358,5 +6469,12 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtName;
         private Bunifu.UI.WinForms.BunifuTextBox txtTelephone;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCloseAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn houseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deliverFee;
     }
 }

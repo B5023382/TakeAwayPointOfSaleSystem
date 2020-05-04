@@ -14,6 +14,7 @@ namespace TakeAwayPointOfSaleSystem
     public partial class frmAddress : Form
     {
         onScreenKeyboard onKeyboard;
+        private DataTable dt;
 
         //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private string connectionString =
@@ -54,11 +55,6 @@ namespace TakeAwayPointOfSaleSystem
             onKeyboard.press_shift();
         }
 
-        private void btnRightShift_Click(object sender, EventArgs e)
-        {
-            onKeyboard.press_shift();
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             onKeyboard.press_clear();
@@ -87,7 +83,7 @@ namespace TakeAwayPointOfSaleSystem
         private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (!Char.IsDigit(ch))
+            if (!Char.IsDigit(ch) && ch != 8)
             {
                 e.Handled = true;
             }
@@ -110,33 +106,84 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSaveOrder_Click(object sender, EventArgs e)
         {
-            //lblAddress.Text = txtHouseNo.Text + " " + txtAddress.Text;
-            //lblDeliverFee.Text = txtDeliverFee.Text;
-            //lblDeliverTime.Text = txtDeliverTime.Text;
-            //lblName.Text = txtName.Text;
-            //lblNote.Text = txtNote.Text;
-            //lblPostcode.Text = txtPostcode.Text;
-            //lblTelphone.Text = txtTelephone.Text;
+            Program.mainPage.setCustomerDetail(txtTelephone.Text, 
+                txtName.Text, txtHouseNo.Text, txtAddress.Text, txtPostcode.Text, txtDeliverFee.Text, txtDeliverTime.Text);
 
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            if (!string.IsNullOrWhiteSpace(txtTelephone.Text))
             {
-                sqlCon.Open();
-                SqlCommand addCustomer = new SqlCommand("AddCustomer", sqlCon);
-                addCustomer.CommandType = CommandType.StoredProcedure;
-                addCustomer.Parameters.AddWithValue("@telephone", txtTelephone.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@name", txtName.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@houseNo", txtHouseNo.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@address", txtAddress.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@postcode", txtPostcode.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@deliverFee", txtDeliverFee.Text.Trim());
-                addCustomer.Parameters.AddWithValue("@id", 0);
-                addCustomer.ExecuteNonQuery();
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand addCustomer = new SqlCommand("AddCustomer", sqlCon);
+                    addCustomer.CommandType = CommandType.StoredProcedure;
+                    addCustomer.Parameters.AddWithValue("@telephone", txtTelephone.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@name", txtName.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@houseNo", txtHouseNo.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@address", txtAddress.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@postcode", txtPostcode.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@deliverFee", txtDeliverFee.Text.Trim());
+                    addCustomer.ExecuteNonQuery();
+                }
             }
+
+            if (dt != null)
+            {
+                dt.Clear();
+                dgvCustomer.DataSource = dt;
+            }
+            
+            Program.ShowMainForm();
+            this.Hide();
         }
 
         private void btnCloseAddress_Click(object sender, EventArgs e)
         {
+            Program.ShowMainForm();
+            this.Hide();
+        }
 
+        public void SetCustomerDetail(string phone, string name, string houseNo, string address, string postCode, string deliverFee, string deliverTime)
+        {
+            txtTelephone.Text = phone;
+            txtName.Text = name;
+            txtHouseNo.Text = houseNo;
+            txtAddress.Text = address;
+            txtPostcode.Text = postCode;
+            txtDeliverFee.Text = deliverFee;
+            txtDeliverTime.Text = deliverTime;
+        }
+
+        private void btnSearchByPhone_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtTelephone.Text))
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlDataAdapter getCustomer = new SqlDataAdapter("SELECT * FROM Customer WHERE telephone = " + txtTelephone.Text, sqlCon);
+                    //SqlDataAdapter getCustomer = new SqlDataAdapter("SELECT * FROM Customer", sqlCon);
+                    DataSet customerDetail = new DataSet();
+                    getCustomer.Fill(customerDetail);
+                    sqlCon.Close();
+                    dt = customerDetail.Tables[0];
+                    dgvCustomer.DataSource = dt;
+                }
+            }
+        }
+
+        private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCustomer.SelectedRows.Count > 0 )
+            {
+                DataGridViewRow selectedRow = dgvCustomer.SelectedRows[0];
+
+                txtName.Text = selectedRow.Cells["customerName"].Value.ToString();
+                txtTelephone.Text = selectedRow.Cells["phoneNumber"].Value.ToString();
+                txtHouseNo.Text = selectedRow.Cells["houseNo"].Value.ToString();
+                txtAddress.Text = selectedRow.Cells["address"].Value.ToString();
+                txtPostcode.Text = selectedRow.Cells["postcode"].Value.ToString();
+                txtDeliverFee.Text = selectedRow.Cells["deliverFee"].Value.ToString();
+            }
         }
     }
 }

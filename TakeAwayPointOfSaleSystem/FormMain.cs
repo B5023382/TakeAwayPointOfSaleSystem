@@ -21,7 +21,8 @@ namespace TakeAwayPointOfSaleSystem
         private string connectionString =
             "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\LocalDatabase.mdf;Integrated Security=True";
         Timer myTimer = new Timer{Interval = 1000};
- 
+        private frmAddress addressForm = new frmAddress();
+
         public FrmMain(string username, string role)
         {
             InitializeComponent();
@@ -83,7 +84,24 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnChangePrice_Click(object sender, EventArgs e)
         {
+            using (dialogChangePrice d = new dialogChangePrice('.', "Change Price"))
+            {
+                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    lblTotal.Text = d.newData;
+                }
+            }
+        }
 
+        private void btnSetTime_Click(object sender, EventArgs e)
+        {
+            using (dialogChangePrice d = new dialogChangePrice(':', "Set Time"))
+            {
+                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    lblDeliverTime.Text = d.newData;
+                }
+            }
         }
 
         private void btnCancelOrder_Click(object sender, EventArgs e)
@@ -138,7 +156,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void panAddressBar_click(object sender, EventArgs e)
         {
-            var addressForm = new frmAddress();
+            addressForm.SetCustomerDetail(lblTelphone.Text, lblName.Text, lblHouseNo.Text, lblAddress.Text, lblPostcode.Text, lblDeliverFee.Text, lblDeliverTime.Text);
             Program.SetActiveForm(addressForm);
             Program.ShowForm();
             this.Hide();
@@ -146,23 +164,38 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnManagement_Click(object sender, EventArgs e)
         {
-            if (lblRole.Text.Equals("admin"))
-            {
-                var managementForm = new frmManagement();
-                Program.SetActiveForm(managementForm);
-                Program.ShowForm();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Your don't have management permission, Please change to admin account", "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
+            //if (lblRole.Text.Equals("admin"))
+            //{
+            //    var managementForm = new frmManagement();
+            //    Program.SetActiveForm(managementForm);
+            //    Program.ShowForm();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Your don't have management permission, Please change to admin account", "Error", MessageBoxButtons.OK,
+            //        MessageBoxIcon.Error);
+            //}
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
 
         }
+
+        public void setCustomerDetail(string phone, string name, string houseNo, string address, string postCode, string deliverFee, string deliverTime)
+        {
+            lblTelphone.Text = phone;
+            lblName.Text = name;
+            lblHouseNo.Text = houseNo;
+            lblAddress.Text = address;
+            lblPostcode.Text = postCode;
+            lblDeliverFee.Text = deliverFee;
+            lblDeliverTime.Text = deliverTime;
+
+            lblAddress.Location = new Point(lblHouseNo.Right + 5, lblHouseNo.Location.Y );
+        }
+
+
     }
 }

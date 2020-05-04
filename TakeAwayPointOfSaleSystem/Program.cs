@@ -9,7 +9,7 @@ namespace TakeAwayPointOfSaleSystem
     static class Program
     {
         private static ApplicationContext mainContext = new ApplicationContext();
-        private static Form mainPage; 
+        public static FrmMain mainPage; 
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,11 +22,12 @@ namespace TakeAwayPointOfSaleSystem
 
             //mainContext.MainForm = new frmLogin();
             mainContext.MainForm = new FrmMain("Wei", "admin");
-            mainPage = mainContext.MainForm;
+            mainPage = (FrmMain)mainContext.MainForm;
+            mainContext.MainForm = new frmAddress();
             Application.Run(mainContext);
         }
 
-        public static void SetMainForm(Form mainForm)
+        public static void SetMainForm(FrmMain mainForm)
         {
             mainPage = mainForm;
             mainContext.MainForm = mainPage;
