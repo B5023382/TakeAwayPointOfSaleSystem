@@ -22,6 +22,7 @@ namespace TakeAwayPointOfSaleSystem
             "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
+        private frmMenuEdit menuEdition = new frmMenuEdit();
 
         public FrmMain(string username, string role)
         {
@@ -170,18 +171,18 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnManagement_Click(object sender, EventArgs e)
         {
-            //if (lblRole.Text.Equals("admin"))
-            //{
-            //    var managementForm = new frmManagement();
-            //    Program.SetActiveForm(managementForm);
-            //    Program.ShowForm();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Your don't have management permission, Please change to admin account", "Error", MessageBoxButtons.OK,
-            //        MessageBoxIcon.Error);
-            //}
+            if (lblRole.Text.Equals("admin"))
+            {
+                var managementForm = new frmManagement(menuEdition);
+                Program.SetActiveForm(managementForm);
+                Program.ShowForm();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Your don't have management permission, Please change to admin account", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void btnPayment_Click(object sender, EventArgs e)

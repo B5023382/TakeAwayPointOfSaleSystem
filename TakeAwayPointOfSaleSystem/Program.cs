@@ -9,7 +9,8 @@ namespace TakeAwayPointOfSaleSystem
     static class Program
     {
         private static ApplicationContext mainContext = new ApplicationContext();
-        public static FrmMain mainPage; 
+        public static FrmMain mainPage;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
