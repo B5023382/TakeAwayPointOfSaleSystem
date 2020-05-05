@@ -77,5 +77,13 @@ namespace TakeAwayPointOfSaleSystem
             txtSetPrice.Text = "";
             txtQTY.Text = "";
         }
+
+        private void btnGetDish_Click(object sender, EventArgs e)
+        {
+            using (dialogSelectSetMealDish d = new dialogSelectSetMealDish() )
+            {
+                
+            }
+        }
     }
 }

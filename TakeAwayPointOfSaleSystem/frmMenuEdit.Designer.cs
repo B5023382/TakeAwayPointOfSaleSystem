@@ -6146,7 +6146,7 @@
             borderEdges79.TopRight = true;
             this.btnSaveFood.CustomizableEdges = borderEdges79;
             this.btnSaveFood.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSaveFood.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnSaveFood.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSaveFood.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSaveFood.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSaveFood.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
@@ -7036,7 +7036,7 @@
             borderEdges86.TopRight = true;
             this.btnSaveSet.CustomizableEdges = borderEdges86;
             this.btnSaveSet.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSaveSet.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnSaveSet.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSaveSet.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSaveSet.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSaveSet.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
@@ -7295,6 +7295,7 @@
             this.btnGetDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGetDish.TextMarginLeft = 0;
             this.btnGetDish.UseDefaultRadiusAndThickness = true;
+            this.btnGetDish.Click += new System.EventHandler(this.btnGetDish_Click);
             // 
             // btnDeleteSetDish
             // 
@@ -7979,7 +7980,7 @@
             borderEdges80.TopRight = true;
             this.btnAddDish.CustomizableEdges = borderEdges80;
             this.btnAddDish.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAddDish.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnAddDish.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddDish.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAddDish.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnAddDish.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
