@@ -147,6 +147,12 @@
     <Compile Include="dialogChangePrice.Designer.cs">
       <DependentUpon>dialogChangePrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="dialogPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogPayment.Designer.cs">
+      <DependentUpon>dialogPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="dialogSelectSetMealDish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="dialogChangePrice.resx">
       <DependentUpon>dialogChangePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogPayment.resx">
+      <DependentUpon>dialogPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dialogSelectSetMealDish.resx">
       <DependentUpon>dialogSelectSetMealDish.cs</DependentUpon>
