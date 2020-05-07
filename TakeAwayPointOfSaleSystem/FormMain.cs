@@ -187,7 +187,13 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
+            using (dialogPayment p = new dialogPayment())
+            {
+                if (p.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
 
+                }
+            }
         }
 
         public void setCustomerDetail(string phone, string name, string houseNo, string address, string postCode, string deliverFee, string deliverTime)

@@ -123,6 +123,7 @@ namespace TakeAwayPointOfSaleSystem
                     addCustomer.Parameters.AddWithValue("@postcode", txtPostcode.Text.Trim().ToUpper());
                     addCustomer.Parameters.AddWithValue("@deliverFee", txtDeliverFee.Text.Trim());
                     addCustomer.ExecuteNonQuery();
+                    sqlCon.Close();
                 }
             }
 

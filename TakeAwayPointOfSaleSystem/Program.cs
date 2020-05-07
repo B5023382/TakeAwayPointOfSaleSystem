@@ -23,6 +23,7 @@ namespace TakeAwayPointOfSaleSystem
             mainContext.MainForm = new FrmMain("Wei", "admin");
             mainPage = (FrmMain)mainContext.MainForm;
             //mainContext.MainForm = new frmLogin();
+            mainContext.MainForm = new frmManagement(new frmMenuEdit());
             Application.Run(mainContext);
         }
 

@@ -116,7 +116,6 @@ namespace TakeAwayPointOfSaleSystem
                 {
 
                     string role = dr.GetValue(3).ToString();
-                    
                     var mainForm = new FrmMain(txtUsername.Text.Trim(), role);
                     Program.SetMainForm(mainForm);
                     Program.ShowForm();
@@ -131,6 +130,8 @@ namespace TakeAwayPointOfSaleSystem
                     MessageBox.Show("Either your username or password is incorrect", "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
+
+                sqlCon.Close();
             }
         }
 

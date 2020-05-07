@@ -29,6 +29,7 @@ namespace TakeAwayPointOfSaleSystem
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
             menuEdit.setEditType(0);
+            Program.SetActiveForm(menuEdit);
             Program.ShowForm();
             this.Close();
         }
@@ -36,28 +37,34 @@ namespace TakeAwayPointOfSaleSystem
         private void EditFoodCategory_Click(object sender, EventArgs e)
         {
             menuEdit.setEditType(1);
+            Program.SetActiveForm(menuEdit);
             Program.ShowForm();
+            menuEdit.fillGird();
             this.Close();
         }
 
         private void btnEditSetMeal_Click(object sender, EventArgs e)
         {
             menuEdit.setEditType(4);
+            Program.SetActiveForm(menuEdit);
             Program.ShowForm();
             this.Close();
         }
 
         private void btnEditDishCommon_Click(object sender, EventArgs e)
         {
-            menuEdit.setEditType(3);
+            menuEdit.setEditType(2);
+            Program.SetActiveForm(menuEdit);
             Program.ShowForm();
             this.Close();
         }
 
         private void btnEditCommonCategory_Click(object sender, EventArgs e)
         {
-            menuEdit.setEditType(2);
+            menuEdit.setEditType(3);
+            Program.SetActiveForm(menuEdit);
             Program.ShowForm();
+            menuEdit.fillGird();
             this.Close();
         }
     }
