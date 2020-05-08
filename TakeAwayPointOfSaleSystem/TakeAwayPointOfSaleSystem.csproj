@@ -159,6 +159,7 @@
     <Compile Include="dialogSelectSetMealDish.Designer.cs">
       <DependentUpon>dialogSelectSetMealDish.cs</DependentUpon>
     </Compile>
+    <Compile Include="dish.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>

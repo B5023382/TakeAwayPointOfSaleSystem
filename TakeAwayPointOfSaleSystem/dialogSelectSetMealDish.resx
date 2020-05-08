@@ -159,6 +159,9 @@
         MbtKWMTsKmERs6uERcyuEhYxu0r4HfH1fHw7wE97d1vCZss7jhfslFya/GVrXAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="dishNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="dishName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

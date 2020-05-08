@@ -171,7 +171,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnManagement_Click(object sender, EventArgs e)
         {
-            if (lblRole.Text.Equals("admin"))
+            if (lblRole.Text.Trim() == "admin")
             {
                 var managementForm = new frmManagement(menuEdition);
                 Program.SetActiveForm(managementForm);

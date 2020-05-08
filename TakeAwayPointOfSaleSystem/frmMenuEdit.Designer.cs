@@ -143,10 +143,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges80 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -163,10 +159,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges81 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges82 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges83 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -179,6 +171,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnSideEqual = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -282,18 +278,22 @@
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblNo = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnBack2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDeleteFood = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnClearFood = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSaveFood = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dgvFood = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.foodNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSetName = new System.Windows.Forms.TabPage();
+            this.lblDishOther = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDishName = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAddDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtQTY = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txtSetDishOther = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txtSetDish = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtSetPrice = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -321,10 +321,8 @@
             this.setMealPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lblTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.foodNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSetDishPrice = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel2.SuspendLayout();
             this.pagEditType.SuspendLayout();
             this.tabCategory.SuspendLayout();
@@ -5408,10 +5406,10 @@
             this.pagEditType.Location = new System.Drawing.Point(1, 35);
             this.pagEditType.Multiline = true;
             this.pagEditType.Name = "pagEditType";
-            this.pagEditType.Page = this.tabFood;
-            this.pagEditType.PageIndex = 1;
-            this.pagEditType.PageName = "tabFood";
-            this.pagEditType.PageTitle = "Menu";
+            this.pagEditType.Page = this.txtSetName;
+            this.pagEditType.PageIndex = 2;
+            this.pagEditType.PageName = "txtSetName";
+            this.pagEditType.PageTitle = "SetMenu";
             this.pagEditType.SelectedIndex = 0;
             this.pagEditType.Size = new System.Drawing.Size(1278, 448);
             this.pagEditType.TabIndex = 4;
@@ -6029,7 +6027,7 @@
             this.tabFood.Controls.Add(this.bunifuLabel6);
             this.tabFood.Controls.Add(this.bunifuLabel5);
             this.tabFood.Controls.Add(this.bunifuLabel4);
-            this.tabFood.Controls.Add(this.bunifuLabel3);
+            this.tabFood.Controls.Add(this.lblNo);
             this.tabFood.Controls.Add(this.btnBack2);
             this.tabFood.Controls.Add(this.btnDeleteFood);
             this.tabFood.Controls.Add(this.btnClearFood);
@@ -6389,7 +6387,7 @@
             this.txtDishNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDishNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDishNo.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtDishNo.DefaultText = "";
+            this.txtDishNo.DefaultText = "0";
             this.txtDishNo.FillColor = System.Drawing.Color.White;
             this.txtDishNo.HideSelection = true;
             this.txtDishNo.IconLeft = null;
@@ -6397,7 +6395,8 @@
             this.txtDishNo.IconPadding = 10;
             this.txtDishNo.IconRight = null;
             this.txtDishNo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDishNo.Lines = new string[0];
+            this.txtDishNo.Lines = new string[] {
+        "0"};
             this.txtDishNo.Location = new System.Drawing.Point(49, 383);
             this.txtDishNo.MaxLength = 32767;
             this.txtDishNo.MinimumSize = new System.Drawing.Size(1, 1);
@@ -6431,7 +6430,7 @@
             this.txtDishNo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDishNo.SelectedText = "";
             this.txtDishNo.SelectionLength = 0;
-            this.txtDishNo.SelectionStart = 0;
+            this.txtDishNo.SelectionStart = 1;
             this.txtDishNo.ShortcutsEnabled = true;
             this.txtDishNo.Size = new System.Drawing.Size(63, 30);
             this.txtDishNo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
@@ -6455,9 +6454,9 @@
             this.lblCategoryTwo.Name = "lblCategoryTwo";
             this.lblCategoryTwo.Padding = new System.Windows.Forms.Padding(5);
             this.lblCategoryTwo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCategoryTwo.Size = new System.Drawing.Size(10, 10);
+            this.lblCategoryTwo.Size = new System.Drawing.Size(51, 33);
             this.lblCategoryTwo.TabIndex = 12;
-            this.lblCategoryTwo.Text = null;
+            this.lblCategoryTwo.Text = "test 1";
             this.lblCategoryTwo.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblCategoryTwo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -6471,9 +6470,9 @@
             this.lblCategoryOne.Name = "lblCategoryOne";
             this.lblCategoryOne.Padding = new System.Windows.Forms.Padding(5);
             this.lblCategoryOne.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCategoryOne.Size = new System.Drawing.Size(10, 10);
+            this.lblCategoryOne.Size = new System.Drawing.Size(54, 33);
             this.lblCategoryOne.TabIndex = 11;
-            this.lblCategoryOne.Text = null;
+            this.lblCategoryOne.Text = "test 2";
             this.lblCategoryOne.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblCategoryOne.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -6537,20 +6536,20 @@
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel3
+            // lblNo
             // 
-            this.bunifuLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(23, 387);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(20, 15);
-            this.bunifuLabel3.TabIndex = 6;
-            this.bunifuLabel3.Text = "No.";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblNo.AutoEllipsis = false;
+            this.lblNo.CursorType = null;
+            this.lblNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNo.Location = new System.Drawing.Point(23, 387);
+            this.lblNo.Name = "lblNo";
+            this.lblNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNo.Size = new System.Drawing.Size(20, 15);
+            this.lblNo.TabIndex = 6;
+            this.lblNo.Text = "No.";
+            this.lblNo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblNo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnBack2
             // 
@@ -6839,6 +6838,8 @@
             // dgvFood
             // 
             this.dgvFood.AllowCustomTheming = false;
+            this.dgvFood.AllowUserToAddRows = false;
+            this.dgvFood.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(191)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             this.dgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
@@ -6897,6 +6898,7 @@
             this.dgvFood.HeaderForeColor = System.Drawing.Color.White;
             this.dgvFood.Location = new System.Drawing.Point(7, 6);
             this.dgvFood.Name = "dgvFood";
+            this.dgvFood.ReadOnly = true;
             this.dgvFood.RowHeadersVisible = false;
             this.dgvFood.RowTemplate.Height = 40;
             this.dgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -6905,13 +6907,45 @@
             this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Orange;
             this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
             // 
+            // foodNo
+            // 
+            this.foodNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.foodNo.DataPropertyName = "Id";
+            this.foodNo.HeaderText = "No.";
+            this.foodNo.Name = "foodNo";
+            this.foodNo.ReadOnly = true;
+            this.foodNo.Width = 59;
+            // 
+            // dishName
+            // 
+            this.dishName.HeaderText = "Dish Name";
+            this.dishName.Name = "dishName";
+            this.dishName.ReadOnly = true;
+            // 
+            // dishOtherName
+            // 
+            this.dishOtherName.HeaderText = "Dish Other Name";
+            this.dishOtherName.Name = "dishOtherName";
+            this.dishOtherName.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 69;
+            // 
             // txtSetName
             // 
+            this.txtSetName.Controls.Add(this.txtSetDishPrice);
+            this.txtSetName.Controls.Add(this.bunifuLabel3);
+            this.txtSetName.Controls.Add(this.lblDishOther);
+            this.txtSetName.Controls.Add(this.lblDishName);
             this.txtSetName.Controls.Add(this.btnAddDish);
             this.txtSetName.Controls.Add(this.txtQTY);
             this.txtSetName.Controls.Add(this.bunifuLabel13);
-            this.txtSetName.Controls.Add(this.txtSetDishOther);
-            this.txtSetName.Controls.Add(this.txtSetDish);
             this.txtSetName.Controls.Add(this.bunifuLabel12);
             this.txtSetName.Controls.Add(this.bunifuLabel11);
             this.txtSetName.Controls.Add(this.txtSetPrice);
@@ -6934,6 +6968,34 @@
             this.txtSetName.TabIndex = 2;
             this.txtSetName.Text = "SetMenu";
             this.txtSetName.UseVisualStyleBackColor = true;
+            // 
+            // lblDishOther
+            // 
+            this.lblDishOther.AutoEllipsis = false;
+            this.lblDishOther.CursorType = null;
+            this.lblDishOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblDishOther.Location = new System.Drawing.Point(836, 33);
+            this.lblDishOther.Name = "lblDishOther";
+            this.lblDishOther.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDishOther.Size = new System.Drawing.Size(64, 15);
+            this.lblDishOther.TabIndex = 22;
+            this.lblDishOther.Text = "bunifuLabel3";
+            this.lblDishOther.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDishOther.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblDishName
+            // 
+            this.lblDishName.AutoEllipsis = false;
+            this.lblDishName.CursorType = null;
+            this.lblDishName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblDishName.Location = new System.Drawing.Point(696, 33);
+            this.lblDishName.Name = "lblDishName";
+            this.lblDishName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDishName.Size = new System.Drawing.Size(64, 15);
+            this.lblDishName.TabIndex = 21;
+            this.lblDishName.Text = "bunifuLabel3";
+            this.lblDishName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDishName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnAddDish
             // 
@@ -7003,6 +7065,7 @@
             this.btnAddDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddDish.TextMarginLeft = 0;
             this.btnAddDish.UseDefaultRadiusAndThickness = true;
+            this.btnAddDish.Click += new System.EventHandler(this.btnAddDish_Click);
             // 
             // txtQTY
             // 
@@ -7022,7 +7085,7 @@
             this.txtQTY.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtQTY.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQTY.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtQTY.DefaultText = "";
+            this.txtQTY.DefaultText = "0";
             this.txtQTY.FillColor = System.Drawing.Color.White;
             this.txtQTY.HideSelection = true;
             this.txtQTY.IconLeft = null;
@@ -7030,33 +7093,34 @@
             this.txtQTY.IconPadding = 10;
             this.txtQTY.IconRight = null;
             this.txtQTY.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQTY.Lines = new string[0];
-            this.txtQTY.Location = new System.Drawing.Point(1036, 32);
+            this.txtQTY.Lines = new string[] {
+        "0"};
+            this.txtQTY.Location = new System.Drawing.Point(1045, 33);
             this.txtQTY.MaxLength = 32767;
             this.txtQTY.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtQTY.Modified = false;
             this.txtQTY.Multiline = false;
             this.txtQTY.Name = "txtQTY";
-            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties25.FillColor = System.Drawing.Color.Empty;
-            stateProperties25.ForeColor = System.Drawing.Color.Empty;
-            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtQTY.OnActiveState = stateProperties25;
-            stateProperties26.BorderColor = System.Drawing.Color.Empty;
-            stateProperties26.FillColor = System.Drawing.Color.White;
-            stateProperties26.ForeColor = System.Drawing.Color.Empty;
-            stateProperties26.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtQTY.OnDisabledState = stateProperties26;
-            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties27.FillColor = System.Drawing.Color.Empty;
-            stateProperties27.ForeColor = System.Drawing.Color.Empty;
-            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtQTY.OnHoverState = stateProperties27;
-            stateProperties28.BorderColor = System.Drawing.Color.Silver;
-            stateProperties28.FillColor = System.Drawing.Color.White;
-            stateProperties28.ForeColor = System.Drawing.Color.Empty;
-            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtQTY.OnIdleState = stateProperties28;
+            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtQTY.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.Empty;
+            stateProperties30.FillColor = System.Drawing.Color.White;
+            stateProperties30.ForeColor = System.Drawing.Color.Empty;
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtQTY.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtQTY.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Empty;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtQTY.OnIdleState = stateProperties32;
             this.txtQTY.PasswordChar = '\0';
             this.txtQTY.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtQTY.PlaceholderText = "Enter text";
@@ -7064,7 +7128,7 @@
             this.txtQTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtQTY.SelectedText = "";
             this.txtQTY.SelectionLength = 0;
-            this.txtQTY.SelectionStart = 0;
+            this.txtQTY.SelectionStart = 1;
             this.txtQTY.ShortcutsEnabled = true;
             this.txtQTY.Size = new System.Drawing.Size(57, 26);
             this.txtQTY.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
@@ -7076,13 +7140,14 @@
             this.txtQTY.TextPlaceholder = "Enter text";
             this.txtQTY.UseSystemPasswordChar = false;
             this.txtQTY.WordWrap = true;
+            this.txtQTY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQTY_KeyPress);
             // 
             // bunifuLabel13
             // 
             this.bunifuLabel13.AutoEllipsis = false;
             this.bunifuLabel13.CursorType = null;
             this.bunifuLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel13.Location = new System.Drawing.Point(1052, 11);
+            this.bunifuLabel13.Location = new System.Drawing.Point(1061, 12);
             this.bunifuLabel13.Name = "bunifuLabel13";
             this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel13.Size = new System.Drawing.Size(25, 15);
@@ -7091,163 +7156,17 @@
             this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // txtSetDishOther
-            // 
-            this.txtSetDishOther.AcceptsReturn = false;
-            this.txtSetDishOther.AcceptsTab = false;
-            this.txtSetDishOther.AnimationSpeed = 200;
-            this.txtSetDishOther.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtSetDishOther.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtSetDishOther.BackColor = System.Drawing.Color.Transparent;
-            this.txtSetDishOther.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSetDishOther.BackgroundImage")));
-            this.txtSetDishOther.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtSetDishOther.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtSetDishOther.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtSetDishOther.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtSetDishOther.BorderRadius = 1;
-            this.txtSetDishOther.BorderThickness = 1;
-            this.txtSetDishOther.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtSetDishOther.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSetDishOther.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtSetDishOther.DefaultText = "";
-            this.txtSetDishOther.FillColor = System.Drawing.Color.White;
-            this.txtSetDishOther.HideSelection = true;
-            this.txtSetDishOther.IconLeft = null;
-            this.txtSetDishOther.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSetDishOther.IconPadding = 10;
-            this.txtSetDishOther.IconRight = null;
-            this.txtSetDishOther.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSetDishOther.Lines = new string[0];
-            this.txtSetDishOther.Location = new System.Drawing.Point(837, 32);
-            this.txtSetDishOther.MaxLength = 32767;
-            this.txtSetDishOther.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtSetDishOther.Modified = false;
-            this.txtSetDishOther.Multiline = false;
-            this.txtSetDishOther.Name = "txtSetDishOther";
-            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties29.FillColor = System.Drawing.Color.Empty;
-            stateProperties29.ForeColor = System.Drawing.Color.Empty;
-            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetDishOther.OnActiveState = stateProperties29;
-            stateProperties30.BorderColor = System.Drawing.Color.Empty;
-            stateProperties30.FillColor = System.Drawing.Color.White;
-            stateProperties30.ForeColor = System.Drawing.Color.Empty;
-            stateProperties30.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSetDishOther.OnDisabledState = stateProperties30;
-            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties31.FillColor = System.Drawing.Color.Empty;
-            stateProperties31.ForeColor = System.Drawing.Color.Empty;
-            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetDishOther.OnHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.Silver;
-            stateProperties32.FillColor = System.Drawing.Color.White;
-            stateProperties32.ForeColor = System.Drawing.Color.Empty;
-            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetDishOther.OnIdleState = stateProperties32;
-            this.txtSetDishOther.PasswordChar = '\0';
-            this.txtSetDishOther.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSetDishOther.PlaceholderText = "Enter text";
-            this.txtSetDishOther.ReadOnly = false;
-            this.txtSetDishOther.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSetDishOther.SelectedText = "";
-            this.txtSetDishOther.SelectionLength = 0;
-            this.txtSetDishOther.SelectionStart = 0;
-            this.txtSetDishOther.ShortcutsEnabled = true;
-            this.txtSetDishOther.Size = new System.Drawing.Size(164, 26);
-            this.txtSetDishOther.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtSetDishOther.TabIndex = 17;
-            this.txtSetDishOther.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSetDishOther.TextMarginBottom = 0;
-            this.txtSetDishOther.TextMarginLeft = 3;
-            this.txtSetDishOther.TextMarginTop = 0;
-            this.txtSetDishOther.TextPlaceholder = "Enter text";
-            this.txtSetDishOther.UseSystemPasswordChar = false;
-            this.txtSetDishOther.WordWrap = true;
-            // 
-            // txtSetDish
-            // 
-            this.txtSetDish.AcceptsReturn = false;
-            this.txtSetDish.AcceptsTab = false;
-            this.txtSetDish.AnimationSpeed = 200;
-            this.txtSetDish.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtSetDish.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtSetDish.BackColor = System.Drawing.Color.Transparent;
-            this.txtSetDish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSetDish.BackgroundImage")));
-            this.txtSetDish.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtSetDish.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtSetDish.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtSetDish.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtSetDish.BorderRadius = 1;
-            this.txtSetDish.BorderThickness = 1;
-            this.txtSetDish.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtSetDish.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSetDish.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtSetDish.DefaultText = "";
-            this.txtSetDish.FillColor = System.Drawing.Color.White;
-            this.txtSetDish.HideSelection = true;
-            this.txtSetDish.IconLeft = null;
-            this.txtSetDish.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSetDish.IconPadding = 10;
-            this.txtSetDish.IconRight = null;
-            this.txtSetDish.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSetDish.Lines = new string[0];
-            this.txtSetDish.Location = new System.Drawing.Point(660, 32);
-            this.txtSetDish.MaxLength = 32767;
-            this.txtSetDish.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtSetDish.Modified = false;
-            this.txtSetDish.Multiline = false;
-            this.txtSetDish.Name = "txtSetDish";
-            stateProperties33.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties33.FillColor = System.Drawing.Color.Empty;
-            stateProperties33.ForeColor = System.Drawing.Color.Empty;
-            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetDish.OnActiveState = stateProperties33;
-            stateProperties34.BorderColor = System.Drawing.Color.Empty;
-            stateProperties34.FillColor = System.Drawing.Color.White;
-            stateProperties34.ForeColor = System.Drawing.Color.Empty;
-            stateProperties34.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSetDish.OnDisabledState = stateProperties34;
-            stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties35.FillColor = System.Drawing.Color.Empty;
-            stateProperties35.ForeColor = System.Drawing.Color.Empty;
-            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetDish.OnHoverState = stateProperties35;
-            stateProperties36.BorderColor = System.Drawing.Color.Silver;
-            stateProperties36.FillColor = System.Drawing.Color.White;
-            stateProperties36.ForeColor = System.Drawing.Color.Empty;
-            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetDish.OnIdleState = stateProperties36;
-            this.txtSetDish.PasswordChar = '\0';
-            this.txtSetDish.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSetDish.PlaceholderText = "Enter text";
-            this.txtSetDish.ReadOnly = false;
-            this.txtSetDish.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSetDish.SelectedText = "";
-            this.txtSetDish.SelectionLength = 0;
-            this.txtSetDish.SelectionStart = 0;
-            this.txtSetDish.ShortcutsEnabled = true;
-            this.txtSetDish.Size = new System.Drawing.Size(144, 26);
-            this.txtSetDish.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtSetDish.TabIndex = 16;
-            this.txtSetDish.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSetDish.TextMarginBottom = 0;
-            this.txtSetDish.TextMarginLeft = 3;
-            this.txtSetDish.TextMarginTop = 0;
-            this.txtSetDish.TextPlaceholder = "Enter text";
-            this.txtSetDish.UseSystemPasswordChar = false;
-            this.txtSetDish.WordWrap = true;
-            // 
             // bunifuLabel12
             // 
             this.bunifuLabel12.AutoEllipsis = false;
             this.bunifuLabel12.CursorType = null;
             this.bunifuLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel12.Location = new System.Drawing.Point(885, 12);
+            this.bunifuLabel12.Location = new System.Drawing.Point(836, 12);
             this.bunifuLabel12.Name = "bunifuLabel12";
             this.bunifuLabel12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel12.Size = new System.Drawing.Size(84, 15);
+            this.bunifuLabel12.Size = new System.Drawing.Size(87, 15);
             this.bunifuLabel12.TabIndex = 15;
-            this.bunifuLabel12.Text = "Dish Other Name";
+            this.bunifuLabel12.Text = "Dish Other Name:";
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel12.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -7256,12 +7175,12 @@
             this.bunifuLabel11.AutoEllipsis = false;
             this.bunifuLabel11.CursorType = null;
             this.bunifuLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel11.Location = new System.Drawing.Point(705, 11);
+            this.bunifuLabel11.Location = new System.Drawing.Point(696, 12);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(55, 15);
+            this.bunifuLabel11.Size = new System.Drawing.Size(58, 15);
             this.bunifuLabel11.TabIndex = 14;
-            this.bunifuLabel11.Text = "Dish Name";
+            this.bunifuLabel11.Text = "Dish Name:";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -7298,26 +7217,26 @@
             this.txtSetPrice.Modified = false;
             this.txtSetPrice.Multiline = false;
             this.txtSetPrice.Name = "txtSetPrice";
-            stateProperties37.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties37.FillColor = System.Drawing.Color.Empty;
-            stateProperties37.ForeColor = System.Drawing.Color.Empty;
-            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetPrice.OnActiveState = stateProperties37;
-            stateProperties38.BorderColor = System.Drawing.Color.Empty;
-            stateProperties38.FillColor = System.Drawing.Color.White;
-            stateProperties38.ForeColor = System.Drawing.Color.Empty;
-            stateProperties38.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSetPrice.OnDisabledState = stateProperties38;
-            stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties39.FillColor = System.Drawing.Color.Empty;
-            stateProperties39.ForeColor = System.Drawing.Color.Empty;
-            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetPrice.OnHoverState = stateProperties39;
-            stateProperties40.BorderColor = System.Drawing.Color.Silver;
-            stateProperties40.FillColor = System.Drawing.Color.White;
-            stateProperties40.ForeColor = System.Drawing.Color.Empty;
-            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetPrice.OnIdleState = stateProperties40;
+            stateProperties33.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties33.FillColor = System.Drawing.Color.Empty;
+            stateProperties33.ForeColor = System.Drawing.Color.Empty;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetPrice.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.Empty;
+            stateProperties34.FillColor = System.Drawing.Color.White;
+            stateProperties34.ForeColor = System.Drawing.Color.Empty;
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSetPrice.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties35.FillColor = System.Drawing.Color.Empty;
+            stateProperties35.ForeColor = System.Drawing.Color.Empty;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetPrice.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.Silver;
+            stateProperties36.FillColor = System.Drawing.Color.White;
+            stateProperties36.ForeColor = System.Drawing.Color.Empty;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetPrice.OnIdleState = stateProperties36;
             this.txtSetPrice.PasswordChar = '\0';
             this.txtSetPrice.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSetPrice.PlaceholderText = "Enter text";
@@ -7337,6 +7256,7 @@
             this.txtSetPrice.TextPlaceholder = "Enter text";
             this.txtSetPrice.UseSystemPasswordChar = false;
             this.txtSetPrice.WordWrap = true;
+            this.txtSetPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDishPrice_KeyPress);
             // 
             // txtSetOtherName
             // 
@@ -7371,26 +7291,26 @@
             this.txtSetOtherName.Modified = false;
             this.txtSetOtherName.Multiline = false;
             this.txtSetOtherName.Name = "txtSetOtherName";
-            stateProperties41.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties41.FillColor = System.Drawing.Color.Empty;
-            stateProperties41.ForeColor = System.Drawing.Color.Empty;
-            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetOtherName.OnActiveState = stateProperties41;
-            stateProperties42.BorderColor = System.Drawing.Color.Empty;
-            stateProperties42.FillColor = System.Drawing.Color.White;
-            stateProperties42.ForeColor = System.Drawing.Color.Empty;
-            stateProperties42.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSetOtherName.OnDisabledState = stateProperties42;
-            stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties43.FillColor = System.Drawing.Color.Empty;
-            stateProperties43.ForeColor = System.Drawing.Color.Empty;
-            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetOtherName.OnHoverState = stateProperties43;
-            stateProperties44.BorderColor = System.Drawing.Color.Silver;
-            stateProperties44.FillColor = System.Drawing.Color.White;
-            stateProperties44.ForeColor = System.Drawing.Color.Empty;
-            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSetOtherName.OnIdleState = stateProperties44;
+            stateProperties37.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties37.FillColor = System.Drawing.Color.Empty;
+            stateProperties37.ForeColor = System.Drawing.Color.Empty;
+            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetOtherName.OnActiveState = stateProperties37;
+            stateProperties38.BorderColor = System.Drawing.Color.Empty;
+            stateProperties38.FillColor = System.Drawing.Color.White;
+            stateProperties38.ForeColor = System.Drawing.Color.Empty;
+            stateProperties38.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSetOtherName.OnDisabledState = stateProperties38;
+            stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties39.FillColor = System.Drawing.Color.Empty;
+            stateProperties39.ForeColor = System.Drawing.Color.Empty;
+            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetOtherName.OnHoverState = stateProperties39;
+            stateProperties40.BorderColor = System.Drawing.Color.Silver;
+            stateProperties40.FillColor = System.Drawing.Color.White;
+            stateProperties40.ForeColor = System.Drawing.Color.Empty;
+            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetOtherName.OnIdleState = stateProperties40;
             this.txtSetOtherName.PasswordChar = '\0';
             this.txtSetOtherName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSetOtherName.PlaceholderText = "Enter text";
@@ -7444,26 +7364,26 @@
             this.bunifuTextBox2.Modified = false;
             this.bunifuTextBox2.Multiline = false;
             this.bunifuTextBox2.Name = "bunifuTextBox2";
-            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties45.FillColor = System.Drawing.Color.Empty;
-            stateProperties45.ForeColor = System.Drawing.Color.Empty;
-            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnActiveState = stateProperties45;
-            stateProperties46.BorderColor = System.Drawing.Color.Empty;
-            stateProperties46.FillColor = System.Drawing.Color.White;
-            stateProperties46.ForeColor = System.Drawing.Color.Empty;
-            stateProperties46.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.OnDisabledState = stateProperties46;
-            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties47.FillColor = System.Drawing.Color.Empty;
-            stateProperties47.ForeColor = System.Drawing.Color.Empty;
-            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnHoverState = stateProperties47;
-            stateProperties48.BorderColor = System.Drawing.Color.Silver;
-            stateProperties48.FillColor = System.Drawing.Color.White;
-            stateProperties48.ForeColor = System.Drawing.Color.Empty;
-            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnIdleState = stateProperties48;
+            stateProperties41.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties41.FillColor = System.Drawing.Color.Empty;
+            stateProperties41.ForeColor = System.Drawing.Color.Empty;
+            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox2.OnActiveState = stateProperties41;
+            stateProperties42.BorderColor = System.Drawing.Color.Empty;
+            stateProperties42.FillColor = System.Drawing.Color.White;
+            stateProperties42.ForeColor = System.Drawing.Color.Empty;
+            stateProperties42.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBox2.OnDisabledState = stateProperties42;
+            stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties43.FillColor = System.Drawing.Color.Empty;
+            stateProperties43.ForeColor = System.Drawing.Color.Empty;
+            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox2.OnHoverState = stateProperties43;
+            stateProperties44.BorderColor = System.Drawing.Color.Silver;
+            stateProperties44.FillColor = System.Drawing.Color.White;
+            stateProperties44.ForeColor = System.Drawing.Color.Empty;
+            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox2.OnIdleState = stateProperties44;
             this.bunifuTextBox2.PasswordChar = '\0';
             this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox2.PlaceholderText = "Enter text";
@@ -7666,6 +7586,7 @@
             this.btnDeleteSetDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDeleteSetDish.TextMarginLeft = 0;
             this.btnDeleteSetDish.UseDefaultRadiusAndThickness = true;
+            this.btnDeleteSetDish.Click += new System.EventHandler(this.btnDeleteSetDish_Click);
             // 
             // btnGetDish
             // 
@@ -7952,6 +7873,8 @@
             // dgvSetDish
             // 
             this.dgvSetDish.AllowCustomTheming = false;
+            this.dgvSetDish.AllowUserToAddRows = false;
+            this.dgvSetDish.AllowUserToDeleteRows = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
             this.dgvSetDish.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
@@ -8011,6 +7934,7 @@
             this.dgvSetDish.HeaderForeColor = System.Drawing.Color.White;
             this.dgvSetDish.Location = new System.Drawing.Point(660, 63);
             this.dgvSetDish.Name = "dgvSetDish";
+            this.dgvSetDish.ReadOnly = true;
             this.dgvSetDish.RowHeadersVisible = false;
             this.dgvSetDish.RowTemplate.Height = 40;
             this.dgvSetDish.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -8023,23 +7947,27 @@
             this.setDishId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.setDishId.HeaderText = "No.";
             this.setDishId.Name = "setDishId";
+            this.setDishId.ReadOnly = true;
             this.setDishId.Width = 59;
             // 
             // setDishName
             // 
             this.setDishName.HeaderText = "Dish Name";
             this.setDishName.Name = "setDishName";
+            this.setDishName.ReadOnly = true;
             // 
             // setDishOtherName
             // 
             this.setDishOtherName.HeaderText = "Dish Other Name";
             this.setDishOtherName.Name = "setDishOtherName";
+            this.setDishOtherName.ReadOnly = true;
             // 
             // setDishPrice
             // 
             this.setDishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.setDishPrice.HeaderText = "Price";
             this.setDishPrice.Name = "setDishPrice";
+            this.setDishPrice.ReadOnly = true;
             this.setDishPrice.Width = 69;
             // 
             // qty
@@ -8047,11 +7975,14 @@
             this.qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.qty.HeaderText = "QTY";
             this.qty.Name = "qty";
+            this.qty.ReadOnly = true;
             this.qty.Width = 62;
             // 
             // dgvSetMenu
             // 
             this.dgvSetMenu.AllowCustomTheming = false;
+            this.dgvSetMenu.AllowUserToAddRows = false;
+            this.dgvSetMenu.AllowUserToDeleteRows = false;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
             this.dgvSetMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
@@ -8109,6 +8040,7 @@
             this.dgvSetMenu.HeaderForeColor = System.Drawing.Color.White;
             this.dgvSetMenu.Location = new System.Drawing.Point(8, 110);
             this.dgvSetMenu.Name = "dgvSetMenu";
+            this.dgvSetMenu.ReadOnly = true;
             this.dgvSetMenu.RowHeadersVisible = false;
             this.dgvSetMenu.RowTemplate.Height = 40;
             this.dgvSetMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -8121,23 +8053,27 @@
             this.setMealId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.setMealId.HeaderText = "ID.";
             this.setMealId.Name = "setMealId";
+            this.setMealId.ReadOnly = true;
             this.setMealId.Width = 52;
             // 
             // setMealName
             // 
             this.setMealName.HeaderText = "Set Meal Name";
             this.setMealName.Name = "setMealName";
+            this.setMealName.ReadOnly = true;
             // 
             // setMealOtherName
             // 
             this.setMealOtherName.HeaderText = "Set Meal Other Name";
             this.setMealOtherName.Name = "setMealOtherName";
+            this.setMealOtherName.ReadOnly = true;
             // 
             // setMealPrice
             // 
             this.setMealPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.setMealPrice.HeaderText = "Price";
             this.setMealPrice.Name = "setMealPrice";
+            this.setMealPrice.ReadOnly = true;
             this.setMealPrice.Width = 69;
             // 
             // bunifuGradientPanel1
@@ -8174,31 +8110,94 @@
             this.lblTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // foodNo
+            // txtSetDishPrice
             // 
-            this.foodNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.foodNo.DataPropertyName = "Id";
-            this.foodNo.HeaderText = "No.";
-            this.foodNo.Name = "foodNo";
-            this.foodNo.Width = 59;
+            this.txtSetDishPrice.AcceptsReturn = false;
+            this.txtSetDishPrice.AcceptsTab = false;
+            this.txtSetDishPrice.AnimationSpeed = 200;
+            this.txtSetDishPrice.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSetDishPrice.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSetDishPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtSetDishPrice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSetDishPrice.BackgroundImage")));
+            this.txtSetDishPrice.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSetDishPrice.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtSetDishPrice.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSetDishPrice.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSetDishPrice.BorderRadius = 1;
+            this.txtSetDishPrice.BorderThickness = 1;
+            this.txtSetDishPrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSetDishPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSetDishPrice.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtSetDishPrice.DefaultText = "0.00";
+            this.txtSetDishPrice.FillColor = System.Drawing.Color.White;
+            this.txtSetDishPrice.HideSelection = true;
+            this.txtSetDishPrice.IconLeft = null;
+            this.txtSetDishPrice.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSetDishPrice.IconPadding = 10;
+            this.txtSetDishPrice.IconRight = null;
+            this.txtSetDishPrice.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSetDishPrice.Lines = new string[] {
+        "0.00"};
+            this.txtSetDishPrice.Location = new System.Drawing.Point(966, 32);
+            this.txtSetDishPrice.MaxLength = 32767;
+            this.txtSetDishPrice.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSetDishPrice.Modified = false;
+            this.txtSetDishPrice.Multiline = false;
+            this.txtSetDishPrice.Name = "txtSetDishPrice";
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetDishPrice.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.Empty;
+            stateProperties26.FillColor = System.Drawing.Color.White;
+            stateProperties26.ForeColor = System.Drawing.Color.Empty;
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSetDishPrice.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetDishPrice.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSetDishPrice.OnIdleState = stateProperties28;
+            this.txtSetDishPrice.PasswordChar = '\0';
+            this.txtSetDishPrice.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSetDishPrice.PlaceholderText = "Enter text";
+            this.txtSetDishPrice.ReadOnly = false;
+            this.txtSetDishPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSetDishPrice.SelectedText = "";
+            this.txtSetDishPrice.SelectionLength = 0;
+            this.txtSetDishPrice.SelectionStart = 0;
+            this.txtSetDishPrice.ShortcutsEnabled = true;
+            this.txtSetDishPrice.Size = new System.Drawing.Size(57, 26);
+            this.txtSetDishPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSetDishPrice.TabIndex = 24;
+            this.txtSetDishPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSetDishPrice.TextMarginBottom = 0;
+            this.txtSetDishPrice.TextMarginLeft = 3;
+            this.txtSetDishPrice.TextMarginTop = 0;
+            this.txtSetDishPrice.TextPlaceholder = "Enter text";
+            this.txtSetDishPrice.UseSystemPasswordChar = false;
+            this.txtSetDishPrice.WordWrap = true;
+            this.txtSetDishPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDishPrice_KeyPress);
             // 
-            // dishName
+            // bunifuLabel3
             // 
-            this.dishName.HeaderText = "Dish Name";
-            this.dishName.Name = "dishName";
-            // 
-            // dishOtherName
-            // 
-            this.dishOtherName.HeaderText = "Dish Other Name";
-            this.dishOtherName.Name = "dishOtherName";
-            // 
-            // price
-            // 
-            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.price.DataPropertyName = "price";
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.Width = 69;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bunifuLabel3.Location = new System.Drawing.Point(982, 11);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(27, 15);
+            this.bunifuLabel3.TabIndex = 23;
+            this.bunifuLabel3.Text = "Price";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // frmMenuEdit
             // 
@@ -8329,7 +8328,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel lblNo;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBack2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDeleteFood;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnClearFood;
@@ -8340,8 +8339,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddDish;
         private Bunifu.UI.WinForms.BunifuTextBox txtQTY;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
-        private Bunifu.UI.WinForms.BunifuTextBox txtSetDishOther;
-        private Bunifu.UI.WinForms.BunifuTextBox txtSetDish;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuTextBox txtSetPrice;
@@ -8380,5 +8377,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishOtherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private Bunifu.UI.WinForms.BunifuLabel lblDishOther;
+        private Bunifu.UI.WinForms.BunifuLabel lblDishName;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSetDishPrice;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 using TakeAwayPointOfSaleSystem.Properties;
 
 namespace TakeAwayPointOfSaleSystem
@@ -21,11 +22,17 @@ namespace TakeAwayPointOfSaleSystem
         private gridSetting  gridSet = new gridSetting();
         private int category1 = 0;
         private int category2 = 0;
+
+        private dish food;
         onScreenKeyboard onKeyboard;
         public frmMenuEdit()
         {
             InitializeComponent();
             onKeyboard = new onScreenKeyboard(btnLeftShift, btnRightShift);
+            lblCategoryOne.Text = "";
+            lblCategoryTwo.Text = "";
+            lblDishName.Text = "";
+            lblDishOther.Text = "";
         }
 
         private void keyboard_click(object sender, EventArgs e)
@@ -65,6 +72,8 @@ namespace TakeAwayPointOfSaleSystem
 
         private void textbox_select(object sender, EventArgs e)
         {
+            BunifuTextBox t = (BunifuTextBox) sender;
+            t.SelectAll();
             onKeyboard.setCotrol((Control)sender);
         }
 
@@ -93,12 +102,13 @@ namespace TakeAwayPointOfSaleSystem
             {
                 case 0:
                     lblTitle.Text = "Edit Menu";
-                    gridSet.setTable("foodMenu", "GetFoodTable");
+                    gridSet.setTable("FoodMenu", "GetFoodTable");
                     gridSet.setProprety("FoodCategory", "AddNewDish", "DeleteDish");
                     dgvFoodCategory.Columns[2].DataPropertyName = "categoryName";
                     dgvFoodCategory.Columns[3].DataPropertyName = "categoryOtherName";
                     dgvFood.Columns[1].DataPropertyName = "foodName";
                     dgvFood.Columns[2].DataPropertyName = "foodOtherName";
+                    lblCategoryTwo.Visible = true;
                     pagEditType.SetPage(1);
                     fillGirdOfPage2();
                     break;
@@ -151,10 +161,10 @@ namespace TakeAwayPointOfSaleSystem
         private void btnClearSet_Click(object sender, EventArgs e)
         {
             dgvCatogory.ClearSelection();
-            txtSetDish.Text = "";
-            txtSetDishOther.Text = "";
+            lblDishName.Text = "";
+            lblDishOther.Text = "";
             txtSetName.Text = "";
-            txtSetPrice.Text = "";
+            txtSetPrice.Text = "0.00";
             txtQTY.Text = "";
         }
 
@@ -162,7 +172,12 @@ namespace TakeAwayPointOfSaleSystem
         {
             using (dialogSelectSetMealDish d = new dialogSelectSetMealDish() )
             {
-                
+                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    food = d.getDish();
+                    lblDishName.Text = food.getName();
+                    lblDishOther.Text = food.getOtherName();
+                }
             }
         }
 
@@ -221,7 +236,7 @@ namespace TakeAwayPointOfSaleSystem
                 dgvFood.Columns["category"].Visible = false;
                 dgvFood.Columns["categoryName"].Visible = false;
 
-                if (gridSet.getTable().Equals("foodMenu"))
+                if (gridSet.getTable().Equals("FoodMenu"))
                 {
                     dgvFood.Columns["category2"].Visible = false;
                     dgvFood.Columns["category2Name"].Visible = false;
@@ -337,14 +352,20 @@ namespace TakeAwayPointOfSaleSystem
                 dgvFoodCategory.SelectedRows[0].DefaultCellStyle.BackColor = Color.Empty;
                 if (category1 == (int) dgvFoodCategory.SelectedRows[0].Cells[1].Value)
                 {
-                    category1 = 0;
-                    lblCategoryOne.Text = "";
+                    if (category2 != 0)
+                    {
+                        category1 = category2;
+                        lblCategoryOne.Text = lblCategoryTwo.Text;
+                    }
+                    else
+                    {
+                        category1 = 0;
+                        lblCategoryOne.Text = "";
+                    }
                 }
-                else
-                {
-                    category2 = 0;
-                    lblCategoryTwo.Text = "";
-                }
+
+                category2 = 0;
+                lblCategoryTwo.Text = "";
 
             }
             
@@ -365,7 +386,7 @@ namespace TakeAwayPointOfSaleSystem
             txtDishNo.Text = "";
             txtDishName.Text = "";
             txtDishOther.Text = "";
-            txtDishPrice.Text = "";
+            txtDishPrice.Text = "0.00";
             lblCategoryOne.Text = "";
             lblCategoryTwo.Text = "";
             category2 = 0;
@@ -416,7 +437,7 @@ namespace TakeAwayPointOfSaleSystem
                 category1 = (int)selectedRow.Cells[4].Value;
                 lblCategoryOne.Text = selectedRow.Cells[5].Value.ToString();
                 
-                if (gridSet.getTable().Equals("foodMenu") && !string.IsNullOrWhiteSpace(selectedRow.Cells[6].Value.ToString()) )
+                if (gridSet.getTable().Equals("FoodMenu") && !string.IsNullOrWhiteSpace(selectedRow.Cells[6].Value.ToString()) )
                 {
                     category2 = (int)selectedRow.Cells[6].Value;
                     lblCategoryTwo.Text = selectedRow.Cells[7].Value.ToString();
@@ -440,7 +461,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSaveFood_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDishNo.Text)|| string.IsNullOrWhiteSpace(txtDishName.Text)|| string.IsNullOrWhiteSpace(txtSetPrice.Text) || category1 == 0)
+            if ((string.IsNullOrWhiteSpace(txtDishNo.Text))|| string.IsNullOrWhiteSpace(txtDishName.Text)|| string.IsNullOrWhiteSpace(txtDishPrice.Text) || category1 == 0)
             {
                 MessageBox.Show("Your didn't complete all necessary section", "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -452,12 +473,12 @@ namespace TakeAwayPointOfSaleSystem
                     sqlCon.Open();
                     SqlCommand addCustomer = new SqlCommand(gridSet.getProcedureName(), sqlCon);
                     addCustomer.CommandType = CommandType.StoredProcedure;
-                    addCustomer.Parameters.AddWithValue("@foodName", txtDishOther.Text.Trim());
-                    addCustomer.Parameters.AddWithValue("@foodOtherName", txtDishName.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@foodName", txtDishName.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@foodOtherName", txtDishOther.Text.Trim());
                     addCustomer.Parameters.AddWithValue("@price", txtDishPrice.Text.Trim());
                     addCustomer.Parameters.AddWithValue("@id", txtDishNo.Text);
                     addCustomer.Parameters.AddWithValue("@category1", category1);
-                    if (gridSet.getTable().Equals("foodMenu") && category2 != 0)
+                    if (gridSet.getTable().Equals("FoodMenu") )
                     {
                         addCustomer.Parameters.AddWithValue("@category2", category2);
                     }
@@ -468,6 +489,37 @@ namespace TakeAwayPointOfSaleSystem
                 }
             }
             clearPage();
+        }
+
+        private void btnAddDish_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(lblDishName.Text) || Convert.ToInt32(txtQTY.Text) < 1)
+            {
+                MessageBox.Show("Please select a dish use Get Dish button", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                dgvSetDish.Rows.Add(food.getId(), lblDishName.Text, lblDishOther.Text, txtSetDishPrice.Text,
+                    txtQTY.Text);
+            }
+        }
+
+        private void btnDeleteSetDish_Click(object sender, EventArgs e)
+        {
+            if (dgvSetDish.SelectedRows.Count > 0)
+            {
+                dgvSetDish.Rows.RemoveAt(dgvSetDish.SelectedRows[0].Index);
+            }
+        }
+
+        private void txtQTY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
