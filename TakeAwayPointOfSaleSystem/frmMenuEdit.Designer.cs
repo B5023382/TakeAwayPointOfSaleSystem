@@ -116,6 +116,9 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges73 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges74 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges75 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -136,9 +139,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges77 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges78 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges79 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -259,18 +259,26 @@
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvCatogory = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBackToManagement = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDeleteCatogory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BtnClearCategory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSaveCategory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tabFood = new System.Windows.Forms.TabPage();
+            this.dgvFoodCategory = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.selected = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDishPrice = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtDishOther = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtDishName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtDishNo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lblCategoryTwo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCategoryOne = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblcate = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -279,16 +287,7 @@
             this.btnDeleteFood = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnClearFood = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSaveFood = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.dgvFoodCateGory = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.cateSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cateOther = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFood = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.foodNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSetName = new System.Windows.Forms.TabPage();
             this.btnAddDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtQTY = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -322,15 +321,16 @@
             this.setMealPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lblTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuGradientPanel2.SuspendLayout();
             this.pagEditType.SuspendLayout();
             this.tabCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatogory)).BeginInit();
             this.tabFood.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFoodCateGory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFoodCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).BeginInit();
             this.txtSetName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSetDish)).BeginInit();
@@ -5331,7 +5331,7 @@
             this.btnwave.AnimationSpeed = 200;
             this.btnwave.AutoGenerateColors = false;
             this.btnwave.BackColor = System.Drawing.Color.Transparent;
-            this.btnwave.BackColor1 = System.Drawing.Color.Black;
+            this.btnwave.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnwave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnwave.BackgroundImage")));
             this.btnwave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnwave.ButtonText = "`";
@@ -5350,15 +5350,15 @@
             this.btnwave.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnwave.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnwave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnwave.ForeColor = System.Drawing.Color.White;
+            this.btnwave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnwave.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnwave.IconMarginLeft = 11;
             this.btnwave.IconPadding = 10;
             this.btnwave.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnwave.IdleBorderColor = System.Drawing.Color.White;
+            this.btnwave.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnwave.IdleBorderRadius = 1;
             this.btnwave.IdleBorderThickness = 1;
-            this.btnwave.IdleFillColor = System.Drawing.Color.Black;
+            this.btnwave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnwave.IdleIconLeftImage = null;
             this.btnwave.IdleIconRightImage = null;
             this.btnwave.IndicateFocus = false;
@@ -5372,12 +5372,12 @@
             this.btnwave.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnwave.onHoverState.IconLeftImage = null;
             this.btnwave.onHoverState.IconRightImage = null;
-            this.btnwave.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnwave.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnwave.OnIdleState.BorderRadius = 1;
             this.btnwave.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnwave.OnIdleState.BorderThickness = 1;
-            this.btnwave.OnIdleState.FillColor = System.Drawing.Color.Black;
-            this.btnwave.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnwave.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnwave.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnwave.OnIdleState.IconLeftImage = null;
             this.btnwave.OnIdleState.IconRightImage = null;
             this.btnwave.OnPressedState.BorderColor = System.Drawing.Color.White;
@@ -5408,10 +5408,10 @@
             this.pagEditType.Location = new System.Drawing.Point(1, 35);
             this.pagEditType.Multiline = true;
             this.pagEditType.Name = "pagEditType";
-            this.pagEditType.Page = this.tabCategory;
-            this.pagEditType.PageIndex = 0;
-            this.pagEditType.PageName = "tabCategory";
-            this.pagEditType.PageTitle = "Category";
+            this.pagEditType.Page = this.tabFood;
+            this.pagEditType.PageIndex = 1;
+            this.pagEditType.PageName = "tabFood";
+            this.pagEditType.PageTitle = "Menu";
             this.pagEditType.SelectedIndex = 0;
             this.pagEditType.Size = new System.Drawing.Size(1278, 448);
             this.pagEditType.TabIndex = 4;
@@ -5493,7 +5493,7 @@
             this.txtOtherName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOtherName.Lines = new string[0];
             this.txtOtherName.Location = new System.Drawing.Point(744, 380);
-            this.txtOtherName.MaxLength = 50;
+            this.txtOtherName.MaxLength = 32767;
             this.txtOtherName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtOtherName.Modified = false;
             this.txtOtherName.Multiline = false;
@@ -5568,7 +5568,7 @@
             this.txtCategoryName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCategoryName.Lines = new string[0];
             this.txtCategoryName.Location = new System.Drawing.Point(429, 380);
-            this.txtCategoryName.MaxLength = 50;
+            this.txtCategoryName.MaxLength = 32767;
             this.txtCategoryName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCategoryName.Modified = false;
             this.txtCategoryName.Multiline = false;
@@ -5714,6 +5714,27 @@
             this.dgvCatogory.TabIndex = 4;
             this.dgvCatogory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvCatogory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatogory_CellClick);
+            // 
+            // CategoryId
+            // 
+            this.CategoryId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.CategoryId.DataPropertyName = "Id";
+            this.CategoryId.HeaderText = "ID.";
+            this.CategoryId.Name = "CategoryId";
+            this.CategoryId.ReadOnly = true;
+            this.CategoryId.Width = 52;
+            // 
+            // categoryName
+            // 
+            this.categoryName.HeaderText = "Category Name";
+            this.categoryName.Name = "categoryName";
+            this.categoryName.ReadOnly = true;
+            // 
+            // categoryOtherName
+            // 
+            this.categoryOtherName.HeaderText = "Category Other Name";
+            this.categoryOtherName.Name = "categoryOtherName";
+            this.categoryOtherName.ReadOnly = true;
             // 
             // btnBackToManagement
             // 
@@ -5997,13 +6018,14 @@
             // 
             // tabFood
             // 
+            this.tabFood.Controls.Add(this.dgvFoodCategory);
             this.tabFood.Controls.Add(this.txtDishPrice);
             this.tabFood.Controls.Add(this.txtDishOther);
             this.tabFood.Controls.Add(this.txtDishName);
             this.tabFood.Controls.Add(this.txtDishNo);
             this.tabFood.Controls.Add(this.lblCategoryTwo);
             this.tabFood.Controls.Add(this.lblCategoryOne);
-            this.tabFood.Controls.Add(this.bunifuLabel7);
+            this.tabFood.Controls.Add(this.lblcate);
             this.tabFood.Controls.Add(this.bunifuLabel6);
             this.tabFood.Controls.Add(this.bunifuLabel5);
             this.tabFood.Controls.Add(this.bunifuLabel4);
@@ -6012,7 +6034,6 @@
             this.tabFood.Controls.Add(this.btnDeleteFood);
             this.tabFood.Controls.Add(this.btnClearFood);
             this.tabFood.Controls.Add(this.btnSaveFood);
-            this.tabFood.Controls.Add(this.dgvFoodCateGory);
             this.tabFood.Controls.Add(this.dgvFood);
             this.tabFood.Location = new System.Drawing.Point(4, 4);
             this.tabFood.Name = "tabFood";
@@ -6021,6 +6042,106 @@
             this.tabFood.TabIndex = 1;
             this.tabFood.Text = "Menu";
             this.tabFood.UseVisualStyleBackColor = true;
+            // 
+            // dgvFoodCategory
+            // 
+            this.dgvFoodCategory.AllowCustomTheming = false;
+            this.dgvFoodCategory.AllowUserToAddRows = false;
+            this.dgvFoodCategory.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvFoodCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFoodCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFoodCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFoodCategory.BackgroundColor = System.Drawing.Color.White;
+            this.dgvFoodCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFoodCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFoodCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFoodCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFoodCategory.ColumnHeadersHeight = 40;
+            this.dgvFoodCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.selected,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dgvFoodCategory.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvFoodCategory.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFoodCategory.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFoodCategory.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFoodCategory.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFoodCategory.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvFoodCategory.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFoodCategory.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFoodCategory.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFoodCategory.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFoodCategory.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvFoodCategory.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFoodCategory.CurrentTheme.Name = null;
+            this.dgvFoodCategory.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFoodCategory.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFoodCategory.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFoodCategory.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFoodCategory.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFoodCategory.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvFoodCategory.EnableHeadersVisualStyles = false;
+            this.dgvFoodCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFoodCategory.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFoodCategory.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvFoodCategory.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvFoodCategory.Location = new System.Drawing.Point(573, 6);
+            this.dgvFoodCategory.Name = "dgvFoodCategory";
+            this.dgvFoodCategory.ReadOnly = true;
+            this.dgvFoodCategory.RowHeadersVisible = false;
+            this.dgvFoodCategory.RowTemplate.Height = 40;
+            this.dgvFoodCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFoodCategory.Size = new System.Drawing.Size(691, 361);
+            this.dgvFoodCategory.TabIndex = 17;
+            this.dgvFoodCategory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvFoodCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFoodCateGory_CellClick);
+            // 
+            // selected
+            // 
+            this.selected.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.selected.HeaderText = "Selected";
+            this.selected.Name = "selected";
+            this.selected.ReadOnly = true;
+            this.selected.Width = 97;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID.";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 52;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Category Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Category Other Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // txtDishPrice
             // 
@@ -6041,7 +6162,7 @@
             this.txtDishPrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDishPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDishPrice.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtDishPrice.DefaultText = "";
+            this.txtDishPrice.DefaultText = "0.00";
             this.txtDishPrice.FillColor = System.Drawing.Color.White;
             this.txtDishPrice.HideSelection = true;
             this.txtDishPrice.IconLeft = null;
@@ -6049,7 +6170,8 @@
             this.txtDishPrice.IconPadding = 10;
             this.txtDishPrice.IconRight = null;
             this.txtDishPrice.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDishPrice.Lines = new string[0];
+            this.txtDishPrice.Lines = new string[] {
+        "0.00"};
             this.txtDishPrice.Location = new System.Drawing.Point(893, 383);
             this.txtDishPrice.MaxLength = 32767;
             this.txtDishPrice.MinimumSize = new System.Drawing.Size(1, 1);
@@ -6328,14 +6450,15 @@
             this.lblCategoryTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCategoryTwo.AutoEllipsis = false;
             this.lblCategoryTwo.CursorType = null;
-            this.lblCategoryTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblCategoryTwo.Location = new System.Drawing.Point(1201, 387);
+            this.lblCategoryTwo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryTwo.Location = new System.Drawing.Point(1136, 381);
             this.lblCategoryTwo.Name = "lblCategoryTwo";
+            this.lblCategoryTwo.Padding = new System.Windows.Forms.Padding(5);
             this.lblCategoryTwo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCategoryTwo.Size = new System.Drawing.Size(45, 15);
+            this.lblCategoryTwo.Size = new System.Drawing.Size(10, 10);
             this.lblCategoryTwo.TabIndex = 12;
-            this.lblCategoryTwo.Text = "Category";
-            this.lblCategoryTwo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCategoryTwo.Text = null;
+            this.lblCategoryTwo.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblCategoryTwo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblCategoryOne
@@ -6343,30 +6466,31 @@
             this.lblCategoryOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCategoryOne.AutoEllipsis = false;
             this.lblCategoryOne.CursorType = null;
-            this.lblCategoryOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblCategoryOne.Location = new System.Drawing.Point(1070, 387);
+            this.lblCategoryOne.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryOne.Location = new System.Drawing.Point(1070, 381);
             this.lblCategoryOne.Name = "lblCategoryOne";
+            this.lblCategoryOne.Padding = new System.Windows.Forms.Padding(5);
             this.lblCategoryOne.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCategoryOne.Size = new System.Drawing.Size(45, 15);
+            this.lblCategoryOne.Size = new System.Drawing.Size(10, 10);
             this.lblCategoryOne.TabIndex = 11;
-            this.lblCategoryOne.Text = "Category";
-            this.lblCategoryOne.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCategoryOne.Text = null;
+            this.lblCategoryOne.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblCategoryOne.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel7
+            // lblcate
             // 
-            this.bunifuLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel7.Location = new System.Drawing.Point(1004, 387);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(51, 15);
-            this.bunifuLabel7.TabIndex = 10;
-            this.bunifuLabel7.Text = "Category :";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblcate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblcate.AutoEllipsis = false;
+            this.lblcate.CursorType = null;
+            this.lblcate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblcate.Location = new System.Drawing.Point(1004, 391);
+            this.lblcate.Name = "lblcate";
+            this.lblcate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblcate.Size = new System.Drawing.Size(51, 15);
+            this.lblcate.TabIndex = 10;
+            this.lblcate.Text = "Category :";
+            this.lblcate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblcate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel6
             // 
@@ -6568,6 +6692,7 @@
             this.btnDeleteFood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDeleteFood.TextMarginLeft = 0;
             this.btnDeleteFood.UseDefaultRadiusAndThickness = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // btnClearFood
             // 
@@ -6709,104 +6834,7 @@
             this.btnSaveFood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSaveFood.TextMarginLeft = 0;
             this.btnSaveFood.UseDefaultRadiusAndThickness = true;
-            // 
-            // dgvFoodCateGory
-            // 
-            this.dgvFoodCateGory.AllowCustomTheming = false;
-            this.dgvFoodCateGory.AllowUserToAddRows = false;
-            this.dgvFoodCateGory.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvFoodCateGory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvFoodCateGory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFoodCateGory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFoodCateGory.BackgroundColor = System.Drawing.Color.White;
-            this.dgvFoodCateGory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFoodCateGory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvFoodCateGory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFoodCateGory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvFoodCateGory.ColumnHeadersHeight = 40;
-            this.dgvFoodCateGory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cateSelected,
-            this.cateId,
-            this.cateName,
-            this.cateOther});
-            this.dgvFoodCateGory.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvFoodCateGory.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFoodCateGory.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFoodCateGory.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFoodCateGory.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFoodCateGory.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvFoodCateGory.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFoodCateGory.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFoodCateGory.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFoodCateGory.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvFoodCateGory.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvFoodCateGory.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvFoodCateGory.CurrentTheme.Name = null;
-            this.dgvFoodCateGory.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvFoodCateGory.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFoodCateGory.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFoodCateGory.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFoodCateGory.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFoodCateGory.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvFoodCateGory.EnableHeadersVisualStyles = false;
-            this.dgvFoodCateGory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFoodCateGory.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFoodCateGory.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvFoodCateGory.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvFoodCateGory.Location = new System.Drawing.Point(572, 9);
-            this.dgvFoodCateGory.Name = "dgvFoodCateGory";
-            this.dgvFoodCateGory.ReadOnly = true;
-            this.dgvFoodCateGory.RowHeadersVisible = false;
-            this.dgvFoodCateGory.RowTemplate.Height = 40;
-            this.dgvFoodCateGory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFoodCateGory.Size = new System.Drawing.Size(688, 372);
-            this.dgvFoodCateGory.TabIndex = 1;
-            this.dgvFoodCateGory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // cateSelected
-            // 
-            this.cateSelected.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cateSelected.HeaderText = "Selected";
-            this.cateSelected.Name = "cateSelected";
-            this.cateSelected.ReadOnly = true;
-            this.cateSelected.Width = 97;
-            // 
-            // cateId
-            // 
-            this.cateId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cateId.HeaderText = "ID.";
-            this.cateId.Name = "cateId";
-            this.cateId.ReadOnly = true;
-            this.cateId.Width = 52;
-            // 
-            // cateName
-            // 
-            this.cateName.HeaderText = "Category Name";
-            this.cateName.Name = "cateName";
-            this.cateName.ReadOnly = true;
-            // 
-            // cateOther
-            // 
-            this.cateOther.HeaderText = "Category Other Name";
-            this.cateOther.Name = "cateOther";
-            this.cateOther.ReadOnly = true;
+            this.btnSaveFood.Click += new System.EventHandler(this.btnSaveFood_Click);
             // 
             // dgvFood
             // 
@@ -6875,30 +6903,7 @@
             this.dgvFood.Size = new System.Drawing.Size(407, 375);
             this.dgvFood.TabIndex = 0;
             this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Orange;
-            // 
-            // foodNo
-            // 
-            this.foodNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.foodNo.HeaderText = "No.";
-            this.foodNo.Name = "foodNo";
-            this.foodNo.Width = 59;
-            // 
-            // dishName
-            // 
-            this.dishName.HeaderText = "Dish Name";
-            this.dishName.Name = "dishName";
-            // 
-            // dishOtherName
-            // 
-            this.dishOtherName.HeaderText = "Dish Other Name";
-            this.dishOtherName.Name = "dishOtherName";
-            // 
-            // price
-            // 
-            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.Width = 69;
+            this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
             // 
             // txtSetName
             // 
@@ -8169,25 +8174,31 @@
             this.lblTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // CategoryId
+            // foodNo
             // 
-            this.CategoryId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.CategoryId.HeaderText = "ID.";
-            this.CategoryId.Name = "CategoryId";
-            this.CategoryId.ReadOnly = true;
-            this.CategoryId.Width = 52;
+            this.foodNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.foodNo.DataPropertyName = "Id";
+            this.foodNo.HeaderText = "No.";
+            this.foodNo.Name = "foodNo";
+            this.foodNo.Width = 59;
             // 
-            // categoryName
+            // dishName
             // 
-            this.categoryName.HeaderText = "Category Name";
-            this.categoryName.Name = "categoryName";
-            this.categoryName.ReadOnly = true;
+            this.dishName.HeaderText = "Dish Name";
+            this.dishName.Name = "dishName";
             // 
-            // categoryOtherName
+            // dishOtherName
             // 
-            this.categoryOtherName.HeaderText = "Category Other Name";
-            this.categoryOtherName.Name = "categoryOtherName";
-            this.categoryOtherName.ReadOnly = true;
+            this.dishOtherName.HeaderText = "Dish Other Name";
+            this.dishOtherName.Name = "dishOtherName";
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.Width = 69;
             // 
             // frmMenuEdit
             // 
@@ -8201,6 +8212,7 @@
             this.Name = "frmMenuEdit";
             this.Text = "frmMenuEdit";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.frmMenuEdit_Shown);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.pagEditType.ResumeLayout(false);
             this.tabCategory.ResumeLayout(false);
@@ -8208,7 +8220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatogory)).EndInit();
             this.tabFood.ResumeLayout(false);
             this.tabFood.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFoodCateGory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFoodCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).EndInit();
             this.txtSetName.ResumeLayout(false);
             this.txtSetName.PerformLayout();
@@ -8306,7 +8318,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton BtnClearCategory;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSaveCategory;
         private System.Windows.Forms.TabPage tabFood;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvFoodCateGory;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvFood;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuLabel lblTitle;
@@ -8314,7 +8325,7 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtDishNo;
         private Bunifu.UI.WinForms.BunifuLabel lblCategoryTwo;
         private Bunifu.UI.WinForms.BunifuLabel lblCategoryOne;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private Bunifu.UI.WinForms.BunifuLabel lblcate;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
@@ -8323,16 +8334,8 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDeleteFood;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnClearFood;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSaveFood;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foodNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishOtherName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private Bunifu.UI.WinForms.BunifuTextBox txtDishPrice;
         private Bunifu.UI.WinForms.BunifuTextBox txtDishOther;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cateSelected;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cateId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cateName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cateOther;
         private System.Windows.Forms.TabPage txtSetName;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddDish;
         private Bunifu.UI.WinForms.BunifuTextBox txtQTY;
@@ -8368,5 +8371,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryId;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryOtherName;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvFoodCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn selected;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foodNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishOtherName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
     }
 }

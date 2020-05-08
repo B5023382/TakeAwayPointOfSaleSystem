@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TakeAwayPointOfSaleSystem.Properties;
 
 namespace TakeAwayPointOfSaleSystem
 {
@@ -18,6 +19,8 @@ namespace TakeAwayPointOfSaleSystem
             "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
 
         private gridSetting  gridSet = new gridSetting();
+        private int category1 = 0;
+        private int category2 = 0;
         onScreenKeyboard onKeyboard;
         public frmMenuEdit()
         {
@@ -71,6 +74,10 @@ namespace TakeAwayPointOfSaleSystem
             Program.SetActiveForm(managementForm);
             Program.ShowForm();
             this.Hide();
+            category1 = 0;
+            category2 = 0;
+            lblCategoryOne.Text = "";
+            lblCategoryTwo.Text = "";
         }
 
         private void BtnClearCategory_Click(object sender, EventArgs e)
@@ -86,17 +93,19 @@ namespace TakeAwayPointOfSaleSystem
             {
                 case 0:
                     lblTitle.Text = "Edit Menu";
-                    gridSet.setCategoryTable("FoodCategory");
-                    dgvFoodCateGory.Columns[2].DataPropertyName = "categoryName";
-                    dgvFoodCateGory.Columns[3].DataPropertyName = "categoryOtherName";
+                    gridSet.setTable("foodMenu", "GetFoodTable");
+                    gridSet.setProprety("FoodCategory", "AddNewDish", "DeleteDish");
+                    dgvFoodCategory.Columns[2].DataPropertyName = "categoryName";
+                    dgvFoodCategory.Columns[3].DataPropertyName = "categoryOtherName";
+                    dgvFood.Columns[1].DataPropertyName = "foodName";
+                    dgvFood.Columns[2].DataPropertyName = "foodOtherName";
                     pagEditType.SetPage(1);
                     fillGirdOfPage2();
                     break;
 
                 case 1:
                     lblTitle.Text = "Edit Food Category";
-                    gridSet.setCategoryTable("FoodCategory");
-                    gridSet.setProprety("AddFoodCategory", "DeleteFromFoodCategory");
+                    gridSet.setProprety("FoodCategory", "AddFoodCategory", "DeleteFromFoodCategory");
                     dgvCatogory.Columns[1].DataPropertyName = "categoryName";
                     dgvCatogory.Columns[2].DataPropertyName = "categoryOtherName";
                     pagEditType.SetPage(0);
@@ -105,9 +114,12 @@ namespace TakeAwayPointOfSaleSystem
 
                 case 2:
                     lblTitle.Text = "Edit Food Common";
-                    gridSet.setCategoryTable("CommonCategory");
-                    dgvFoodCateGory.Columns[2].DataPropertyName = "commonCategory";
-                    dgvFoodCateGory.Columns[3].DataPropertyName = "commonCategoryOther";
+                    gridSet.setTable("FoodCommon", "GetCommonTable");
+                    gridSet.setProprety("CommonCategory", "AddNewCommon", "DeleteCommon");
+                    dgvFoodCategory.Columns[2].DataPropertyName = "commonCategory";
+                    dgvFoodCategory.Columns[3].DataPropertyName = "commonCategoryOther";
+                    dgvFood.Columns[1].DataPropertyName = "commonName";
+                    dgvFood.Columns[2].DataPropertyName = "commonOtherName";
                     lblCategoryTwo.Visible = false;
                     pagEditType.SetPage(1);
                     fillGirdOfPage2();
@@ -115,8 +127,7 @@ namespace TakeAwayPointOfSaleSystem
 
                 case 3:
                     lblTitle.Text = "Edit Food Common Category";
-                    gridSet.setCategoryTable("CommonCategory");
-                    gridSet.setProprety("AddCommonCategory", "DeleteFromCommonCategory");
+                    gridSet.setProprety("CommonCategory","AddCommonCategory", "DeleteFromCommonCategory");
                     dgvCatogory.Columns[1].DataPropertyName = "commonCategory";
                     dgvCatogory.Columns[2].DataPropertyName = "commonCategoryOther";
                     pagEditType.SetPage(0);
@@ -134,11 +145,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnClearFood_Click(object sender, EventArgs e)
         {
-            dgvFoodCateGory.ClearSelection();
-            txtDishNo.Text = "";
-            txtDishName.Text = "";
-            txtDishOther.Text = "";
-            txtDishPrice.Text = "";
+            clearPage();
         }
 
         private void btnClearSet_Click(object sender, EventArgs e)
@@ -175,11 +182,10 @@ namespace TakeAwayPointOfSaleSystem
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT * FROM " + gridSet.getTable(), sqlCon);
+                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT * FROM " + gridSet.getCategoryTable(), sqlCon);
                 DataSet categoryDataSet = new DataSet();
                 getCategory.Fill(categoryDataSet);
                 sqlCon.Close();
-                dgvCatogory.Columns[0].DataPropertyName = "Id";
                 dgvCatogory.DataSource = categoryDataSet.Tables[0];
                 foreach (DataGridViewRow row in dgvCatogory.Rows)
                 {
@@ -195,14 +201,33 @@ namespace TakeAwayPointOfSaleSystem
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT * FROM " + gridSet.getTable(), sqlCon);
+                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT * FROM " + gridSet.getCategoryTable(), sqlCon);
                 DataSet categoryDataSet = new DataSet();
                 getCategory.Fill(categoryDataSet);
+
+                SqlCommand getCommand = new SqlCommand(gridSet.getProcedureGet(), sqlCon);
+                getCommand.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter getMenu = new SqlDataAdapter();
+                getMenu.SelectCommand = getCommand;
+                DataSet menuDataSet = new DataSet();
+                getMenu.Fill(menuDataSet);
+
                 sqlCon.Close();
-                dgvFoodCateGory.Columns[1].DataPropertyName = "Id";
-                dgvFoodCateGory.DataSource = categoryDataSet.Tables[0];
-                dgvFoodCateGory.Columns["buttonColor"].Visible = false;
-                dgvFoodCateGory.ClearSelection();
+
+                dgvFoodCategory.DataSource = categoryDataSet.Tables[0];
+                dgvFoodCategory.Columns["buttonColor"].Visible = false;
+
+                dgvFood.DataSource = menuDataSet.Tables[0];
+                dgvFood.Columns["category"].Visible = false;
+                dgvFood.Columns["categoryName"].Visible = false;
+
+                if (gridSet.getTable().Equals("foodMenu"))
+                {
+                    dgvFood.Columns["category2"].Visible = false;
+                    dgvFood.Columns["category2Name"].Visible = false;
+                }
+
+                dgvFoodCategory.ClearSelection();
             }
         }
 
@@ -229,6 +254,10 @@ namespace TakeAwayPointOfSaleSystem
                     fillGird();
                 }
             }
+
+            txtCategoryName.Text = "";
+            txtOtherName.Text = "";
+            dgvCatogory.ClearSelection();
         }
 
         private void btnDeleteCatogory_Click(object sender, EventArgs e)
@@ -247,6 +276,9 @@ namespace TakeAwayPointOfSaleSystem
                     sqlCon.Close();
                     fillGird();
                 }
+                txtCategoryName.Text = "";
+                txtOtherName.Text = "";
+                dgvCatogory.ClearSelection();
             }
         }
 
@@ -275,6 +307,167 @@ namespace TakeAwayPointOfSaleSystem
                 txtOtherName.Text = selectedRow.Cells[2].Value.ToString();
                 btnPickColor.BackColor = Color.FromArgb((int)selectedRow.Cells[3].Value);
             }
+        }
+
+        private void dgvFoodCateGory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace((string) dgvFoodCategory.SelectedRows[0].Cells[0].Value))
+            {
+                if (string.IsNullOrWhiteSpace(lblCategoryOne.Text))
+                {
+                    dgvFoodCategory.SelectedRows[0].Cells[0].Value = "Yes";
+                    dgvFoodCategory.SelectedRows[0].DefaultCellStyle.BackColor = Color.Chartreuse;
+                    lblCategoryOne.Text = (string)dgvFoodCategory.SelectedRows[0].Cells[2].Value;
+                    lblCategoryOne.Location = new Point(lblcate.Right + 20, lblcate.Location.Y);
+                    category1 = (int) dgvFoodCategory.SelectedRows[0].Cells[1].Value;
+                }
+                else if(gridSet.getCategoryTable().Equals("FoodCategory") && string.IsNullOrWhiteSpace(lblCategoryTwo.Text))
+                {
+                    dgvFoodCategory.SelectedRows[0].Cells[0].Value = "Yes";
+                    dgvFoodCategory.SelectedRows[0].DefaultCellStyle.BackColor = Color.Chartreuse;
+                    lblCategoryTwo.Text = (string)dgvFoodCategory.SelectedRows[0].Cells[2].Value;
+                    lblCategoryTwo.Location = new Point(lblCategoryOne.Right + 20, lblCategoryOne.Location.Y);
+                    category2 = (int)dgvFoodCategory.SelectedRows[0].Cells[1].Value;
+                }
+
+            }
+            else
+            {
+                dgvFoodCategory.SelectedRows[0].Cells[0].Value = "";
+                dgvFoodCategory.SelectedRows[0].DefaultCellStyle.BackColor = Color.Empty;
+                if (category1 == (int) dgvFoodCategory.SelectedRows[0].Cells[1].Value)
+                {
+                    category1 = 0;
+                    lblCategoryOne.Text = "";
+                }
+                else
+                {
+                    category2 = 0;
+                    lblCategoryTwo.Text = "";
+                }
+
+            }
+            
+        }
+
+        private void frmMenuEdit_Shown(object sender, EventArgs e)
+        {
+            category1 = 0;
+            category2 = 0;
+            lblCategoryOne.Text = "";
+            lblCategoryTwo.Text = "";
+        }
+
+        private void clearPage()
+        {
+            dgvFoodCategory.ClearSelection();
+            dgvFood.ClearSelection();
+            txtDishNo.Text = "";
+            txtDishName.Text = "";
+            txtDishOther.Text = "";
+            txtDishPrice.Text = "";
+            lblCategoryOne.Text = "";
+            lblCategoryTwo.Text = "";
+            category2 = 0;
+            category1 = 0;
+            clearCategoryTable();
+        }
+
+        private void clearCategoryTable()
+        {
+            foreach (DataGridViewRow row in dgvFoodCategory.Rows)
+            {
+                row.Cells[0].Value = "";
+                row.DefaultCellStyle.BackColor = Color.Empty;
+            }
+        }
+
+        private void btnDeleteFood_Click(object sender, EventArgs e)
+        {
+            if (dgvFood.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvFood.SelectedRows[0];
+
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand addCustomer = new SqlCommand(gridSet.getProcedureDelete(), sqlCon);
+                    addCustomer.CommandType = CommandType.StoredProcedure;
+                    addCustomer.Parameters.AddWithValue("@id", selectedRow.Cells[0].Value);
+                    addCustomer.ExecuteNonQuery();
+                    sqlCon.Close();
+                    fillGirdOfPage2();
+                }
+            }
+            clearPage();
+        }
+
+        private void dgvFood_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvFood.SelectedRows.Count > 0)
+            {
+                clearCategoryTable();
+                DataGridViewRow selectedRow = dgvFood.SelectedRows[0];
+
+                txtDishNo.Text = selectedRow.Cells[0].Value.ToString();
+                txtDishName.Text = selectedRow.Cells[1].Value.ToString();
+                txtDishOther.Text = selectedRow.Cells[2].Value.ToString();
+                txtDishPrice.Text = selectedRow.Cells[3].Value.ToString();
+                category1 = (int)selectedRow.Cells[4].Value;
+                lblCategoryOne.Text = selectedRow.Cells[5].Value.ToString();
+                
+                if (gridSet.getTable().Equals("foodMenu") && !string.IsNullOrWhiteSpace(selectedRow.Cells[6].Value.ToString()) )
+                {
+                    category2 = (int)selectedRow.Cells[6].Value;
+                    lblCategoryTwo.Text = selectedRow.Cells[7].Value.ToString();
+                }
+                else
+                {
+                    category2 = 0;
+                    lblCategoryTwo.Text = "";
+                }
+
+                foreach (DataGridViewRow row in dgvFoodCategory.Rows)
+                {
+                    if ((int) row.Cells[1].Value == category1 || (int) row.Cells[1].Value == category2)
+                    {
+                        row.Cells[0].Value = "Yes";
+                        row.DefaultCellStyle.BackColor = Color.Chartreuse;
+                    }
+                }
+            }
+        }
+
+        private void btnSaveFood_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtDishNo.Text)|| string.IsNullOrWhiteSpace(txtDishName.Text)|| string.IsNullOrWhiteSpace(txtSetPrice.Text) || category1 == 0)
+            {
+                MessageBox.Show("Your didn't complete all necessary section", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand addCustomer = new SqlCommand(gridSet.getProcedureName(), sqlCon);
+                    addCustomer.CommandType = CommandType.StoredProcedure;
+                    addCustomer.Parameters.AddWithValue("@foodName", txtDishOther.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@foodOtherName", txtDishName.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@price", txtDishPrice.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@id", txtDishNo.Text);
+                    addCustomer.Parameters.AddWithValue("@category1", category1);
+                    if (gridSet.getTable().Equals("foodMenu") && category2 != 0)
+                    {
+                        addCustomer.Parameters.AddWithValue("@category2", category2);
+                    }
+
+                    addCustomer.ExecuteNonQuery();
+                    sqlCon.Close();
+                    fillGirdOfPage2();
+                }
+            }
+            clearPage();
         }
     }
 }

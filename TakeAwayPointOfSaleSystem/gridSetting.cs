@@ -8,23 +8,32 @@ namespace TakeAwayPointOfSaleSystem
 {
     class gridSetting
     {
-        private string table;
+        private string categorytable;
         private string procedureAdd;
         private string procedureDelete;
+        private string mainTable;
+        private string procedureGet;
 
-        public void setCategoryTable(string t)
+        public void setTable(string t, string g)
         {
-            table = t;
+            mainTable = t;
+            procedureGet = g;
         }
-        public void setProprety( string a, string d)
+        public void setProprety(string t,  string a, string d)
         {
+            categorytable = t;
             procedureAdd = a;
             procedureDelete = d;
         }
 
+        public string getCategoryTable()
+        {
+            return categorytable;
+        }
+
         public string getTable()
         {
-            return table;
+            return mainTable;
         }
 
         public string getProcedureName()
@@ -35,6 +44,11 @@ namespace TakeAwayPointOfSaleSystem
         public string getProcedureDelete()
         {
             return procedureDelete;
+        }
+
+        public string getProcedureGet()
+        {
+            return procedureGet;
         }
     }
 }
