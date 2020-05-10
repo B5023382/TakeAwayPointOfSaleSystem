@@ -24,7 +24,9 @@ namespace TakeAwayPointOfSaleSystem
         private int category2 = 0;
 
         private dish food;
+        private DataTable dt;
         onScreenKeyboard onKeyboard;
+
         public frmMenuEdit()
         {
             InitializeComponent();
@@ -160,12 +162,22 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnClearSet_Click(object sender, EventArgs e)
         {
-            dgvCatogory.ClearSelection();
+            clearSetEnter();
+        }
+
+        private void clearSetEnter()
+        {
+            dgvSetMenu.ClearSelection();
             lblDishName.Text = "";
             lblDishOther.Text = "";
             txtSetName.Text = "";
+            txtSetOtherName.Text = "";
             txtSetPrice.Text = "0.00";
-            txtQTY.Text = "";
+            txtSetDishPrice.Text = "0.00";
+            txtQTY.Text = "0";
+            txtSetNo.Text = "";
+            dt.Clear();
+            dgvSetDish.DataSource = dt;
         }
 
         private void btnGetDish_Click(object sender, EventArgs e)
@@ -500,8 +512,23 @@ namespace TakeAwayPointOfSaleSystem
             }
             else
             {
-                dgvSetDish.Rows.Add(food.getId(), lblDishName.Text, lblDishOther.Text, txtSetDishPrice.Text,
-                    txtQTY.Text);
+                bool repeate = false;
+                foreach (DataGridViewRow row in dgvSetDish.Rows)
+                {
+                    if ((int) row.Cells[0].Value == food.getId())
+                    {
+                        row.Cells[3].Value = txtSetDishPrice.Text;
+                        row.Cells[4].Value = txtQTY.Text;
+                        repeate = true;
+                        break;
+                    }
+                }
+
+                if (!repeate)
+                {
+                    dgvSetDish.Rows.Add(food.getId(), lblDishName.Text, lblDishOther.Text, txtSetDishPrice.Text,
+                        txtQTY.Text);
+                }
             }
         }
 
@@ -509,6 +536,19 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (dgvSetDish.SelectedRows.Count > 0)
             {
+                if (dgvSetMenu.SelectedRows.Count > 0)
+                {
+                    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                    {
+                        sqlCon.Open();
+                        SqlCommand addCustomer = new SqlCommand("DeleteSetDish", sqlCon);
+                        addCustomer.CommandType = CommandType.StoredProcedure;
+                        addCustomer.Parameters.AddWithValue("@setId", dgvSetMenu.SelectedRows[0].Cells[0].Value);
+                        addCustomer.Parameters.AddWithValue("@dishId", dgvSetDish.SelectedRows[0].Cells[0].Value);
+                        addCustomer.ExecuteNonQuery();
+                        sqlCon.Close();
+                    }
+                }
                 dgvSetDish.Rows.RemoveAt(dgvSetDish.SelectedRows[0].Index);
             }
         }
@@ -519,6 +559,103 @@ namespace TakeAwayPointOfSaleSystem
             if (!Char.IsDigit(ch) && ch != 8)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void dgvSetMenu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSetMenu.SelectedRows.Count > 0)
+            {
+                txtSetNo.Text = (string)dgvSetMenu.SelectedRows[0].Cells[0].Value;
+                txtSetName.Text = (string)dgvSetMenu.SelectedRows[0].Cells[1].Value;
+                txtSetOtherName.Text = (string)dgvSetMenu.SelectedRows[0].Cells[2].Value;
+                txtSetPrice.Text = (string)dgvSetMenu.SelectedRows[0].Cells[3].Value;
+
+
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand getSetDish = new SqlCommand("GetSetDish", sqlCon);
+                    getSetDish.CommandType = CommandType.StoredProcedure;
+                    getSetDish.Parameters.AddWithValue("@id", txtDishNo.Text);
+                    SqlDataAdapter getDish = new SqlDataAdapter();
+                    getDish.SelectCommand = getSetDish;
+                    DataSet menuDataSet = new DataSet();
+                    getDish.Fill(menuDataSet);
+                    sqlCon.Close();
+                    dt = menuDataSet.Tables[0];
+                    dgvSetDish.DataSource = dt;
+                }
+            }
+        }
+
+        private void btnSaveSet_Click(object sender, EventArgs e)
+        {
+            if ((string.IsNullOrWhiteSpace(txtSetNo.Text)) || string.IsNullOrWhiteSpace(txtSetName.Text) || string.IsNullOrWhiteSpace(txtSetPrice.Text) || dgvSetDish.RowCount < 2)
+            {
+                MessageBox.Show("Your didn't complete all necessary section", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand addCustomer = new SqlCommand("AddSetMeal", sqlCon);
+                    addCustomer.CommandType = CommandType.StoredProcedure;
+                    addCustomer.Parameters.AddWithValue("@setMealName", txtSetName.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@setMealOther", txtSetOtherName.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@price", txtSetPrice.Text.Trim());
+                    addCustomer.Parameters.AddWithValue("@id", txtSetNo.Text);
+
+                    addCustomer.ExecuteNonQuery();
+
+                    for (int row = 0; row < dgvSetDish.RowCount; row++)
+                    {
+                        SqlCommand addSetDish = new SqlCommand("AddSetDish", sqlCon);
+                        addSetDish.CommandType = CommandType.StoredProcedure;
+                        addSetDish.Parameters.AddWithValue("@dishNo", (int)dgvSetDish.Rows[row].Cells[0].Value);
+                        addSetDish.Parameters.AddWithValue("@qty", (int)dgvSetDish.Rows[row].Cells[4].Value);
+                        addSetDish.Parameters.AddWithValue("@price", (float)dgvSetDish.Rows[row].Cells[3].Value);
+                        addSetDish.Parameters.AddWithValue("@setId", txtSetNo.Text);
+
+                    }
+                    sqlCon.Close();
+                    fill_SetTable();
+                }
+            }
+            clearSetEnter();
+        }
+
+        private void btnDeleteSet_Click(object sender, EventArgs e)
+        {
+            if (dgvSetMenu.SelectedRows.Count > 0)
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand addCustomer = new SqlCommand("DeleteSetMeal", sqlCon);
+                    addCustomer.CommandType = CommandType.StoredProcedure;
+                    addCustomer.Parameters.AddWithValue("@id", dgvSetMenu.SelectedRows[0].Cells[0].Value);
+                    addCustomer.ExecuteNonQuery();
+                    sqlCon.Close();
+                    fill_SetTable();
+                }
+
+                clearSetEnter();
+            }
+        }
+
+        private void fill_SetTable()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT * FROM SetMeal", sqlCon);
+                DataSet categoryDataSet = new DataSet();
+                getCategory.Fill(categoryDataSet);
+                sqlCon.Close();
+                dgvSetMenu.DataSource = categoryDataSet.Tables[0];
             }
         }
     }
