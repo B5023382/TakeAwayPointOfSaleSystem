@@ -60,6 +60,7 @@ namespace TakeAwayPointOfSaleSystem
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
             this.panAddressBar = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblHouseNo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPostcode = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTelphone = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -70,16 +71,11 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuDataGridView2 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dgvFood = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.dishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.orderedDishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderedDishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishCommon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPricePerDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvOrder = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTime = new Bunifu.UI.WinForms.BunifuLabel();
@@ -101,9 +97,7 @@ namespace TakeAwayPointOfSaleSystem
             this.tabEditDish = new System.Windows.Forms.TabPage();
             this.btnDishAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDishLess = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuDataGridView3 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.sideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCommon = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnAllDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.flpDishMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pagMenuPage = new Bunifu.UI.WinForms.BunifuPages();
@@ -122,14 +116,22 @@ namespace TakeAwayPointOfSaleSystem
             this.btnManagment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMinusQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSetTime = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.lblHouseNo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.orderedDishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderedDishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishCommon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPricePerDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commonId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panAddressBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.tabEditDish.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommon)).BeginInit();
             this.flpDishMenu.SuspendLayout();
             this.pagMenuPage.SuspendLayout();
             this.tapMenu.SuspendLayout();
@@ -175,6 +177,20 @@ namespace TakeAwayPointOfSaleSystem
             this.panAddressBar.Size = new System.Drawing.Size(619, 115);
             this.panAddressBar.TabIndex = 50;
             this.panAddressBar.Click += new System.EventHandler(this.panAddressBar_click);
+            // 
+            // lblHouseNo
+            // 
+            this.lblHouseNo.AutoEllipsis = false;
+            this.lblHouseNo.CursorType = null;
+            this.lblHouseNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblHouseNo.Location = new System.Drawing.Point(91, 45);
+            this.lblHouseNo.Name = "lblHouseNo";
+            this.lblHouseNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHouseNo.Size = new System.Drawing.Size(30, 22);
+            this.lblHouseNo.TabIndex = 12;
+            this.lblHouseNo.Text = "190";
+            this.lblHouseNo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblHouseNo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblPostcode
             // 
@@ -320,22 +336,22 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuDataGridView2
+            // dgvFood
             // 
-            this.bunifuDataGridView2.AllowCustomTheming = false;
-            this.bunifuDataGridView2.AllowUserToAddRows = false;
-            this.bunifuDataGridView2.AllowUserToDeleteRows = false;
+            this.dgvFood.AllowCustomTheming = false;
+            this.dgvFood.AllowUserToAddRows = false;
+            this.dgvFood.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFood.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFood.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -343,30 +359,30 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView2.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFood.ColumnHeadersHeight = 40;
+            this.dgvFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dishNo,
             this.dishName,
             this.dishPrice});
-            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView2.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView2.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView2.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView2.CurrentTheme.Name = null;
-            this.bunifuDataGridView2.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView2.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView2.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView2.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView2.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFood.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFood.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvFood.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.Name = null;
+            this.dgvFood.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFood.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -374,25 +390,26 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuDataGridView2.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView2.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView2.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView2.Location = new System.Drawing.Point(644, 41);
-            this.bunifuDataGridView2.Name = "bunifuDataGridView2";
-            this.bunifuDataGridView2.ReadOnly = true;
-            this.bunifuDataGridView2.RowHeadersVisible = false;
-            this.bunifuDataGridView2.RowTemplate.Height = 40;
-            this.bunifuDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView2.Size = new System.Drawing.Size(124, 501);
-            this.bunifuDataGridView2.TabIndex = 49;
-            this.bunifuDataGridView2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvFood.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFood.EnableHeadersVisualStyles = false;
+            this.dgvFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFood.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFood.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvFood.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvFood.Location = new System.Drawing.Point(644, 41);
+            this.dgvFood.Name = "dgvFood";
+            this.dgvFood.ReadOnly = true;
+            this.dgvFood.RowHeadersVisible = false;
+            this.dgvFood.RowTemplate.Height = 40;
+            this.dgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFood.Size = new System.Drawing.Size(124, 501);
+            this.dgvFood.TabIndex = 49;
+            this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // dishNo
             // 
             this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishNo.DataPropertyName = "Id";
             this.dishNo.HeaderText = "Dish No.";
             this.dishNo.Name = "dishNo";
             this.dishNo.ReadOnly = true;
@@ -400,6 +417,7 @@ namespace TakeAwayPointOfSaleSystem
             // 
             // dishName
             // 
+            this.dishName.DataPropertyName = "foodName";
             this.dishName.HeaderText = "Dish Name";
             this.dishName.Name = "dishName";
             this.dishName.ReadOnly = true;
@@ -407,26 +425,27 @@ namespace TakeAwayPointOfSaleSystem
             // dishPrice
             // 
             this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishPrice.DataPropertyName = "price";
             this.dishPrice.HeaderText = "Price";
             this.dishPrice.Name = "dishPrice";
             this.dishPrice.ReadOnly = true;
             this.dishPrice.Width = 69;
             // 
-            // bunifuDataGridView1
+            // dgvOrder
             // 
-            this.bunifuDataGridView1.AllowCustomTheming = false;
-            this.bunifuDataGridView1.AllowUserToAddRows = false;
-            this.bunifuDataGridView1.AllowUserToDeleteRows = false;
+            this.dgvOrder.AllowCustomTheming = false;
+            this.dgvOrder.AllowUserToAddRows = false;
+            this.dgvOrder.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrder.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -434,32 +453,33 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvOrder.ColumnHeadersHeight = 40;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderedDishNo,
             this.quantity,
             this.orderedDishName,
             this.dishCommon,
-            this.totalPricePerDish});
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.Name = null;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.totalPricePerDish,
+            this.commonId});
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvOrder.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvOrder.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvOrder.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.Name = null;
+            this.dgvOrder.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvOrder.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -467,60 +487,21 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(7, 162);
-            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
-            this.bunifuDataGridView1.ReadOnly = true;
-            this.bunifuDataGridView1.RowHeadersVisible = false;
-            this.bunifuDataGridView1.RowTemplate.Height = 40;
-            this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(617, 223);
-            this.bunifuDataGridView1.TabIndex = 47;
-            this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // orderedDishNo
-            // 
-            this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.orderedDishNo.HeaderText = "Dish No.";
-            this.orderedDishNo.Name = "orderedDishNo";
-            this.orderedDishNo.ReadOnly = true;
-            this.orderedDishNo.Width = 94;
-            // 
-            // quantity
-            // 
-            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.quantity.HeaderText = "QTY";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            this.quantity.Width = 62;
-            // 
-            // orderedDishName
-            // 
-            this.orderedDishName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.orderedDishName.HeaderText = "Dish Name";
-            this.orderedDishName.Name = "orderedDishName";
-            this.orderedDishName.ReadOnly = true;
-            this.orderedDishName.Width = 111;
-            // 
-            // dishCommon
-            // 
-            this.dishCommon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dishCommon.HeaderText = "Common";
-            this.dishCommon.Name = "dishCommon";
-            this.dishCommon.ReadOnly = true;
-            // 
-            // totalPricePerDish
-            // 
-            this.totalPricePerDish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.totalPricePerDish.HeaderText = "Price";
-            this.totalPricePerDish.Name = "totalPricePerDish";
-            this.totalPricePerDish.ReadOnly = true;
-            this.totalPricePerDish.Width = 69;
+            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvOrder.EnableHeadersVisualStyles = false;
+            this.dgvOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvOrder.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvOrder.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvOrder.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvOrder.Location = new System.Drawing.Point(7, 162);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.ReadOnly = true;
+            this.dgvOrder.RowHeadersVisible = false;
+            this.dgvOrder.RowTemplate.Height = 40;
+            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrder.Size = new System.Drawing.Size(617, 223);
+            this.dgvOrder.TabIndex = 47;
+            this.dgvOrder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // bunifuGradientPanel1
             // 
@@ -969,7 +950,7 @@ namespace TakeAwayPointOfSaleSystem
             this.tabEditDish.Controls.Add(this.btnDishNone);
             this.tabEditDish.Controls.Add(this.btnDishAdd);
             this.tabEditDish.Controls.Add(this.btnDishLess);
-            this.tabEditDish.Controls.Add(this.bunifuDataGridView3);
+            this.tabEditDish.Controls.Add(this.dgvCommon);
             this.tabEditDish.Location = new System.Drawing.Point(4, 4);
             this.tabEditDish.Name = "tabEditDish";
             this.tabEditDish.Padding = new System.Windows.Forms.Padding(3);
@@ -1120,19 +1101,19 @@ namespace TakeAwayPointOfSaleSystem
             this.btnDishLess.UseDefaultRadiusAndThickness = true;
             this.btnDishLess.Click += new System.EventHandler(this.btnDishLess_Click);
             // 
-            // bunifuDataGridView3
+            // dgvCommon
             // 
-            this.bunifuDataGridView3.AllowCustomTheming = false;
+            this.dgvCommon.AllowCustomTheming = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.bunifuDataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvCommon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvCommon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuDataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuDataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCommon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCommon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCommon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCommon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCommon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -1140,29 +1121,30 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.bunifuDataGridView3.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCommon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvCommon.ColumnHeadersHeight = 40;
+            this.dgvCommon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sideName,
-            this.Price});
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.Name = null;
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.Price,
+            this.cId});
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvCommon.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvCommon.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.Name = null;
+            this.dgvCommon.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvCommon.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -1170,32 +1152,20 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView3.DefaultCellStyle = dataGridViewCellStyle9;
-            this.bunifuDataGridView3.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView3.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView3.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.bunifuDataGridView3.Name = "bunifuDataGridView3";
-            this.bunifuDataGridView3.RowHeadersVisible = false;
-            this.bunifuDataGridView3.RowTemplate.Height = 40;
-            this.bunifuDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView3.Size = new System.Drawing.Size(345, 412);
-            this.bunifuDataGridView3.TabIndex = 0;
-            this.bunifuDataGridView3.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // sideName
-            // 
-            this.sideName.HeaderText = "Side Name";
-            this.sideName.Name = "sideName";
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.Width = 69;
+            this.dgvCommon.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvCommon.EnableHeadersVisualStyles = false;
+            this.dgvCommon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvCommon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvCommon.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvCommon.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvCommon.Location = new System.Drawing.Point(0, 0);
+            this.dgvCommon.Name = "dgvCommon";
+            this.dgvCommon.RowHeadersVisible = false;
+            this.dgvCommon.RowTemplate.Height = 40;
+            this.dgvCommon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCommon.Size = new System.Drawing.Size(345, 412);
+            this.dgvCommon.TabIndex = 0;
+            this.dgvCommon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // btnAllDish
             // 
@@ -2177,19 +2147,75 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSetTime.UseDefaultRadiusAndThickness = true;
             this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
-            // lblHouseNo
+            // orderedDishNo
             // 
-            this.lblHouseNo.AutoEllipsis = false;
-            this.lblHouseNo.CursorType = null;
-            this.lblHouseNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblHouseNo.Location = new System.Drawing.Point(91, 45);
-            this.lblHouseNo.Name = "lblHouseNo";
-            this.lblHouseNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHouseNo.Size = new System.Drawing.Size(30, 22);
-            this.lblHouseNo.TabIndex = 12;
-            this.lblHouseNo.Text = "190";
-            this.lblHouseNo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblHouseNo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.orderedDishNo.HeaderText = "Dish No.";
+            this.orderedDishNo.Name = "orderedDishNo";
+            this.orderedDishNo.ReadOnly = true;
+            this.orderedDishNo.Width = 94;
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.quantity.HeaderText = "QTY";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            this.quantity.Width = 62;
+            // 
+            // orderedDishName
+            // 
+            this.orderedDishName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.orderedDishName.HeaderText = "Dish Name";
+            this.orderedDishName.Name = "orderedDishName";
+            this.orderedDishName.ReadOnly = true;
+            this.orderedDishName.Width = 111;
+            // 
+            // dishCommon
+            // 
+            this.dishCommon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dishCommon.HeaderText = "Common";
+            this.dishCommon.Name = "dishCommon";
+            this.dishCommon.ReadOnly = true;
+            // 
+            // totalPricePerDish
+            // 
+            this.totalPricePerDish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.totalPricePerDish.HeaderText = "Price";
+            this.totalPricePerDish.Name = "totalPricePerDish";
+            this.totalPricePerDish.ReadOnly = true;
+            this.totalPricePerDish.Width = 69;
+            // 
+            // commonId
+            // 
+            this.commonId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.commonId.DataPropertyName = "commonId";
+            this.commonId.HeaderText = "cmmonId";
+            this.commonId.Name = "commonId";
+            this.commonId.ReadOnly = true;
+            this.commonId.Visible = false;
+            this.commonId.Width = 103;
+            // 
+            // sideName
+            // 
+            this.sideName.HeaderText = "Side Name";
+            this.sideName.Name = "sideName";
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.Width = 69;
+            // 
+            // cId
+            // 
+            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cId.DataPropertyName = "Id";
+            this.cId.HeaderText = "cId";
+            this.cId.Name = "cId";
+            this.cId.Visible = false;
+            this.cId.Width = 56;
             // 
             // FrmMain
             // 
@@ -2199,8 +2225,8 @@ namespace TakeAwayPointOfSaleSystem
             this.ClientSize = new System.Drawing.Size(1284, 639);
             this.Controls.Add(this.btnSetTime);
             this.Controls.Add(this.panAddressBar);
-            this.Controls.Add(this.bunifuDataGridView2);
-            this.Controls.Add(this.bunifuDataGridView1);
+            this.Controls.Add(this.dgvFood);
+            this.Controls.Add(this.dgvOrder);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.pagMenuPage);
@@ -2222,14 +2248,14 @@ namespace TakeAwayPointOfSaleSystem
             this.Load += new System.EventHandler(this.Form_load);
             this.panAddressBar.ResumeLayout(false);
             this.panAddressBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel3.PerformLayout();
             this.tabEditDish.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommon)).EndInit();
             this.flpDishMenu.ResumeLayout(false);
             this.pagMenuPage.ResumeLayout(false);
             this.tapMenu.ResumeLayout(false);
@@ -2253,16 +2279,8 @@ namespace TakeAwayPointOfSaleSystem
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishPrice;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderedDishNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderedDishName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishCommon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalPricePerDish;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvFood;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvOrder;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
         private Bunifu.UI.WinForms.BunifuLabel lblTime;
@@ -2284,9 +2302,7 @@ namespace TakeAwayPointOfSaleSystem
         private System.Windows.Forms.TabPage tabEditDish;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDishAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDishLess;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sideName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvCommon;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAllDish;
         private System.Windows.Forms.FlowLayoutPanel flpDishMenu;
         private Bunifu.UI.WinForms.BunifuPages pagMenuPage;
@@ -2306,5 +2322,17 @@ namespace TakeAwayPointOfSaleSystem
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMinusQTY;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSetTime;
         private Bunifu.UI.WinForms.BunifuLabel lblHouseNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderedDishNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderedDishName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishCommon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalPricePerDish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commonId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sideName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cId;
     }
 }

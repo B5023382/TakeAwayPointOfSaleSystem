@@ -26,6 +26,7 @@ namespace TakeAwayPointOfSaleSystem
         private dish food;
         private DataTable dt;
         onScreenKeyboard onKeyboard;
+        private BunifuTextBox textBox;
 
         public frmMenuEdit()
         {
@@ -74,8 +75,8 @@ namespace TakeAwayPointOfSaleSystem
 
         private void textbox_select(object sender, EventArgs e)
         {
-            BunifuTextBox t = (BunifuTextBox) sender;
-            t.SelectAll();
+            textBox = (BunifuTextBox) sender;
+            textBox.SelectAll();
             onKeyboard.setCotrol((Control)sender);
         }
 
@@ -149,6 +150,7 @@ namespace TakeAwayPointOfSaleSystem
                 case 4:
                     lblTitle.Text = "Edit Set Meal";
                     pagEditType.SetPage(2);
+                    fill_SetTable();
                     break;
             }
 
@@ -176,8 +178,15 @@ namespace TakeAwayPointOfSaleSystem
             txtSetDishPrice.Text = "0.00";
             txtQTY.Text = "0";
             txtSetNo.Text = "";
-            dt.Clear();
-            dgvSetDish.DataSource = dt;
+            if(dt != null)
+            {
+                dt.Clear();
+                dgvSetDish.DataSource = dt;
+            }
+            else
+            {
+                dgvSetDish.Rows.Clear();
+            }
         }
 
         private void btnGetDish_Click(object sender, EventArgs e)
@@ -312,7 +321,7 @@ namespace TakeAwayPointOfSaleSystem
         private void txtDishPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (ch == 46 && txtDishPrice.Text.IndexOf('.') != -1)
+            if (ch == 46 && textBox.Text.IndexOf('.') != -1)
             {
                 e.Handled = true;
                 return;
@@ -505,10 +514,15 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnAddDish_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(lblDishName.Text) || Convert.ToInt32(txtQTY.Text) < 1)
+            if (string.IsNullOrWhiteSpace(lblDishName.Text))
             {
                 MessageBox.Show("Please select a dish use Get Dish button", "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            }
+            else if (Convert.ToInt32(txtQTY.Text) < 1)
+            {
+                MessageBox.Show("Please set Quantity of dish", "Error", MessageBoxButtons.OK,
+                     MessageBoxIcon.Error);
             }
             else
             {
@@ -526,8 +540,21 @@ namespace TakeAwayPointOfSaleSystem
 
                 if (!repeate)
                 {
-                    dgvSetDish.Rows.Add(food.getId(), lblDishName.Text, lblDishOther.Text, txtSetDishPrice.Text,
-                        txtQTY.Text);
+                    if(dgvSetDish.DataSource == null)
+                    {
+                        dgvSetDish.Rows.Add(food.getId(), lblDishName.Text, lblDishOther.Text, txtSetDishPrice.Text, txtQTY.Text);
+                    }
+                    else
+                    {
+                        DataRow r = dt.NewRow();
+                        r["dishNo"] = food.getId();
+                        r["foodName"] = lblDishName.Text;
+                        r["foodOtherName"] = lblDishOther.Text;
+                        r["price"] = txtSetDishPrice.Text;
+                        r["QTY"] = txtQTY.Text;
+                        dt.Rows.Add(r);
+                    }
+
                 }
             }
         }
@@ -536,14 +563,14 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (dgvSetDish.SelectedRows.Count > 0)
             {
-                if (dgvSetMenu.SelectedRows.Count > 0)
+                if (!string.IsNullOrEmpty(txtSetNo.Text))
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
                         sqlCon.Open();
                         SqlCommand addCustomer = new SqlCommand("DeleteSetDish", sqlCon);
                         addCustomer.CommandType = CommandType.StoredProcedure;
-                        addCustomer.Parameters.AddWithValue("@setId", dgvSetMenu.SelectedRows[0].Cells[0].Value);
+                        addCustomer.Parameters.AddWithValue("@setId", txtSetNo.Text);
                         addCustomer.Parameters.AddWithValue("@dishId", dgvSetDish.SelectedRows[0].Cells[0].Value);
                         addCustomer.ExecuteNonQuery();
                         sqlCon.Close();
@@ -566,32 +593,16 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (dgvSetMenu.SelectedRows.Count > 0)
             {
-                txtSetNo.Text = (string)dgvSetMenu.SelectedRows[0].Cells[0].Value;
-                txtSetName.Text = (string)dgvSetMenu.SelectedRows[0].Cells[1].Value;
-                txtSetOtherName.Text = (string)dgvSetMenu.SelectedRows[0].Cells[2].Value;
-                txtSetPrice.Text = (string)dgvSetMenu.SelectedRows[0].Cells[3].Value;
-
-
-                using (SqlConnection sqlCon = new SqlConnection(connectionString))
-                {
-                    sqlCon.Open();
-                    SqlCommand getSetDish = new SqlCommand("GetSetDish", sqlCon);
-                    getSetDish.CommandType = CommandType.StoredProcedure;
-                    getSetDish.Parameters.AddWithValue("@id", txtDishNo.Text);
-                    SqlDataAdapter getDish = new SqlDataAdapter();
-                    getDish.SelectCommand = getSetDish;
-                    DataSet menuDataSet = new DataSet();
-                    getDish.Fill(menuDataSet);
-                    sqlCon.Close();
-                    dt = menuDataSet.Tables[0];
-                    dgvSetDish.DataSource = dt;
-                }
+                txtSetName.Text = dgvSetMenu.SelectedRows[0].Cells[1].Value.ToString();
+                txtSetOtherName.Text = dgvSetMenu.SelectedRows[0].Cells[2].Value.ToString();
+                txtSetPrice.Text = dgvSetMenu.SelectedRows[0].Cells[3].Value.ToString();
+                txtSetNo.Text = dgvSetMenu.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
 
         private void btnSaveSet_Click(object sender, EventArgs e)
         {
-            if ((string.IsNullOrWhiteSpace(txtSetNo.Text)) || string.IsNullOrWhiteSpace(txtSetName.Text) || string.IsNullOrWhiteSpace(txtSetPrice.Text) || dgvSetDish.RowCount < 2)
+            if ((string.IsNullOrWhiteSpace(txtSetNo.Text)) || string.IsNullOrWhiteSpace(txtSetName.Text) || string.IsNullOrWhiteSpace(txtSetPrice.Text) || dgvSetDish.RowCount < 1)
             {
                 MessageBox.Show("Your didn't complete all necessary section", "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -615,10 +626,10 @@ namespace TakeAwayPointOfSaleSystem
                         SqlCommand addSetDish = new SqlCommand("AddSetDish", sqlCon);
                         addSetDish.CommandType = CommandType.StoredProcedure;
                         addSetDish.Parameters.AddWithValue("@dishNo", (int)dgvSetDish.Rows[row].Cells[0].Value);
-                        addSetDish.Parameters.AddWithValue("@qty", (int)dgvSetDish.Rows[row].Cells[4].Value);
-                        addSetDish.Parameters.AddWithValue("@price", (float)dgvSetDish.Rows[row].Cells[3].Value);
+                        addSetDish.Parameters.AddWithValue("@qty", Convert.ToInt32(dgvSetDish.Rows[row].Cells[4].Value));
+                        addSetDish.Parameters.AddWithValue("@price", Convert.ToDecimal(dgvSetDish.Rows[row].Cells[3].Value));
                         addSetDish.Parameters.AddWithValue("@setId", txtSetNo.Text);
-
+                        addSetDish.ExecuteNonQuery();
                     }
                     sqlCon.Close();
                     fill_SetTable();
@@ -657,6 +668,25 @@ namespace TakeAwayPointOfSaleSystem
                 sqlCon.Close();
                 dgvSetMenu.DataSource = categoryDataSet.Tables[0];
             }
+        }
+
+        private void txtSetNo_TextChange(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand getSetDish = new SqlCommand("GetSetDish", sqlCon);
+                getSetDish.CommandType = CommandType.StoredProcedure;
+                getSetDish.Parameters.AddWithValue("@setId", txtSetNo.Text);
+                SqlDataAdapter getDish = new SqlDataAdapter();
+                getDish.SelectCommand = getSetDish;
+                DataSet menuDataSet = new DataSet();
+                getDish.Fill(menuDataSet);
+                sqlCon.Close();
+                dt = menuDataSet.Tables[0];
+                dgvSetDish.DataSource = dt;
+            }
+            dgvSetMenu.ClearSelection();
         }
     }
 }

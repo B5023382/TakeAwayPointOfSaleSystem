@@ -23,33 +23,81 @@ namespace TakeAwayPointOfSaleSystem
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
         private frmMenuEdit menuEdition = new frmMenuEdit();
+        BunifuButton delete = new BunifuButton();
 
         public FrmMain(string username, string role)
         {
             InitializeComponent();
 
-            for (int i = 0; i < 20; i++)
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
-                BunifuButton b = new BunifuButton();
-                b.Text = "Type " + i;
-                b.Size = new Size(110, 50);
-                b.Click += common_button_click;
-                flpCommonCategory.Controls.Add(b);
+                sqlCon.Open();
+                SqlCommand addCustomer = new SqlCommand("SELECT categoryName FROM FoodCategory", sqlCon);
+                addCustomer.CommandType = CommandType.Text;
+
+                using (SqlDataReader reader = addCustomer.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        BunifuButton b = new BunifuButton();
+                        b.Text = reader["categoryName"].ToString();
+                        b.Size = new Size(110, 50);
+                        b.Click += dishButton_click;
+                        flpCommonCategory.Controls.Add(b);
+                    }
+                }
+
+                SqlCommand getCommonCategory = new SqlCommand("SELECT commonCategory FROM CommonCategory", sqlCon);
+                getCommonCategory.CommandType = CommandType.Text;
+
+                using (SqlDataReader reader = getCommonCategory.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        BunifuButton b = new BunifuButton();
+                        b.Text = reader["commonCategory"].ToString();
+                        b.Size = new Size(110, 50);
+                        b.Click += common_button_click;
+                        flpDishMenu.Controls.Add(b);
+                    }
+                }
+
+                sqlCon.Close();
             }
 
-            for (int i = 0; i < 20; i++)
-            {
-                BunifuButton b = new BunifuButton();
-                b.Text = "Type " + i;
-                b.Size = new Size(200, 90);
-                b.Click += dishButton_click;
-                flpDishMenu.Controls.Add(b);
-            }
+            delete.Text = "Delete";
+            delete.Size = new Size(110, 50);
+            delete.Click += deleteCommon_click;
+            flpDishMenu.Controls.Add(delete);
 
             lblUsername.Text = username;
             lblRole.Text = role;
             lblDate.Text = DateTime.Now.Date.ToString("yyyy-M-d dddd");
 
+            lblHouseNo.Text = "";
+            lblAddress.Text = "";
+            lblDeliverTime.Text = "";
+            lblTelphone.Text = "";
+            lblDeliverFee.Text = "1";
+            lblPostcode.Text = "";
+            lblName.Text = "";
+            lblTotal.Text = "0.00";
+            lblNote.Text = "";
+        }
+
+        private void deleteCommon_click(object sender, EventArgs e)
+        {
+            if (dgvOrder.SelectedRows.Count > 0)
+            {
+                string commonId = (string) dgvOrder.SelectedRows[0].Cells[5].Value;
+                string commons = (string) dgvOrder.SelectedRows[0].Cells[3].Value;
+                dgvOrder.SelectedRows[0].Cells[3].Value = "";
+                string[] commonList = commons.Split(',');
+                for (int i = 0; i < commonList.Length - 1; i++)
+                {
+                    dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value + commonList[i];
+                }
+            }
         }
 
         private void Form_load(object sender, EventArgs e)
@@ -60,36 +108,80 @@ namespace TakeAwayPointOfSaleSystem
 
         private void common_button_click(object sender, EventArgs e)
         {
-
+            BunifuButton b = (BunifuButton)sender;
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter getCategory =
+                    new SqlDataAdapter("SELECT Id, commonName, price FROM FoodCommon WHERE category = '" + b.Text +"'", sqlCon);
+                DataSet categoryDataSet = new DataSet();
+                getCategory.Fill(categoryDataSet);
+                sqlCon.Close();
+                dgvCommon.DataSource = categoryDataSet.Tables[0];
+            }
         }
 
         private void btnAllDish_Click(object sender, EventArgs e)
         {
-
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT Id, foodName, price FROM FoodMenu", sqlCon);
+                DataSet categoryDataSet = new DataSet();
+                getCategory.Fill(categoryDataSet);
+                sqlCon.Close();
+                dgvFood.DataSource = categoryDataSet.Tables[0];
+            }
         }
 
         private void dishButton_click(object sender, EventArgs e)
         {
-
+            BunifuButton b = (BunifuButton) sender;
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter getCategory = 
+                    new SqlDataAdapter("SELECT Id, foodName, price FROM FoodMenu WHERE category1 = " + b.Text + " OR category2 = " + b.Text, sqlCon);
+                DataSet categoryDataSet = new DataSet();
+                getCategory.Fill(categoryDataSet);
+                sqlCon.Close();
+                dgvFood.DataSource = categoryDataSet.Tables[0];
+            }
         }
 
         private void btnMinusQTY_Click(object sender, EventArgs e)
         {
-
+            if (dgvOrder.SelectedRows.Count > 0)
+            {
+               if((int)dgvOrder.SelectedRows[0].Cells[1].Value - 1 < 1)
+               {
+                    dgvOrder.Rows.RemoveAt(dgvOrder.SelectedRows[0].Index);
+               }
+               else
+               {
+                   dgvOrder.SelectedRows[0].Cells[1].Value = (int) dgvOrder.SelectedRows[0].Cells[1].Value - 1;
+               }
+            }
         }
 
         private void btnAddQTY_Click(object sender, EventArgs e)
         {
-
+            if (dgvOrder.SelectedRows.Count > 0)
+            {
+                dgvOrder.SelectedRows[0].Cells[1].Value = (int)dgvOrder.SelectedRows[0].Cells[1].Value + 1;
+            }
         }
 
         private void btnChangePrice_Click(object sender, EventArgs e)
         {
-            using (dialogChangePrice d = new dialogChangePrice('.', "Change Price", null))
+            if (dgvOrder.SelectedRows.Count > 0)
             {
-                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                using (dialogChangePrice d = new dialogChangePrice('.', "Change Price", null))
                 {
-                    lblTotal.Text = d.newData;
+                    if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        lblTotal.Text = d.newData;
+                    }
                 }
             }
         }
@@ -118,7 +210,17 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnCancelOrder_Click(object sender, EventArgs e)
         {
+            lblHouseNo.Text = "";
+            lblAddress.Text = "";
+            lblDeliverTime.Text = "";
+            lblTelphone.Text = "";
+            lblDeliverFee.Text = "1";
+            lblPostcode.Text = "";
+            lblName.Text = "";
+            lblTotal.Text = "0.00";
+            lblNote.Text = "";
 
+            dgvOrder.Rows.Clear();
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
@@ -138,22 +240,46 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnDishLess_Click(object sender, EventArgs e)
         {
-
+            if (dgvCommon.SelectedRows.Count > 0)
+            {
+                dgvOrder.SelectedRows[0].Cells[3].Value = (string) dgvOrder.SelectedRows[0].Cells[3].Value
+                                                          + "," + "Less " +
+                                                          (string) dgvCommon.SelectedRows[0].Cells[0].Value;
+            }
         }
 
         private void btnDishAdd_Click(object sender, EventArgs e)
         {
-
+            if (dgvCommon.SelectedRows.Count > 0)
+            {
+                dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value
+                                                          + "," + "Add " +
+                                                          (string)dgvCommon.SelectedRows[0].Cells[0].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = (float)dgvOrder.SelectedRows[0].Cells[4].Value + 
+                                                          (float)dgvCommon.SelectedRows[0].Cells[1].Value;
+            }
         }
 
         private void btnDishNone_Click(object sender, EventArgs e)
         {
-
+            if (dgvCommon.SelectedRows.Count > 0)
+            {
+                dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value
+                                                          + "," + "No " +
+                                                          (string)dgvCommon.SelectedRows[0].Cells[0].Value;
+            }
         }
 
         private void btnDishSwap_Click(object sender, EventArgs e)
         {
-
+            if (dgvCommon.SelectedRows.Count > 0)
+            {
+                dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value
+                                                          + "," + "Swap to" +
+                                                          (string)dgvCommon.SelectedRows[0].Cells[0].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = (float)dgvOrder.SelectedRows[0].Cells[4].Value +
+                                                          (float)dgvCommon.SelectedRows[0].Cells[1].Value;
+            }
         }
 
         private void btnCloseCommon_Click(object sender, EventArgs e)
