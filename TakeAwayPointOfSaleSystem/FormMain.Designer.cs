@@ -72,9 +72,6 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvFood = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvOrder = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -116,15 +113,21 @@ namespace TakeAwayPointOfSaleSystem
             this.btnManagment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMinusQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSetTime = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.dishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sideOther = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderedDishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderedDishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishOtherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishCommon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPricePerDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commonId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commonPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panAddressBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
@@ -364,6 +367,7 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dishNo,
             this.dishName,
+            this.otherName,
             this.dishPrice});
             this.dgvFood.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvFood.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -405,31 +409,7 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvFood.Size = new System.Drawing.Size(124, 501);
             this.dgvFood.TabIndex = 49;
             this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // dishNo
-            // 
-            this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dishNo.DataPropertyName = "Id";
-            this.dishNo.HeaderText = "Dish No.";
-            this.dishNo.Name = "dishNo";
-            this.dishNo.ReadOnly = true;
-            this.dishNo.Width = 94;
-            // 
-            // dishName
-            // 
-            this.dishName.DataPropertyName = "foodName";
-            this.dishName.HeaderText = "Dish Name";
-            this.dishName.Name = "dishName";
-            this.dishName.ReadOnly = true;
-            // 
-            // dishPrice
-            // 
-            this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dishPrice.DataPropertyName = "price";
-            this.dishPrice.HeaderText = "Price";
-            this.dishPrice.Name = "dishPrice";
-            this.dishPrice.ReadOnly = true;
-            this.dishPrice.Width = 69;
+            this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
             // 
             // dgvOrder
             // 
@@ -459,9 +439,10 @@ namespace TakeAwayPointOfSaleSystem
             this.orderedDishNo,
             this.quantity,
             this.orderedDishName,
+            this.dishOtherName,
             this.dishCommon,
             this.totalPricePerDish,
-            this.commonId});
+            this.commonPrice});
             this.dgvOrder.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvOrder.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvOrder.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -1104,6 +1085,8 @@ namespace TakeAwayPointOfSaleSystem
             // dgvCommon
             // 
             this.dgvCommon.AllowCustomTheming = false;
+            this.dgvCommon.AllowUserToAddRows = false;
+            this.dgvCommon.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             this.dgvCommon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
@@ -1125,6 +1108,7 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvCommon.ColumnHeadersHeight = 40;
             this.dgvCommon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sideName,
+            this.sideOther,
             this.Price,
             this.cId});
             this.dgvCommon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -1160,6 +1144,7 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvCommon.HeaderForeColor = System.Drawing.Color.White;
             this.dgvCommon.Location = new System.Drawing.Point(0, 0);
             this.dgvCommon.Name = "dgvCommon";
+            this.dgvCommon.ReadOnly = true;
             this.dgvCommon.RowHeadersVisible = false;
             this.dgvCommon.RowTemplate.Height = 40;
             this.dgvCommon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -2147,6 +2132,71 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSetTime.UseDefaultRadiusAndThickness = true;
             this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
+            // dishNo
+            // 
+            this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishNo.DataPropertyName = "Id";
+            this.dishNo.HeaderText = "Dish No.";
+            this.dishNo.Name = "dishNo";
+            this.dishNo.ReadOnly = true;
+            this.dishNo.Width = 94;
+            // 
+            // dishName
+            // 
+            this.dishName.DataPropertyName = "foodName";
+            this.dishName.HeaderText = "Dish Name";
+            this.dishName.Name = "dishName";
+            this.dishName.ReadOnly = true;
+            // 
+            // otherName
+            // 
+            this.otherName.DataPropertyName = "foodOtherName";
+            this.otherName.HeaderText = "Dish Other Name";
+            this.otherName.Name = "otherName";
+            this.otherName.ReadOnly = true;
+            // 
+            // dishPrice
+            // 
+            this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishPrice.DataPropertyName = "price";
+            this.dishPrice.HeaderText = "Price";
+            this.dishPrice.Name = "dishPrice";
+            this.dishPrice.ReadOnly = true;
+            this.dishPrice.Width = 69;
+            // 
+            // sideName
+            // 
+            this.sideName.DataPropertyName = "commonName";
+            this.sideName.HeaderText = "Side Name";
+            this.sideName.Name = "sideName";
+            this.sideName.ReadOnly = true;
+            // 
+            // sideOther
+            // 
+            this.sideOther.DataPropertyName = "commonOtherName";
+            this.sideOther.HeaderText = "Side Other Name";
+            this.sideOther.Name = "sideOther";
+            this.sideOther.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Price.DataPropertyName = "price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 69;
+            // 
+            // cId
+            // 
+            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cId.DataPropertyName = "Id";
+            this.cId.HeaderText = "cId";
+            this.cId.Name = "cId";
+            this.cId.ReadOnly = true;
+            this.cId.Visible = false;
+            this.cId.Width = 56;
+            // 
             // orderedDishNo
             // 
             this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -2171,9 +2221,16 @@ namespace TakeAwayPointOfSaleSystem
             this.orderedDishName.ReadOnly = true;
             this.orderedDishName.Width = 111;
             // 
+            // dishOtherName
+            // 
+            this.dishOtherName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dishOtherName.HeaderText = "Dish Other Name";
+            this.dishOtherName.Name = "dishOtherName";
+            this.dishOtherName.ReadOnly = true;
+            this.dishOtherName.Width = 157;
+            // 
             // dishCommon
             // 
-            this.dishCommon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dishCommon.HeaderText = "Common";
             this.dishCommon.Name = "dishCommon";
             this.dishCommon.ReadOnly = true;
@@ -2186,36 +2243,14 @@ namespace TakeAwayPointOfSaleSystem
             this.totalPricePerDish.ReadOnly = true;
             this.totalPricePerDish.Width = 69;
             // 
-            // commonId
+            // commonPrice
             // 
-            this.commonId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.commonId.DataPropertyName = "commonId";
-            this.commonId.HeaderText = "cmmonId";
-            this.commonId.Name = "commonId";
-            this.commonId.ReadOnly = true;
-            this.commonId.Visible = false;
-            this.commonId.Width = 103;
-            // 
-            // sideName
-            // 
-            this.sideName.HeaderText = "Side Name";
-            this.sideName.Name = "sideName";
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.Width = 69;
-            // 
-            // cId
-            // 
-            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cId.DataPropertyName = "Id";
-            this.cId.HeaderText = "cId";
-            this.cId.Name = "cId";
-            this.cId.Visible = false;
-            this.cId.Width = 56;
+            this.commonPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.commonPrice.HeaderText = "cmmonId";
+            this.commonPrice.Name = "commonPrice";
+            this.commonPrice.ReadOnly = true;
+            this.commonPrice.Visible = false;
+            this.commonPrice.Width = 103;
             // 
             // FrmMain
             // 
@@ -2324,15 +2359,18 @@ namespace TakeAwayPointOfSaleSystem
         private Bunifu.UI.WinForms.BunifuLabel lblHouseNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sideName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sideOther;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cId;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderedDishNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderedDishName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishOtherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishCommon;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPricePerDish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commonId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sideName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commonPrice;
     }
 }

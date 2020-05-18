@@ -1120,7 +1120,7 @@
             this.btnNormal.BackColor1 = System.Drawing.Color.Black;
             this.btnNormal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNormal.BackgroundImage")));
             this.btnNormal.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnNormal.ButtonText = "Normal\r\n Price";
+            this.btnNormal.ButtonText = "Clear \r\nChange";
             this.btnNormal.ButtonTextMarginLeft = 0;
             this.btnNormal.ColorContrastOnClick = 45;
             this.btnNormal.ColorContrastOnHover = 45;

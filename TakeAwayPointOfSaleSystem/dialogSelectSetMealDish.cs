@@ -43,7 +43,7 @@ namespace TakeAwayPointOfSaleSystem
             if (dgvDish.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dgvDish.SelectedRows[0];
-                d = new dish((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value);
+                d = new dish((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, "");
             }
             else
             {

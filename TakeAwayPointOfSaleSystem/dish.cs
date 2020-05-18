@@ -11,8 +11,9 @@ namespace TakeAwayPointOfSaleSystem
         private int id;
         private string Name;
         private string otherName;
+        private string price;
 
-        public dish(int i, string n, string o)
+        public dish(int i, string n, string o, string price)
         {
             id = i;
             Name = n;
@@ -32,6 +33,11 @@ namespace TakeAwayPointOfSaleSystem
         public string getOtherName()
         {
             return otherName;
+        }
+
+        public string getPrice()
+        {
+            return price;
         }
     }
 }

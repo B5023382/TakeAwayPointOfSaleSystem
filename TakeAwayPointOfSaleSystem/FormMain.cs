@@ -41,9 +41,9 @@ namespace TakeAwayPointOfSaleSystem
                     {
                         BunifuButton b = new BunifuButton();
                         b.Text = reader["categoryName"].ToString();
-                        b.Size = new Size(110, 50);
+                        b.Size = new Size(200, 90);
                         b.Click += dishButton_click;
-                        flpCommonCategory.Controls.Add(b);
+                        flpDishMenu.Controls.Add(b);
                     }
                 }
 
@@ -58,7 +58,7 @@ namespace TakeAwayPointOfSaleSystem
                         b.Text = reader["commonCategory"].ToString();
                         b.Size = new Size(110, 50);
                         b.Click += common_button_click;
-                        flpDishMenu.Controls.Add(b);
+                        flpCommonCategory.Controls.Add(b);
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace TakeAwayPointOfSaleSystem
             delete.Text = "Delete";
             delete.Size = new Size(110, 50);
             delete.Click += deleteCommon_click;
-            flpDishMenu.Controls.Add(delete);
+            flpCommonCategory.Controls.Add(delete);
 
             lblUsername.Text = username;
             lblRole.Text = role;
@@ -83,19 +83,44 @@ namespace TakeAwayPointOfSaleSystem
             lblName.Text = "";
             lblTotal.Text = "0.00";
             lblNote.Text = "";
+
+            dgvFood.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void deleteCommon_click(object sender, EventArgs e)
         {
             if (dgvOrder.SelectedRows.Count > 0)
             {
-                string commonId = (string) dgvOrder.SelectedRows[0].Cells[5].Value;
-                string commons = (string) dgvOrder.SelectedRows[0].Cells[3].Value;
-                dgvOrder.SelectedRows[0].Cells[3].Value = "";
-                string[] commonList = commons.Split(',');
+                string commonId = (string) dgvOrder.SelectedRows[0].Cells[6].Value;
+                string commons = (string) dgvOrder.SelectedRows[0].Cells[4].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = "";
+
+                string[] commonList = commons.Split('/');
+                string[] commonPrice = commonId.Split('/');
+
+                if(commonList.Length > 0 && (commonList[commonList.Length - 1].Contains("Add") || commonList[commonList.Length - 1].Contains("Swap"))){
+
+                    dgvOrder.SelectedRows[0].Cells[6].Value = "";
+
+                    decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                    dgvOrder.SelectedRows[0].Cells[5].Value = (single - Convert.ToDecimal(commonPrice[commonPrice.Length - 1]))
+                        * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+
+                    for (int i = 0; i < commonPrice.Length - 1; i++)
+                    {
+                        if (!string.IsNullOrEmpty(commonPrice[i]))
+                        {
+                            dgvOrder.SelectedRows[0].Cells[6].Value = (string)dgvOrder.SelectedRows[0].Cells[6].Value + "/" + commonPrice[i];
+                        }
+                    }
+                }
+
                 for (int i = 0; i < commonList.Length - 1; i++)
                 {
-                    dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value + commonList[i];
+                    if (!string.IsNullOrEmpty(commonList[i]))
+                    {
+                        dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value + "/" + commonList[i] ;
+                    }
                 }
             }
         }
@@ -113,7 +138,8 @@ namespace TakeAwayPointOfSaleSystem
             {
                 sqlCon.Open();
                 SqlDataAdapter getCategory =
-                    new SqlDataAdapter("SELECT Id, commonName, price FROM FoodCommon WHERE category = '" + b.Text +"'", sqlCon);
+                    new SqlDataAdapter("SELECT f.Id, f.commonName, f.commonOtherName, f.price FROM FoodCommon f " +
+                    "LEFT JOIN CommonCategory c ON f.category = c.Id WHERE c.commonCategory = '" + b.Text +"'", sqlCon);
                 DataSet categoryDataSet = new DataSet();
                 getCategory.Fill(categoryDataSet);
                 sqlCon.Close();
@@ -126,7 +152,7 @@ namespace TakeAwayPointOfSaleSystem
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT Id, foodName, price FROM FoodMenu", sqlCon);
+                SqlDataAdapter getCategory = new SqlDataAdapter("SELECT Id, foodName, foodOtherName, price FROM FoodMenu", sqlCon);
                 DataSet categoryDataSet = new DataSet();
                 getCategory.Fill(categoryDataSet);
                 sqlCon.Close();
@@ -137,11 +163,15 @@ namespace TakeAwayPointOfSaleSystem
         private void dishButton_click(object sender, EventArgs e)
         {
             BunifuButton b = (BunifuButton) sender;
+
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter getCategory = 
-                    new SqlDataAdapter("SELECT Id, foodName, price FROM FoodMenu WHERE category1 = " + b.Text + " OR category2 = " + b.Text, sqlCon);
+                SqlDataAdapter getCategory =
+                    new SqlDataAdapter("SELECT f.Id, f.foodName, f.foodOtherName, f.price FROM FoodMenu f " +
+                    "LEFT JOIN FoodCategory c ON f.category1 = c.Id " +
+                    "LEFT JOIN FoodCategory c2 ON f.category2 = c2.Id" +
+                    " WHERE c.categoryName = '" + b.Text + "' OR c2.categoryName = '" + b.Text + "'", sqlCon);
                 DataSet categoryDataSet = new DataSet();
                 getCategory.Fill(categoryDataSet);
                 sqlCon.Close();
@@ -153,14 +183,18 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (dgvOrder.SelectedRows.Count > 0)
             {
-               if((int)dgvOrder.SelectedRows[0].Cells[1].Value - 1 < 1)
+               if(Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value) - 1 < 1)
                {
                     dgvOrder.Rows.RemoveAt(dgvOrder.SelectedRows[0].Index);
                }
                else
                {
-                   dgvOrder.SelectedRows[0].Cells[1].Value = (int) dgvOrder.SelectedRows[0].Cells[1].Value - 1;
+                    decimal qty = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                    decimal dishPrice = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / qty;
+                    dgvOrder.SelectedRows[0].Cells[1].Value = qty - 1;
+                    dgvOrder.SelectedRows[0].Cells[5].Value = dishPrice * (qty - 1);
                }
+                lblTotal.Text = "£ " + calculateTotal().ToString();
             }
         }
 
@@ -168,7 +202,11 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (dgvOrder.SelectedRows.Count > 0)
             {
-                dgvOrder.SelectedRows[0].Cells[1].Value = (int)dgvOrder.SelectedRows[0].Cells[1].Value + 1;
+                decimal temp = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                decimal qty = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value) + 1;
+                dgvOrder.SelectedRows[0].Cells[1].Value = qty;
+                dgvOrder.SelectedRows[0].Cells[5].Value = temp * qty;
+                lblTotal.Text = "£ " + calculateTotal().ToString();
             }
         }
 
@@ -176,11 +214,13 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (dgvOrder.SelectedRows.Count > 0)
             {
-                using (dialogChangePrice d = new dialogChangePrice('.', "Change Price", null))
+                decimal price = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                using (dialogChangePrice d = new dialogChangePrice('.', "Change Price", null, price.ToString()))
                 {
                     if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        lblTotal.Text = d.newData;
+                        dgvOrder.SelectedRows[0].Cells[5].Value = Convert.ToDecimal(d.newData) * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                        lblTotal.Text = "£ " + calculateTotal().ToString();
                     }
                 }
             }
@@ -188,7 +228,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSetTime_Click(object sender, EventArgs e)
         {
-            using (dialogChangePrice d = new dialogChangePrice(':', "Set Time", "Clear"))
+            using (dialogChangePrice d = new dialogChangePrice(':', "Set Time", "Clear", lblDeliverTime.Text))
             {
                 if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -199,11 +239,19 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            using (dialogChangePrice d = new dialogChangePrice(' ', "Search Dish", "Clear"))
+            using (dialogChangePrice d = new dialogChangePrice(' ', "Search Dish", "Clear", ""))
             {
                 if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                   
+                    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                    {
+                        sqlCon.Open();
+                        SqlDataAdapter getCategory = new SqlDataAdapter("SELECT Id, foodName, foodOtherName, price FROM FoodMenu WHERE Id LIKE '" + d.newData + "%'", sqlCon);
+                        DataSet categoryDataSet = new DataSet();
+                        getCategory.Fill(categoryDataSet);
+                        sqlCon.Close();
+                        dgvFood.DataSource = categoryDataSet.Tables[0];
+                    }
                 }
             }
         }
@@ -230,7 +278,49 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSetMeal_Click(object sender, EventArgs e)
         {
+            using (dialogGetSetMeal d = new dialogGetSetMeal())
+            {
+                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                   // int setId = d.getSetId();
 
+                    //using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                    //{
+                    //    sqlCon.Open();
+                    //    SqlCommand addCustomer = new SqlCommand("SELECT categoryName FROM FoodCategory", sqlCon);
+                    //    addCustomer.CommandType = CommandType.Text;
+
+                    //    using (SqlDataReader reader = addCustomer.ExecuteReader())
+                    //    {
+                    //        while (reader.Read())
+                    //        {
+                    //            BunifuButton b = new BunifuButton();
+                    //            b.Text = reader["categoryName"].ToString();
+                    //            b.Size = new Size(200, 90);
+                    //            b.Click += dishButton_click;
+                    //            flpDishMenu.Controls.Add(b);
+                    //        }
+                    //    }
+
+                    //    SqlCommand getCommonCategory = new SqlCommand("SELECT commonCategory FROM CommonCategory", sqlCon);
+                    //    getCommonCategory.CommandType = CommandType.Text;
+
+                    //    using (SqlDataReader reader = getCommonCategory.ExecuteReader())
+                    //    {
+                    //        while (reader.Read())
+                    //        {
+                    //            BunifuButton b = new BunifuButton();
+                    //            b.Text = reader["commonCategory"].ToString();
+                    //            b.Size = new Size(110, 50);
+                    //            b.Click += common_button_click;
+                    //            flpCommonCategory.Controls.Add(b);
+                    //        }
+                    //    }
+
+                    //    sqlCon.Close();
+                    //}
+                }
+            }
         }
 
         private void btnDishCommon_Click(object sender, EventArgs e)
@@ -240,45 +330,56 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnDishLess_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0)
+            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
-                dgvOrder.SelectedRows[0].Cells[3].Value = (string) dgvOrder.SelectedRows[0].Cells[3].Value
-                                                          + "," + "Less " +
-                                                          (string) dgvCommon.SelectedRows[0].Cells[0].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = (string) dgvOrder.SelectedRows[0].Cells[4].Value
+                                                          + "/" + "Less " +
+                                                          (string) dgvCommon.SelectedRows[0].Cells["sideName"].Value;
             }
         }
 
         private void btnDishAdd_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0)
+            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
-                dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value
-                                                          + "," + "Add " +
-                                                          (string)dgvCommon.SelectedRows[0].Cells[0].Value;
-                dgvOrder.SelectedRows[0].Cells[4].Value = (float)dgvOrder.SelectedRows[0].Cells[4].Value + 
-                                                          (float)dgvCommon.SelectedRows[0].Cells[1].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value
+                                                          + "/" + "Add " +
+                                                          (string)dgvCommon.SelectedRows[0].Cells["sideName"].Value;
+
+                    dgvOrder.SelectedRows[0].Cells[6].Value = (string)dgvOrder.SelectedRows[0].Cells[6].Value
+                          + "/" + dgvCommon.SelectedRows[0].Cells["Price"].Value.ToString();
+                
+
+                decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(dgvCommon.SelectedRows[0].Cells["Price"].Value))
+                    * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
             }
         }
 
         private void btnDishNone_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0)
+            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
-                dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value
-                                                          + "," + "No " +
-                                                          (string)dgvCommon.SelectedRows[0].Cells[0].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value
+                                                          + "/" + "No " +
+                                                          (string)dgvCommon.SelectedRows[0].Cells["sideName"].Value;
             }
         }
 
         private void btnDishSwap_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0)
+            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
-                dgvOrder.SelectedRows[0].Cells[3].Value = (string)dgvOrder.SelectedRows[0].Cells[3].Value
-                                                          + "," + "Swap to" +
-                                                          (string)dgvCommon.SelectedRows[0].Cells[0].Value;
-                dgvOrder.SelectedRows[0].Cells[4].Value = (float)dgvOrder.SelectedRows[0].Cells[4].Value +
-                                                          (float)dgvCommon.SelectedRows[0].Cells[1].Value;
+                dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value
+                                                          + "/" + "Swap to" +
+                                                          (string)dgvCommon.SelectedRows[0].Cells["sideName"].Value;
+
+                dgvOrder.SelectedRows[0].Cells[6].Value = (string)dgvOrder.SelectedRows[0].Cells[6].Value
+                          + "/" + dgvCommon.SelectedRows[0].Cells["Price"].Value.ToString();
+
+                decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+                dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(dgvCommon.SelectedRows[0].Cells["Price"].Value))
+                    * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
             }
         }
 
@@ -335,6 +436,41 @@ namespace TakeAwayPointOfSaleSystem
             lblAddress.Location = new Point(lblHouseNo.Right + 5, lblHouseNo.Location.Y );
         }
 
+        private void dgvFood_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if(dgvFood.SelectedRows.Count > 0 && pagMenuPage.PageIndex == 0)
+            {
+                bool repeat = false;
+                foreach(DataGridViewRow row in dgvOrder.Rows)
+                {
+                    if((int)row.Cells[0].Value == (int)dgvFood.SelectedRows[0].Cells[0].Value && string.IsNullOrEmpty((string)row.Cells[4].Value))
+                    {
+                        row.Cells[1].Value = Convert.ToDecimal(row.Cells[1].Value) + 1;
+                        row.Cells[5].Value = Convert.ToDecimal(row.Cells[1].Value) * Convert.ToDecimal(dgvFood.SelectedRows[0].Cells[3].Value);
+                        repeat = true;
+                        break;
+                    }
+                }
+                if (!repeat)
+                {
+                    dgvOrder.Rows.Add(dgvFood.SelectedRows[0].Cells[0].Value, 1, dgvFood.SelectedRows[0].Cells[1].Value,
+                        dgvFood.SelectedRows[0].Cells[2].Value, "", dgvFood.SelectedRows[0].Cells[3].Value);
+                }
+            }
 
+            lblTotal.Text = "£ " + calculateTotal().ToString();
+        }
+
+        private decimal calculateTotal()
+        {
+            decimal total = 0;
+
+            foreach(DataGridViewRow row in dgvOrder.Rows)
+            {
+                total = total + Convert.ToDecimal(row.Cells[5].Value);
+            }
+            return total + Convert.ToDecimal(lblDeliverFee.Text);
+        }
     }
 }
