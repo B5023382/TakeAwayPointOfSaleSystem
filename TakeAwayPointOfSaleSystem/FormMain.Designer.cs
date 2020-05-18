@@ -30,23 +30,24 @@ namespace TakeAwayPointOfSaleSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -57,62 +58,15 @@ namespace TakeAwayPointOfSaleSystem
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panAddressBar = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.lblHouseNo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblPostcode = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblTelphone = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblNote = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblAddress = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvFood = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.dgvOrder = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblTime = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblDate = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblRole = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblUsername = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel22 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.lblDeliverFee = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblDeliverTime = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel18 = new Bunifu.UI.WinForms.BunifuLabel();
             this.flpCommonCategory = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCloseCommon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishSwap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishNone = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tabEditDish = new System.Windows.Forms.TabPage();
-            this.btnDishAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishLess = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dgvCommon = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btnAllDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.flpDishMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pagMenuPage = new Bunifu.UI.WinForms.BunifuPages();
             this.tapMenu = new System.Windows.Forms.TabPage();
-            this.bunifuLabel32 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.dockMain = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.btnSetMeal = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishCommon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnPayment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnViewAll = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnCancelOrder = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnChangePrice = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnAddQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnManagment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnMinusQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnSetTime = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,32 +82,595 @@ namespace TakeAwayPointOfSaleSystem
             this.dishCommon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPricePerDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commonPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panAddressBar.SuspendLayout();
+            this.btnSetTime = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panAddressBar = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblHouseNo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblPostcode = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTelphone = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblNote = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblAddress = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTime = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDate = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblRole = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblUsername = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel22 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDeliverFee = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDeliverTime = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel18 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnAllDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnCloseCommon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishSwap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishNone = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishLess = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuLabel32 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnSetMeal = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishCommon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnPayment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnViewAll = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnCancelOrder = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnChangePrice = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnAddQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnManagment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnMinusQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
-            this.bunifuGradientPanel1.SuspendLayout();
-            this.bunifuGradientPanel3.SuspendLayout();
             this.tabEditDish.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommon)).BeginInit();
             this.flpDishMenu.SuspendLayout();
             this.pagMenuPage.SuspendLayout();
             this.tapMenu.SuspendLayout();
+            this.panAddressBar.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
+            this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTotal
+            // dgvFood
             // 
-            this.lblTotal.AutoEllipsis = false;
-            this.lblTotal.CursorType = null;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTotal.Location = new System.Drawing.Point(391, 16);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotal.Size = new System.Drawing.Size(85, 22);
-            this.lblTotal.TabIndex = 17;
-            this.lblTotal.Text = "total price £";
-            this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.dgvFood.AllowCustomTheming = false;
+            this.dgvFood.AllowUserToAddRows = false;
+            this.dgvFood.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFood.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFood.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFood.ColumnHeadersHeight = 40;
+            this.dgvFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dishNo,
+            this.dishName,
+            this.otherName,
+            this.dishPrice});
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFood.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFood.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvFood.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.Name = null;
+            this.dgvFood.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFood.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFood.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFood.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFood.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFood.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFood.EnableHeadersVisualStyles = false;
+            this.dgvFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFood.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFood.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvFood.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvFood.Location = new System.Drawing.Point(644, 41);
+            this.dgvFood.Name = "dgvFood";
+            this.dgvFood.ReadOnly = true;
+            this.dgvFood.RowHeadersVisible = false;
+            this.dgvFood.RowTemplate.Height = 40;
+            this.dgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFood.Size = new System.Drawing.Size(124, 501);
+            this.dgvFood.TabIndex = 49;
+            this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
+            // 
+            // dgvOrder
+            // 
+            this.dgvOrder.AllowCustomTheming = false;
+            this.dgvOrder.AllowUserToAddRows = false;
+            this.dgvOrder.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrder.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvOrder.ColumnHeadersHeight = 40;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderedDishNo,
+            this.quantity,
+            this.orderedDishName,
+            this.dishOtherName,
+            this.dishCommon,
+            this.totalPricePerDish,
+            this.commonPrice});
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvOrder.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvOrder.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvOrder.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.Name = null;
+            this.dgvOrder.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvOrder.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvOrder.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrder.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvOrder.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvOrder.EnableHeadersVisualStyles = false;
+            this.dgvOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvOrder.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvOrder.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvOrder.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvOrder.Location = new System.Drawing.Point(7, 162);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.ReadOnly = true;
+            this.dgvOrder.RowHeadersVisible = false;
+            this.dgvOrder.RowTemplate.Height = 40;
+            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrder.Size = new System.Drawing.Size(617, 223);
+            this.dgvOrder.TabIndex = 47;
+            this.dgvOrder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // flpCommonCategory
+            // 
+            this.flpCommonCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpCommonCategory.AutoScroll = true;
+            this.flpCommonCategory.Location = new System.Drawing.Point(343, 0);
+            this.flpCommonCategory.Name = "flpCommonCategory";
+            this.flpCommonCategory.Size = new System.Drawing.Size(144, 412);
+            this.flpCommonCategory.TabIndex = 31;
+            // 
+            // tabEditDish
+            // 
+            this.tabEditDish.Controls.Add(this.flpCommonCategory);
+            this.tabEditDish.Controls.Add(this.btnCloseCommon);
+            this.tabEditDish.Controls.Add(this.btnDishSwap);
+            this.tabEditDish.Controls.Add(this.btnDishNone);
+            this.tabEditDish.Controls.Add(this.btnDishAdd);
+            this.tabEditDish.Controls.Add(this.btnDishLess);
+            this.tabEditDish.Controls.Add(this.dgvCommon);
+            this.tabEditDish.Location = new System.Drawing.Point(4, 4);
+            this.tabEditDish.Name = "tabEditDish";
+            this.tabEditDish.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEditDish.Size = new System.Drawing.Size(493, 475);
+            this.tabEditDish.TabIndex = 1;
+            this.tabEditDish.Text = "DishCommon";
+            this.tabEditDish.UseVisualStyleBackColor = true;
+            // 
+            // dgvCommon
+            // 
+            this.dgvCommon.AllowCustomTheming = false;
+            this.dgvCommon.AllowUserToAddRows = false;
+            this.dgvCommon.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvCommon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvCommon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCommon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCommon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCommon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCommon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCommon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvCommon.ColumnHeadersHeight = 40;
+            this.dgvCommon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sideName,
+            this.sideOther,
+            this.Price,
+            this.cId});
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvCommon.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvCommon.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.Name = null;
+            this.dgvCommon.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvCommon.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvCommon.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvCommon.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvCommon.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCommon.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvCommon.EnableHeadersVisualStyles = false;
+            this.dgvCommon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvCommon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvCommon.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvCommon.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvCommon.Location = new System.Drawing.Point(0, 0);
+            this.dgvCommon.Name = "dgvCommon";
+            this.dgvCommon.ReadOnly = true;
+            this.dgvCommon.RowHeadersVisible = false;
+            this.dgvCommon.RowTemplate.Height = 40;
+            this.dgvCommon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCommon.Size = new System.Drawing.Size(345, 412);
+            this.dgvCommon.TabIndex = 0;
+            this.dgvCommon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // flpDishMenu
+            // 
+            this.flpDishMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpDishMenu.AutoScroll = true;
+            this.flpDishMenu.Controls.Add(this.btnAllDish);
+            this.flpDishMenu.Location = new System.Drawing.Point(3, 4);
+            this.flpDishMenu.Name = "flpDishMenu";
+            this.flpDishMenu.Size = new System.Drawing.Size(489, 401);
+            this.flpDishMenu.TabIndex = 0;
+            // 
+            // pagMenuPage
+            // 
+            this.pagMenuPage.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.pagMenuPage.AllowTransitions = true;
+            this.pagMenuPage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pagMenuPage.Controls.Add(this.tapMenu);
+            this.pagMenuPage.Controls.Add(this.tabEditDish);
+            this.pagMenuPage.Location = new System.Drawing.Point(775, 41);
+            this.pagMenuPage.Multiline = true;
+            this.pagMenuPage.Name = "pagMenuPage";
+            this.pagMenuPage.Page = this.tabEditDish;
+            this.pagMenuPage.PageIndex = 1;
+            this.pagMenuPage.PageName = "tabEditDish";
+            this.pagMenuPage.PageTitle = "DishCommon";
+            this.pagMenuPage.SelectedIndex = 0;
+            this.pagMenuPage.Size = new System.Drawing.Size(501, 501);
+            this.pagMenuPage.TabIndex = 62;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.pagMenuPage.Transition = animation1;
+            this.pagMenuPage.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
+            // 
+            // tapMenu
+            // 
+            this.tapMenu.Controls.Add(this.flpDishMenu);
+            this.tapMenu.Location = new System.Drawing.Point(4, 4);
+            this.tapMenu.Name = "tapMenu";
+            this.tapMenu.Padding = new System.Windows.Forms.Padding(3);
+            this.tapMenu.Size = new System.Drawing.Size(493, 475);
+            this.tapMenu.TabIndex = 0;
+            this.tapMenu.Text = "Menu";
+            this.tapMenu.UseVisualStyleBackColor = true;
+            // 
+            // dockMain
+            // 
+            this.dockMain.AllowFormDragging = false;
+            this.dockMain.AllowFormDropShadow = true;
+            this.dockMain.AllowFormResizing = true;
+            this.dockMain.AllowHidingBottomRegion = true;
+            this.dockMain.AllowOpacityChangesWhileDragging = false;
+            this.dockMain.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.dockMain.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.dockMain.BorderOptions.BottomBorder.ShowBorder = true;
+            this.dockMain.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.dockMain.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.dockMain.BorderOptions.LeftBorder.ShowBorder = true;
+            this.dockMain.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.dockMain.BorderOptions.RightBorder.BorderThickness = 1;
+            this.dockMain.BorderOptions.RightBorder.ShowBorder = true;
+            this.dockMain.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.dockMain.BorderOptions.TopBorder.BorderThickness = 1;
+            this.dockMain.BorderOptions.TopBorder.ShowBorder = true;
+            this.dockMain.ContainerControl = this;
+            this.dockMain.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.dockMain.DockingIndicatorsOpacity = 0.5D;
+            this.dockMain.DockingOptions.DockAll = true;
+            this.dockMain.DockingOptions.DockBottomLeft = true;
+            this.dockMain.DockingOptions.DockBottomRight = true;
+            this.dockMain.DockingOptions.DockFullScreen = true;
+            this.dockMain.DockingOptions.DockLeft = true;
+            this.dockMain.DockingOptions.DockRight = true;
+            this.dockMain.DockingOptions.DockTopLeft = true;
+            this.dockMain.DockingOptions.DockTopRight = true;
+            this.dockMain.FormDraggingOpacity = 0.9D;
+            this.dockMain.ParentForm = this;
+            this.dockMain.ShowCursorChanges = true;
+            this.dockMain.ShowDockingIndicators = true;
+            this.dockMain.TitleBarOptions.AllowFormDragging = true;
+            this.dockMain.TitleBarOptions.BunifuFormDock = this.dockMain;
+            this.dockMain.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.dockMain.TitleBarOptions.TitleBarControl = null;
+            this.dockMain.TitleBarOptions.UseBackColorOnDockingIndicators = false;
+            // 
+            // dishNo
+            // 
+            this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishNo.DataPropertyName = "Id";
+            this.dishNo.HeaderText = "Dish No.";
+            this.dishNo.Name = "dishNo";
+            this.dishNo.ReadOnly = true;
+            this.dishNo.Width = 94;
+            // 
+            // dishName
+            // 
+            this.dishName.DataPropertyName = "foodName";
+            this.dishName.HeaderText = "Dish Name";
+            this.dishName.Name = "dishName";
+            this.dishName.ReadOnly = true;
+            // 
+            // otherName
+            // 
+            this.otherName.DataPropertyName = "foodOtherName";
+            this.otherName.HeaderText = "Dish Other Name";
+            this.otherName.Name = "otherName";
+            this.otherName.ReadOnly = true;
+            // 
+            // dishPrice
+            // 
+            this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishPrice.DataPropertyName = "price";
+            this.dishPrice.HeaderText = "Price";
+            this.dishPrice.Name = "dishPrice";
+            this.dishPrice.ReadOnly = true;
+            this.dishPrice.Width = 69;
+            // 
+            // sideName
+            // 
+            this.sideName.DataPropertyName = "commonName";
+            this.sideName.HeaderText = "Side Name";
+            this.sideName.Name = "sideName";
+            this.sideName.ReadOnly = true;
+            // 
+            // sideOther
+            // 
+            this.sideOther.DataPropertyName = "commonOtherName";
+            this.sideOther.HeaderText = "Side Other Name";
+            this.sideOther.Name = "sideOther";
+            this.sideOther.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Price.DataPropertyName = "price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 69;
+            // 
+            // cId
+            // 
+            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cId.DataPropertyName = "Id";
+            this.cId.HeaderText = "cId";
+            this.cId.Name = "cId";
+            this.cId.ReadOnly = true;
+            this.cId.Visible = false;
+            this.cId.Width = 56;
+            // 
+            // orderedDishNo
+            // 
+            this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.orderedDishNo.HeaderText = "Dish No.";
+            this.orderedDishNo.Name = "orderedDishNo";
+            this.orderedDishNo.ReadOnly = true;
+            this.orderedDishNo.Width = 94;
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.quantity.HeaderText = "QTY";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            this.quantity.Width = 62;
+            // 
+            // orderedDishName
+            // 
+            this.orderedDishName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.orderedDishName.HeaderText = "Dish Name";
+            this.orderedDishName.Name = "orderedDishName";
+            this.orderedDishName.ReadOnly = true;
+            this.orderedDishName.Width = 111;
+            // 
+            // dishOtherName
+            // 
+            this.dishOtherName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dishOtherName.HeaderText = "Dish Other Name";
+            this.dishOtherName.Name = "dishOtherName";
+            this.dishOtherName.ReadOnly = true;
+            this.dishOtherName.Width = 157;
+            // 
+            // dishCommon
+            // 
+            this.dishCommon.HeaderText = "Common";
+            this.dishCommon.Name = "dishCommon";
+            this.dishCommon.ReadOnly = true;
+            // 
+            // totalPricePerDish
+            // 
+            this.totalPricePerDish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.totalPricePerDish.HeaderText = "Price";
+            this.totalPricePerDish.Name = "totalPricePerDish";
+            this.totalPricePerDish.ReadOnly = true;
+            this.totalPricePerDish.Width = 69;
+            // 
+            // commonPrice
+            // 
+            this.commonPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.commonPrice.HeaderText = "cmmonId";
+            this.commonPrice.Name = "commonPrice";
+            this.commonPrice.ReadOnly = true;
+            this.commonPrice.Visible = false;
+            this.commonPrice.Width = 103;
+            // 
+            // btnSetTime
+            // 
+            this.btnSetTime.AllowToggling = false;
+            this.btnSetTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSetTime.AnimationSpeed = 200;
+            this.btnSetTime.AutoGenerateColors = false;
+            this.btnSetTime.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetTime.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnSetTime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSetTime.BackgroundImage")));
+            this.btnSetTime.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSetTime.ButtonText = "Set Deliver Time";
+            this.btnSetTime.ButtonTextMarginLeft = 0;
+            this.btnSetTime.ColorContrastOnClick = 45;
+            this.btnSetTime.ColorContrastOnHover = 45;
+            this.btnSetTime.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnSetTime.CustomizableEdges = borderEdges7;
+            this.btnSetTime.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSetTime.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnSetTime.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnSetTime.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnSetTime.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnSetTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSetTime.ForeColor = System.Drawing.Color.White;
+            this.btnSetTime.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSetTime.IconMarginLeft = 11;
+            this.btnSetTime.IconPadding = 10;
+            this.btnSetTime.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSetTime.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnSetTime.IdleBorderRadius = 1;
+            this.btnSetTime.IdleBorderThickness = 1;
+            this.btnSetTime.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnSetTime.IdleIconLeftImage = null;
+            this.btnSetTime.IdleIconRightImage = null;
+            this.btnSetTime.IndicateFocus = false;
+            this.btnSetTime.Location = new System.Drawing.Point(192, 497);
+            this.btnSetTime.Name = "btnSetTime";
+            this.btnSetTime.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnSetTime.onHoverState.BorderRadius = 1;
+            this.btnSetTime.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSetTime.onHoverState.BorderThickness = 1;
+            this.btnSetTime.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnSetTime.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSetTime.onHoverState.IconLeftImage = null;
+            this.btnSetTime.onHoverState.IconRightImage = null;
+            this.btnSetTime.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnSetTime.OnIdleState.BorderRadius = 1;
+            this.btnSetTime.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSetTime.OnIdleState.BorderThickness = 1;
+            this.btnSetTime.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnSetTime.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnSetTime.OnIdleState.IconLeftImage = null;
+            this.btnSetTime.OnIdleState.IconRightImage = null;
+            this.btnSetTime.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnSetTime.OnPressedState.BorderRadius = 1;
+            this.btnSetTime.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSetTime.OnPressedState.BorderThickness = 1;
+            this.btnSetTime.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnSetTime.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnSetTime.OnPressedState.IconLeftImage = null;
+            this.btnSetTime.OnPressedState.IconRightImage = null;
+            this.btnSetTime.Size = new System.Drawing.Size(122, 45);
+            this.btnSetTime.TabIndex = 64;
+            this.btnSetTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSetTime.TextMarginLeft = 0;
+            this.btnSetTime.UseDefaultRadiusAndThickness = true;
+            this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
             // panAddressBar
             // 
@@ -170,7 +687,7 @@ namespace TakeAwayPointOfSaleSystem
             this.panAddressBar.Controls.Add(this.bunifuLabel10);
             this.panAddressBar.Controls.Add(this.bunifuLabel9);
             this.panAddressBar.Controls.Add(this.bunifuLabel1);
-            this.panAddressBar.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(173)))), ((int)(((byte)(164)))));
+            this.panAddressBar.GradientBottomLeft = System.Drawing.Color.SpringGreen;
             this.panAddressBar.GradientBottomRight = System.Drawing.Color.White;
             this.panAddressBar.GradientTopLeft = System.Drawing.Color.White;
             this.panAddressBar.GradientTopRight = System.Drawing.Color.White;
@@ -339,151 +856,6 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // dgvFood
-            // 
-            this.dgvFood.AllowCustomTheming = false;
-            this.dgvFood.AllowUserToAddRows = false;
-            this.dgvFood.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFood.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFood.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvFood.ColumnHeadersHeight = 40;
-            this.dgvFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dishNo,
-            this.dishName,
-            this.otherName,
-            this.dishPrice});
-            this.dgvFood.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvFood.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFood.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFood.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFood.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFood.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvFood.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFood.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFood.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFood.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvFood.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvFood.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvFood.CurrentTheme.Name = null;
-            this.dgvFood.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvFood.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFood.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFood.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFood.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFood.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFood.EnableHeadersVisualStyles = false;
-            this.dgvFood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFood.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFood.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvFood.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvFood.Location = new System.Drawing.Point(644, 41);
-            this.dgvFood.Name = "dgvFood";
-            this.dgvFood.ReadOnly = true;
-            this.dgvFood.RowHeadersVisible = false;
-            this.dgvFood.RowTemplate.Height = 40;
-            this.dgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFood.Size = new System.Drawing.Size(124, 501);
-            this.dgvFood.TabIndex = 49;
-            this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
-            // 
-            // dgvOrder
-            // 
-            this.dgvOrder.AllowCustomTheming = false;
-            this.dgvOrder.AllowUserToAddRows = false;
-            this.dgvOrder.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvOrder.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvOrder.ColumnHeadersHeight = 40;
-            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.orderedDishNo,
-            this.quantity,
-            this.orderedDishName,
-            this.dishOtherName,
-            this.dishCommon,
-            this.totalPricePerDish,
-            this.commonPrice});
-            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvOrder.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvOrder.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvOrder.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvOrder.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvOrder.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvOrder.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvOrder.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvOrder.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvOrder.CurrentTheme.Name = null;
-            this.dgvOrder.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvOrder.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvOrder.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrder.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvOrder.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvOrder.EnableHeadersVisualStyles = false;
-            this.dgvOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvOrder.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvOrder.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvOrder.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvOrder.Location = new System.Drawing.Point(7, 162);
-            this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.ReadOnly = true;
-            this.dgvOrder.RowHeadersVisible = false;
-            this.dgvOrder.RowTemplate.Height = 40;
-            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrder.Size = new System.Drawing.Size(617, 223);
-            this.dgvOrder.TabIndex = 47;
-            this.dgvOrder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -609,20 +981,6 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel22
-            // 
-            this.bunifuLabel22.AutoEllipsis = false;
-            this.bunifuLabel22.CursorType = null;
-            this.bunifuLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel22.Location = new System.Drawing.Point(289, 16);
-            this.bunifuLabel22.Name = "bunifuLabel22";
-            this.bunifuLabel22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel22.Size = new System.Drawing.Size(79, 22);
-            this.bunifuLabel22.TabIndex = 16;
-            this.bunifuLabel22.Text = "Total Cost:";
-            this.bunifuLabel22.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel22.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // bunifuGradientPanel3
             // 
             this.bunifuGradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -643,6 +1001,34 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(615, 90);
             this.bunifuGradientPanel3.TabIndex = 51;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoEllipsis = false;
+            this.lblTotal.CursorType = null;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTotal.Location = new System.Drawing.Point(391, 16);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotal.Size = new System.Drawing.Size(85, 22);
+            this.lblTotal.TabIndex = 17;
+            this.lblTotal.Text = "total price £";
+            this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel22
+            // 
+            this.bunifuLabel22.AutoEllipsis = false;
+            this.bunifuLabel22.CursorType = null;
+            this.bunifuLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bunifuLabel22.Location = new System.Drawing.Point(289, 16);
+            this.bunifuLabel22.Name = "bunifuLabel22";
+            this.bunifuLabel22.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel22.Size = new System.Drawing.Size(79, 22);
+            this.bunifuLabel22.TabIndex = 16;
+            this.bunifuLabel22.Text = "Total Cost:";
+            this.bunifuLabel22.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel22.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblDeliverFee
             // 
@@ -700,15 +1086,76 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel18.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel18.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // flpCommonCategory
+            // btnAllDish
             // 
-            this.flpCommonCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpCommonCategory.AutoScroll = true;
-            this.flpCommonCategory.Location = new System.Drawing.Point(343, 0);
-            this.flpCommonCategory.Name = "flpCommonCategory";
-            this.flpCommonCategory.Size = new System.Drawing.Size(144, 412);
-            this.flpCommonCategory.TabIndex = 31;
+            this.btnAllDish.AllowToggling = false;
+            this.btnAllDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAllDish.AnimationSpeed = 200;
+            this.btnAllDish.AutoGenerateColors = false;
+            this.btnAllDish.BackColor = System.Drawing.Color.Transparent;
+            this.btnAllDish.BackColor1 = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAllDish.BackgroundImage")));
+            this.btnAllDish.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.ButtonText = "All Dish";
+            this.btnAllDish.ButtonTextMarginLeft = 0;
+            this.btnAllDish.ColorContrastOnClick = 45;
+            this.btnAllDish.ColorContrastOnHover = 45;
+            this.btnAllDish.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnAllDish.CustomizableEdges = borderEdges6;
+            this.btnAllDish.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAllDish.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnAllDish.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAllDish.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAllDish.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnAllDish.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAllDish.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAllDish.IconMarginLeft = 11;
+            this.btnAllDish.IconPadding = 10;
+            this.btnAllDish.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAllDish.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.IdleBorderRadius = 1;
+            this.btnAllDish.IdleBorderThickness = 1;
+            this.btnAllDish.IdleFillColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.IdleIconLeftImage = null;
+            this.btnAllDish.IdleIconRightImage = null;
+            this.btnAllDish.IndicateFocus = false;
+            this.btnAllDish.Location = new System.Drawing.Point(3, 3);
+            this.btnAllDish.Name = "btnAllDish";
+            this.btnAllDish.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAllDish.onHoverState.BorderRadius = 1;
+            this.btnAllDish.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.onHoverState.BorderThickness = 1;
+            this.btnAllDish.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAllDish.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.onHoverState.IconLeftImage = null;
+            this.btnAllDish.onHoverState.IconRightImage = null;
+            this.btnAllDish.OnIdleState.BorderColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.OnIdleState.BorderRadius = 1;
+            this.btnAllDish.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.OnIdleState.BorderThickness = 1;
+            this.btnAllDish.OnIdleState.FillColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.OnIdleState.IconLeftImage = null;
+            this.btnAllDish.OnIdleState.IconRightImage = null;
+            this.btnAllDish.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAllDish.OnPressedState.BorderRadius = 1;
+            this.btnAllDish.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.OnPressedState.BorderThickness = 1;
+            this.btnAllDish.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAllDish.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.OnPressedState.IconLeftImage = null;
+            this.btnAllDish.OnPressedState.IconRightImage = null;
+            this.btnAllDish.Size = new System.Drawing.Size(200, 90);
+            this.btnAllDish.TabIndex = 1;
+            this.btnAllDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAllDish.TextMarginLeft = 0;
+            this.btnAllDish.UseDefaultRadiusAndThickness = true;
+            this.btnAllDish.Click += new System.EventHandler(this.btnAllDish_Click);
             // 
             // btnCloseCommon
             // 
@@ -923,23 +1370,6 @@ namespace TakeAwayPointOfSaleSystem
             this.btnDishNone.UseDefaultRadiusAndThickness = true;
             this.btnDishNone.Click += new System.EventHandler(this.btnDishNone_Click);
             // 
-            // tabEditDish
-            // 
-            this.tabEditDish.Controls.Add(this.flpCommonCategory);
-            this.tabEditDish.Controls.Add(this.btnCloseCommon);
-            this.tabEditDish.Controls.Add(this.btnDishSwap);
-            this.tabEditDish.Controls.Add(this.btnDishNone);
-            this.tabEditDish.Controls.Add(this.btnDishAdd);
-            this.tabEditDish.Controls.Add(this.btnDishLess);
-            this.tabEditDish.Controls.Add(this.dgvCommon);
-            this.tabEditDish.Location = new System.Drawing.Point(4, 4);
-            this.tabEditDish.Name = "tabEditDish";
-            this.tabEditDish.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEditDish.Size = new System.Drawing.Size(493, 475);
-            this.tabEditDish.TabIndex = 1;
-            this.tabEditDish.Text = "DishCommon";
-            this.tabEditDish.UseVisualStyleBackColor = true;
-            // 
             // btnDishAdd
             // 
             this.btnDishAdd.AllowToggling = false;
@@ -1082,219 +1512,6 @@ namespace TakeAwayPointOfSaleSystem
             this.btnDishLess.UseDefaultRadiusAndThickness = true;
             this.btnDishLess.Click += new System.EventHandler(this.btnDishLess_Click);
             // 
-            // dgvCommon
-            // 
-            this.dgvCommon.AllowCustomTheming = false;
-            this.dgvCommon.AllowUserToAddRows = false;
-            this.dgvCommon.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvCommon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvCommon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCommon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCommon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCommon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvCommon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCommon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvCommon.ColumnHeadersHeight = 40;
-            this.dgvCommon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sideName,
-            this.sideOther,
-            this.Price,
-            this.cId});
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvCommon.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCommon.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.Name = null;
-            this.dgvCommon.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCommon.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCommon.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvCommon.EnableHeadersVisualStyles = false;
-            this.dgvCommon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvCommon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvCommon.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvCommon.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvCommon.Location = new System.Drawing.Point(0, 0);
-            this.dgvCommon.Name = "dgvCommon";
-            this.dgvCommon.ReadOnly = true;
-            this.dgvCommon.RowHeadersVisible = false;
-            this.dgvCommon.RowTemplate.Height = 40;
-            this.dgvCommon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommon.Size = new System.Drawing.Size(345, 412);
-            this.dgvCommon.TabIndex = 0;
-            this.dgvCommon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // btnAllDish
-            // 
-            this.btnAllDish.AllowToggling = false;
-            this.btnAllDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAllDish.AnimationSpeed = 200;
-            this.btnAllDish.AutoGenerateColors = false;
-            this.btnAllDish.BackColor = System.Drawing.Color.Transparent;
-            this.btnAllDish.BackColor1 = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAllDish.BackgroundImage")));
-            this.btnAllDish.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.ButtonText = "All Dish";
-            this.btnAllDish.ButtonTextMarginLeft = 0;
-            this.btnAllDish.ColorContrastOnClick = 45;
-            this.btnAllDish.ColorContrastOnHover = 45;
-            this.btnAllDish.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnAllDish.CustomizableEdges = borderEdges6;
-            this.btnAllDish.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAllDish.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnAllDish.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAllDish.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAllDish.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAllDish.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAllDish.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAllDish.IconMarginLeft = 11;
-            this.btnAllDish.IconPadding = 10;
-            this.btnAllDish.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAllDish.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.IdleBorderRadius = 1;
-            this.btnAllDish.IdleBorderThickness = 1;
-            this.btnAllDish.IdleFillColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.IdleIconLeftImage = null;
-            this.btnAllDish.IdleIconRightImage = null;
-            this.btnAllDish.IndicateFocus = false;
-            this.btnAllDish.Location = new System.Drawing.Point(3, 3);
-            this.btnAllDish.Name = "btnAllDish";
-            this.btnAllDish.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAllDish.onHoverState.BorderRadius = 1;
-            this.btnAllDish.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.onHoverState.BorderThickness = 1;
-            this.btnAllDish.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAllDish.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.onHoverState.IconLeftImage = null;
-            this.btnAllDish.onHoverState.IconRightImage = null;
-            this.btnAllDish.OnIdleState.BorderColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.OnIdleState.BorderRadius = 1;
-            this.btnAllDish.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.OnIdleState.BorderThickness = 1;
-            this.btnAllDish.OnIdleState.FillColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.OnIdleState.IconLeftImage = null;
-            this.btnAllDish.OnIdleState.IconRightImage = null;
-            this.btnAllDish.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAllDish.OnPressedState.BorderRadius = 1;
-            this.btnAllDish.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.OnPressedState.BorderThickness = 1;
-            this.btnAllDish.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAllDish.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.OnPressedState.IconLeftImage = null;
-            this.btnAllDish.OnPressedState.IconRightImage = null;
-            this.btnAllDish.Size = new System.Drawing.Size(200, 90);
-            this.btnAllDish.TabIndex = 1;
-            this.btnAllDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAllDish.TextMarginLeft = 0;
-            this.btnAllDish.UseDefaultRadiusAndThickness = true;
-            this.btnAllDish.Click += new System.EventHandler(this.btnAllDish_Click);
-            // 
-            // flpDishMenu
-            // 
-            this.flpDishMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpDishMenu.AutoScroll = true;
-            this.flpDishMenu.Controls.Add(this.btnAllDish);
-            this.flpDishMenu.Location = new System.Drawing.Point(3, 4);
-            this.flpDishMenu.Name = "flpDishMenu";
-            this.flpDishMenu.Size = new System.Drawing.Size(489, 401);
-            this.flpDishMenu.TabIndex = 0;
-            // 
-            // pagMenuPage
-            // 
-            this.pagMenuPage.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.pagMenuPage.AllowTransitions = true;
-            this.pagMenuPage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pagMenuPage.Controls.Add(this.tapMenu);
-            this.pagMenuPage.Controls.Add(this.tabEditDish);
-            this.pagMenuPage.Location = new System.Drawing.Point(775, 41);
-            this.pagMenuPage.Multiline = true;
-            this.pagMenuPage.Name = "pagMenuPage";
-            this.pagMenuPage.Page = this.tabEditDish;
-            this.pagMenuPage.PageIndex = 1;
-            this.pagMenuPage.PageName = "tabEditDish";
-            this.pagMenuPage.PageTitle = "DishCommon";
-            this.pagMenuPage.SelectedIndex = 0;
-            this.pagMenuPage.Size = new System.Drawing.Size(501, 501);
-            this.pagMenuPage.TabIndex = 62;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 1F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.pagMenuPage.Transition = animation1;
-            this.pagMenuPage.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
-            // 
-            // tapMenu
-            // 
-            this.tapMenu.Controls.Add(this.flpDishMenu);
-            this.tapMenu.Location = new System.Drawing.Point(4, 4);
-            this.tapMenu.Name = "tapMenu";
-            this.tapMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.tapMenu.Size = new System.Drawing.Size(493, 475);
-            this.tapMenu.TabIndex = 0;
-            this.tapMenu.Text = "Menu";
-            this.tapMenu.UseVisualStyleBackColor = true;
-            // 
-            // bunifuLabel32
-            // 
-            this.bunifuLabel32.AutoEllipsis = false;
-            this.bunifuLabel32.CursorType = null;
-            this.bunifuLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bunifuLabel32.Location = new System.Drawing.Point(5, 8);
-            this.bunifuLabel32.Name = "bunifuLabel32";
-            this.bunifuLabel32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel32.Size = new System.Drawing.Size(45, 27);
-            this.bunifuLabel32.TabIndex = 0;
-            this.bunifuLabel32.Text = "QTY";
-            this.bunifuLabel32.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel32.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // bunifuGradientPanel4
             // 
             this.bunifuGradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1311,45 +1528,19 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuGradientPanel4.Size = new System.Drawing.Size(55, 45);
             this.bunifuGradientPanel4.TabIndex = 63;
             // 
-            // dockMain
+            // bunifuLabel32
             // 
-            this.dockMain.AllowFormDragging = false;
-            this.dockMain.AllowFormDropShadow = true;
-            this.dockMain.AllowFormResizing = true;
-            this.dockMain.AllowHidingBottomRegion = true;
-            this.dockMain.AllowOpacityChangesWhileDragging = false;
-            this.dockMain.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
-            this.dockMain.BorderOptions.BottomBorder.BorderThickness = 1;
-            this.dockMain.BorderOptions.BottomBorder.ShowBorder = true;
-            this.dockMain.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
-            this.dockMain.BorderOptions.LeftBorder.BorderThickness = 1;
-            this.dockMain.BorderOptions.LeftBorder.ShowBorder = true;
-            this.dockMain.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
-            this.dockMain.BorderOptions.RightBorder.BorderThickness = 1;
-            this.dockMain.BorderOptions.RightBorder.ShowBorder = true;
-            this.dockMain.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
-            this.dockMain.BorderOptions.TopBorder.BorderThickness = 1;
-            this.dockMain.BorderOptions.TopBorder.ShowBorder = true;
-            this.dockMain.ContainerControl = this;
-            this.dockMain.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
-            this.dockMain.DockingIndicatorsOpacity = 0.5D;
-            this.dockMain.DockingOptions.DockAll = true;
-            this.dockMain.DockingOptions.DockBottomLeft = true;
-            this.dockMain.DockingOptions.DockBottomRight = true;
-            this.dockMain.DockingOptions.DockFullScreen = true;
-            this.dockMain.DockingOptions.DockLeft = true;
-            this.dockMain.DockingOptions.DockRight = true;
-            this.dockMain.DockingOptions.DockTopLeft = true;
-            this.dockMain.DockingOptions.DockTopRight = true;
-            this.dockMain.FormDraggingOpacity = 0.9D;
-            this.dockMain.ParentForm = this;
-            this.dockMain.ShowCursorChanges = true;
-            this.dockMain.ShowDockingIndicators = true;
-            this.dockMain.TitleBarOptions.AllowFormDragging = true;
-            this.dockMain.TitleBarOptions.BunifuFormDock = this.dockMain;
-            this.dockMain.TitleBarOptions.DoubleClickToExpandWindow = true;
-            this.dockMain.TitleBarOptions.TitleBarControl = null;
-            this.dockMain.TitleBarOptions.UseBackColorOnDockingIndicators = false;
+            this.bunifuLabel32.AutoEllipsis = false;
+            this.bunifuLabel32.CursorType = null;
+            this.bunifuLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bunifuLabel32.Location = new System.Drawing.Point(5, 8);
+            this.bunifuLabel32.Name = "bunifuLabel32";
+            this.bunifuLabel32.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel32.Size = new System.Drawing.Size(45, 27);
+            this.bunifuLabel32.TabIndex = 0;
+            this.bunifuLabel32.Text = "QTY";
+            this.bunifuLabel32.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel32.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnSetMeal
             // 
@@ -2061,197 +2252,6 @@ namespace TakeAwayPointOfSaleSystem
             this.btnMinusQTY.UseDefaultRadiusAndThickness = true;
             this.btnMinusQTY.Click += new System.EventHandler(this.btnMinusQTY_Click);
             // 
-            // btnSetTime
-            // 
-            this.btnSetTime.AllowToggling = false;
-            this.btnSetTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSetTime.AnimationSpeed = 200;
-            this.btnSetTime.AutoGenerateColors = false;
-            this.btnSetTime.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetTime.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnSetTime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSetTime.BackgroundImage")));
-            this.btnSetTime.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSetTime.ButtonText = "Set Deliver Time";
-            this.btnSetTime.ButtonTextMarginLeft = 0;
-            this.btnSetTime.ColorContrastOnClick = 45;
-            this.btnSetTime.ColorContrastOnHover = 45;
-            this.btnSetTime.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnSetTime.CustomizableEdges = borderEdges7;
-            this.btnSetTime.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSetTime.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnSetTime.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSetTime.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnSetTime.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnSetTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSetTime.ForeColor = System.Drawing.Color.White;
-            this.btnSetTime.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSetTime.IconMarginLeft = 11;
-            this.btnSetTime.IconPadding = 10;
-            this.btnSetTime.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSetTime.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnSetTime.IdleBorderRadius = 1;
-            this.btnSetTime.IdleBorderThickness = 1;
-            this.btnSetTime.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnSetTime.IdleIconLeftImage = null;
-            this.btnSetTime.IdleIconRightImage = null;
-            this.btnSetTime.IndicateFocus = false;
-            this.btnSetTime.Location = new System.Drawing.Point(192, 497);
-            this.btnSetTime.Name = "btnSetTime";
-            this.btnSetTime.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnSetTime.onHoverState.BorderRadius = 1;
-            this.btnSetTime.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSetTime.onHoverState.BorderThickness = 1;
-            this.btnSetTime.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnSetTime.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSetTime.onHoverState.IconLeftImage = null;
-            this.btnSetTime.onHoverState.IconRightImage = null;
-            this.btnSetTime.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnSetTime.OnIdleState.BorderRadius = 1;
-            this.btnSetTime.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSetTime.OnIdleState.BorderThickness = 1;
-            this.btnSetTime.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnSetTime.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnSetTime.OnIdleState.IconLeftImage = null;
-            this.btnSetTime.OnIdleState.IconRightImage = null;
-            this.btnSetTime.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnSetTime.OnPressedState.BorderRadius = 1;
-            this.btnSetTime.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSetTime.OnPressedState.BorderThickness = 1;
-            this.btnSetTime.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnSetTime.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnSetTime.OnPressedState.IconLeftImage = null;
-            this.btnSetTime.OnPressedState.IconRightImage = null;
-            this.btnSetTime.Size = new System.Drawing.Size(122, 45);
-            this.btnSetTime.TabIndex = 64;
-            this.btnSetTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSetTime.TextMarginLeft = 0;
-            this.btnSetTime.UseDefaultRadiusAndThickness = true;
-            this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
-            // 
-            // dishNo
-            // 
-            this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dishNo.DataPropertyName = "Id";
-            this.dishNo.HeaderText = "Dish No.";
-            this.dishNo.Name = "dishNo";
-            this.dishNo.ReadOnly = true;
-            this.dishNo.Width = 94;
-            // 
-            // dishName
-            // 
-            this.dishName.DataPropertyName = "foodName";
-            this.dishName.HeaderText = "Dish Name";
-            this.dishName.Name = "dishName";
-            this.dishName.ReadOnly = true;
-            // 
-            // otherName
-            // 
-            this.otherName.DataPropertyName = "foodOtherName";
-            this.otherName.HeaderText = "Dish Other Name";
-            this.otherName.Name = "otherName";
-            this.otherName.ReadOnly = true;
-            // 
-            // dishPrice
-            // 
-            this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dishPrice.DataPropertyName = "price";
-            this.dishPrice.HeaderText = "Price";
-            this.dishPrice.Name = "dishPrice";
-            this.dishPrice.ReadOnly = true;
-            this.dishPrice.Width = 69;
-            // 
-            // sideName
-            // 
-            this.sideName.DataPropertyName = "commonName";
-            this.sideName.HeaderText = "Side Name";
-            this.sideName.Name = "sideName";
-            this.sideName.ReadOnly = true;
-            // 
-            // sideOther
-            // 
-            this.sideOther.DataPropertyName = "commonOtherName";
-            this.sideOther.HeaderText = "Side Other Name";
-            this.sideOther.Name = "sideOther";
-            this.sideOther.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Price.DataPropertyName = "price";
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            this.Price.Width = 69;
-            // 
-            // cId
-            // 
-            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cId.DataPropertyName = "Id";
-            this.cId.HeaderText = "cId";
-            this.cId.Name = "cId";
-            this.cId.ReadOnly = true;
-            this.cId.Visible = false;
-            this.cId.Width = 56;
-            // 
-            // orderedDishNo
-            // 
-            this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.orderedDishNo.HeaderText = "Dish No.";
-            this.orderedDishNo.Name = "orderedDishNo";
-            this.orderedDishNo.ReadOnly = true;
-            this.orderedDishNo.Width = 94;
-            // 
-            // quantity
-            // 
-            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.quantity.HeaderText = "QTY";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            this.quantity.Width = 62;
-            // 
-            // orderedDishName
-            // 
-            this.orderedDishName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.orderedDishName.HeaderText = "Dish Name";
-            this.orderedDishName.Name = "orderedDishName";
-            this.orderedDishName.ReadOnly = true;
-            this.orderedDishName.Width = 111;
-            // 
-            // dishOtherName
-            // 
-            this.dishOtherName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dishOtherName.HeaderText = "Dish Other Name";
-            this.dishOtherName.Name = "dishOtherName";
-            this.dishOtherName.ReadOnly = true;
-            this.dishOtherName.Width = 157;
-            // 
-            // dishCommon
-            // 
-            this.dishCommon.HeaderText = "Common";
-            this.dishCommon.Name = "dishCommon";
-            this.dishCommon.ReadOnly = true;
-            // 
-            // totalPricePerDish
-            // 
-            this.totalPricePerDish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.totalPricePerDish.HeaderText = "Price";
-            this.totalPricePerDish.Name = "totalPricePerDish";
-            this.totalPricePerDish.ReadOnly = true;
-            this.totalPricePerDish.Width = 69;
-            // 
-            // commonPrice
-            // 
-            this.commonPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.commonPrice.HeaderText = "cmmonId";
-            this.commonPrice.Name = "commonPrice";
-            this.commonPrice.ReadOnly = true;
-            this.commonPrice.Visible = false;
-            this.commonPrice.Width = 103;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2281,19 +2281,19 @@ namespace TakeAwayPointOfSaleSystem
             this.Text = "Point Of Sale System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_load);
-            this.panAddressBar.ResumeLayout(false);
-            this.panAddressBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
-            this.bunifuGradientPanel3.ResumeLayout(false);
-            this.bunifuGradientPanel3.PerformLayout();
             this.tabEditDish.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommon)).EndInit();
             this.flpDishMenu.ResumeLayout(false);
             this.pagMenuPage.ResumeLayout(false);
             this.tapMenu.ResumeLayout(false);
+            this.panAddressBar.ResumeLayout(false);
+            this.panAddressBar.PerformLayout();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
+            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.bunifuGradientPanel3.PerformLayout();
             this.bunifuGradientPanel4.ResumeLayout(false);
             this.bunifuGradientPanel4.PerformLayout();
             this.ResumeLayout(false);

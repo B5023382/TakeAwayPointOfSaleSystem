@@ -18,6 +18,7 @@ namespace TakeAwayPointOfSaleSystem
             id = i;
             Name = n;
             otherName = o;
+            this.price = price;
         }
 
         public int getId()

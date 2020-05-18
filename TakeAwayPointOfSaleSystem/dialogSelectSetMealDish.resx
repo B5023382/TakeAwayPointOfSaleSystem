@@ -117,32 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="categoryName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cateOtherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dishNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dishName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dishOtherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSelect.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAALEAAABLCAYAAAA/IGa6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFzSURBVHhe7dK5DQIBAAPBq4SWoT/KID8eaUMKwGgsTeZw
-        D7O/2OV23i+35xO2nPcS/kT87QC/r4RFzK4SFjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyu
-        EhYxu0pYxOwqYRGzq4RFzK4SFjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwq
-        YRGzq4RFzK4SFjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwqYRGzq4RFzK4S
-        FjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwqYRGzq4RFzK4SFjG7SljE7Cph
-        EbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwqYRGzq4RFzK4SFjG7SljE7CphEbOrhEXMrhIW
-        MbtKWMTsKmERs6uERcyuEhYxu0r4HfH1fHw7wE97d1vCZss7jhfslFya/GVrXAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVChTY/hPJBhViBdQW+H//wAj+46A3TfWvAAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -157,18 +137,38 @@
         MbtKWMTsKmERs6uERcyuEhYxu0r4HfH1fHw7wE97d1vCZss7jhfslFya/GVrXAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSelect.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVChTY/hPJBhViBdQW+H//wAj+46A3TfWvAAAAABJ
-        RU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAALEAAABLCAYAAAA/IGa6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFzSURBVHhe7dK5DQIBAAPBq4SWoT/KID8eaUMKwGgsTeZw
+        D7O/2OV23i+35xO2nPcS/kT87QC/r4RFzK4SFjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyu
+        EhYxu0pYxOwqYRGzq4RFzK4SFjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwq
+        YRGzq4RFzK4SFjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwqYRGzq4RFzK4S
+        FjG7SljE7CphEbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwqYRGzq4RFzK4SFjG7SljE7Cph
+        EbOrhEXMrhIWMbtKWMTsKmERs6uERcyuEhYxu0pYxOwqYRGzq4RFzK4SFjG7SljE7CphEbOrhEXMrhIW
+        MbtKWMTsKmERs6uERcyuEhYxu0r4HfH1fHw7wE97d1vCZss7jhfslFya/GVrXAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="dishNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dishName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dishOtherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="categoryName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cateOtherName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVChTY/hPJBhViBdQW+H//wAj+46A3TfWvAAAAABJ
-        RU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA9SURBVChTjcTRAIBAAATRMU/gBAI4gQROIIAEEjiBbQza
+        j/c4kjQY1uC0BtMaXNZgWYPbGjzW4LUG2/4lH1dscvZ2Ve43AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">

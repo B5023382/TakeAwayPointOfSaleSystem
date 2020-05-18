@@ -185,6 +185,10 @@ namespace TakeAwayPointOfSaleSystem
             {
                if(Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value) - 1 < 1)
                {
+                    //if(dgvOrder.Rows[dgvOrder.SelectedRows[0].Index].DefaultCellStyle.BackColor != Color.Empty)
+                    //{
+                    //    dgvOrder.Rows[dgvOrder.SelectedRows[0].Index].DefaultCellStyle.BackColor = Color.Empty;
+                    //}
                     dgvOrder.Rows.RemoveAt(dgvOrder.SelectedRows[0].Index);
                }
                else
@@ -200,7 +204,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnAddQTY_Click(object sender, EventArgs e)
         {
-            if (dgvOrder.SelectedRows.Count > 0)
+            if (dgvOrder.SelectedRows.Count > 0 && dgvOrder.SelectedRows[0].DefaultCellStyle.BackColor != Color.GreenYellow)
             {
                 decimal temp = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
                 decimal qty = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value) + 1;
@@ -282,43 +286,29 @@ namespace TakeAwayPointOfSaleSystem
             {
                 if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                   // int setId = d.getSetId();
+                    dish set = d.getDish();
 
-                    //using (SqlConnection sqlCon = new SqlConnection(connectionString))
-                    //{
-                    //    sqlCon.Open();
-                    //    SqlCommand addCustomer = new SqlCommand("SELECT categoryName FROM FoodCategory", sqlCon);
-                    //    addCustomer.CommandType = CommandType.Text;
+                    dgvOrder.Rows.Add(set.getId(), 1, set.getName(), set.getOtherName(), "", set.getPrice());
+                    dgvOrder.Rows[dgvOrder.Rows.Count - 1].DefaultCellStyle.BackColor = Color.GreenYellow;
 
-                    //    using (SqlDataReader reader = addCustomer.ExecuteReader())
-                    //    {
-                    //        while (reader.Read())
-                    //        {
-                    //            BunifuButton b = new BunifuButton();
-                    //            b.Text = reader["categoryName"].ToString();
-                    //            b.Size = new Size(200, 90);
-                    //            b.Click += dishButton_click;
-                    //            flpDishMenu.Controls.Add(b);
-                    //        }
-                    //    }
-
-                    //    SqlCommand getCommonCategory = new SqlCommand("SELECT commonCategory FROM CommonCategory", sqlCon);
-                    //    getCommonCategory.CommandType = CommandType.Text;
-
-                    //    using (SqlDataReader reader = getCommonCategory.ExecuteReader())
-                    //    {
-                    //        while (reader.Read())
-                    //        {
-                    //            BunifuButton b = new BunifuButton();
-                    //            b.Text = reader["commonCategory"].ToString();
-                    //            b.Size = new Size(110, 50);
-                    //            b.Click += common_button_click;
-                    //            flpCommonCategory.Controls.Add(b);
-                    //        }
-                    //    }
-
-                    //    sqlCon.Close();
-                    //}
+                    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                    {
+                        sqlCon.Open();
+                        SqlCommand getSetDish = new SqlCommand("GetSetDish", sqlCon);
+                        getSetDish.CommandType = CommandType.StoredProcedure;
+                        getSetDish.Parameters.AddWithValue("@setId", set.getId());
+                        using (SqlDataReader reader = getSetDish.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                dgvOrder.Rows.Add(reader["dishNo"].ToString(), reader["QTY"].ToString(), reader["foodName"].ToString(), 
+                                    reader["foodOtherName"].ToString(), "", reader["price"].ToString());
+                                dgvOrder.Rows[dgvOrder.Rows.Count - 1].DefaultCellStyle.BackColor = Color.GreenYellow;
+                            }
+                        }
+                        sqlCon.Close();
+                    }
+                    lblTotal.Text = "£ " + calculateTotal();
                 }
             }
         }
@@ -353,6 +343,8 @@ namespace TakeAwayPointOfSaleSystem
                 decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
                 dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(dgvCommon.SelectedRows[0].Cells["Price"].Value))
                     * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+
+                lblTotal.Text = "£ " + calculateTotal();
             }
         }
 
@@ -380,6 +372,8 @@ namespace TakeAwayPointOfSaleSystem
                 decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
                 dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(dgvCommon.SelectedRows[0].Cells["Price"].Value))
                     * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
+
+                lblTotal.Text = "£ " + calculateTotal();
             }
         }
 
@@ -444,7 +438,7 @@ namespace TakeAwayPointOfSaleSystem
                 bool repeat = false;
                 foreach(DataGridViewRow row in dgvOrder.Rows)
                 {
-                    if((int)row.Cells[0].Value == (int)dgvFood.SelectedRows[0].Cells[0].Value && string.IsNullOrEmpty((string)row.Cells[4].Value))
+                    if(row.Cells[0].Value.ToString() == dgvFood.SelectedRows[0].Cells[0].Value.ToString() && string.IsNullOrEmpty(row.Cells[4].Value.ToString()) && row.DefaultCellStyle.BackColor != Color.GreenYellow)
                     {
                         row.Cells[1].Value = Convert.ToDecimal(row.Cells[1].Value) + 1;
                         row.Cells[5].Value = Convert.ToDecimal(row.Cells[1].Value) * Convert.ToDecimal(dgvFood.SelectedRows[0].Cells[3].Value);
