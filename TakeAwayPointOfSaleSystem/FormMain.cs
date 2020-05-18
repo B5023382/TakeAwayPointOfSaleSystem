@@ -408,7 +408,11 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            using (dialogPayment p = new dialogPayment())
+            if (string.IsNullOrEmpty(lblAddress.Text))
+            {
+                lblDeliverFee.Text = "";
+            }
+            using (dialogPayment p = new dialogPayment(lblDeliverFee.Text, lblTotal.Text, lblDeliverTime.Text))
             {
                 if (p.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -464,7 +468,7 @@ namespace TakeAwayPointOfSaleSystem
             {
                 total = total + Convert.ToDecimal(row.Cells[5].Value);
             }
-            return total + Convert.ToDecimal(lblDeliverFee.Text);
+            return total;
         }
     }
 }

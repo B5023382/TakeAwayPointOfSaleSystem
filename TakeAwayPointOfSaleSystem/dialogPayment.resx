@@ -125,7 +125,20 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuButton8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnPay.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEoAAACgCAYAAACrD/qVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF+SURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
+        Oqxhf+w4jtvDvm7ZbKYx1mMdnds274H6HagYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
+        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
+        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
+        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
+        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
+        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKjYB9Sc8/762GnLZjPZ9cZ4Am8QmEbYE9XTAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnReset.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIEAAABNCAYAAACBigefAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVHhe7dKxDUMhFARB+m/RVSBnJPbyTeQWmJNGSKRv
@@ -142,7 +155,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel12.BaseStylesheet" xml:space="preserve">
+  <data name="lblChange.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
   <data name="bunifuGradientPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -152,7 +165,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
+  <data name="lblBalance.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
   <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -162,7 +175,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">
+  <data name="lblPaid.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
   <data name="bunifuGradientPanel5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -172,7 +185,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel9.BaseStylesheet" xml:space="preserve">
+  <data name="lblTotal.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
   <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">
@@ -184,7 +197,7 @@
   <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="bunifuButton7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDiscountN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAH4AAABNCAYAAABgzdCLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADoSURBVHhe7dGxDcMwEARB9t+iqiCcMbFBmYla0M4Biwc+
@@ -197,7 +210,7 @@
   <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="bunifuButton6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDisCountP.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAH4AAABNCAYAAABgzdCLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADoSURBVHhe7dGxDcMwEARB9t+iqiCcMbFBmYla0M4Biwc+
@@ -207,7 +220,7 @@
         Ax/tAb/W+twfe/229WG33sb4AUrDypWdU56vAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn50Pound.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAABNCAYAAAAB1fLJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
@@ -217,7 +230,7 @@
         xngCk6lmGXaJb3QAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn20Pound.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAABNCAYAAAAB1fLJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
@@ -227,7 +240,7 @@
         xngCk6lmGXaJb3QAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn10Pound.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAABNCAYAAAAB1fLJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
@@ -237,7 +250,7 @@
         xngCk6lmGXaJb3QAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn5Pound.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAABNCAYAAAAB1fLJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
@@ -260,7 +273,7 @@
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="bunifuTextBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtOtherFee.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIgAAAAeCAYAAAD3hVYMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7dLBCcMwAARB9V+VhcpIGSkgQWBDQsi6gRm4
@@ -271,7 +284,7 @@
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtDeliverTime.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIgAAAAeCAYAAAD3hVYMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7dLBCcMwAARB9V+VhcpIGSkgQWBDQsi6gRm4
@@ -282,7 +295,7 @@
   <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtDiscount.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIgAAAAeCAYAAAD3hVYMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7dLBCcMwAARB9V+VhcpIGSkgQWBDQsi6gRm4
@@ -293,7 +306,7 @@
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtDeliverFee.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIgAAAAeCAYAAAD3hVYMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7dLBCcMwAARB9V+VhcpIGSkgQWBDQsi6gRm4
@@ -442,20 +455,15 @@
   </data>
   <data name="btnNormal.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEoAAAFGCAYAAADNZQm+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALKSURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
+        iVBORw0KGgoAAAANSUhEUgAAAEoAAACgCAYAAACrD/qVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF+SURBVHhe7dAxCgJBEEXBuf8VPcViNokyOomsss+8Pjwa
         Oqxhf+w4jtvDvm7ZbKYx1mMdnds274H6HagYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
         GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
         GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
         GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
         GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBio
-        GKgYqNgH1Jzz/vrYactmM9n1xngCMOn8oJTg1xMAAAAASUVORK5CYII=
+        GKgYqBioGKgYqBioGKgYqBioGKgYqBioGKgYqBioGKjYB9Sc8/762GnLZjPZ9cZ4Am8QmEbYE9XTAAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="txtNewPrice.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
