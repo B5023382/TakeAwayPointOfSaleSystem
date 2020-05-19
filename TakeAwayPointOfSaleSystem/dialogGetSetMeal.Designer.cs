@@ -289,7 +289,7 @@
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
             this.btnSelect.CustomizableEdges = borderEdges1;
-            this.btnSelect.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSelect.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSelect.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnSelect.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSelect.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));

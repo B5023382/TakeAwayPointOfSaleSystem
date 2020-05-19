@@ -44,6 +44,7 @@ namespace TakeAwayPointOfSaleSystem
             {
                 DataGridViewRow row = dgvDish.SelectedRows[0];
                 d = new dish((int)row.Cells[0].Value, (string)row.Cells[1].Value, (string)row.Cells[2].Value, "");
+                this.DialogResult = DialogResult.OK;
             }
             else
             {

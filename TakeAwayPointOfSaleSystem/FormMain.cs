@@ -258,6 +258,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnCancelOrder_Click(object sender, EventArgs e)
         {
+            orderId = 0;
             lblHouseNo.Text = "";
             lblAddress.Text = "";
             lblDeliverTime.Text = "";
@@ -273,7 +274,79 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            using (dialogViewAllOrder d = new dialogViewAllOrder())
+            {
+                if(d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    orderId = 0;
+                    lblHouseNo.Text = "";
+                    lblAddress.Text = "";
+                    lblDeliverTime.Text = "";
+                    lblTelphone.Text = "";
+                    lblDeliverFee.Text = "1";
+                    lblPostcode.Text = "";
+                    lblName.Text = "";
+                    lblTotal.Text = "0.00";
+                    lblNote.Text = "";
 
+                    dgvOrder.Rows.Clear();
+                    orderId = d.orderNo;
+
+                    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                    {
+                        sqlCon.Open();
+                        SqlCommand getCommand = new SqlCommand("SELECT C.customerName, C.phoneNumber, C.houseNo, C.address, C.postcode, C.deliverFee " +
+    "FROM CustomerOrder CO LEFT JOIN Customer C ON CO.customerId = C.Id WHERE CO.Id = " + orderId, sqlCon);
+
+                        using (SqlDataReader reader = getCommand.ExecuteReader())
+                        {
+                            if(reader.Read())
+                            {
+                                setCustomerDetail(reader["phoneNumber"].ToString(), reader["customerName"].ToString(), reader["houseNo"].ToString(), 
+                                    reader["address"].ToString(), reader["postcode"].ToString(), reader["deliverFee"].ToString(),"");
+                            }
+                            reader.Close();
+                        }
+
+                        SqlCommand getOrder = new SqlCommand("SELECT * FROM OrderItem WHERE orderId = " + orderId, sqlCon);
+                        getCommand.CommandType = CommandType.Text;
+
+                        List<string> itemId = new List<string>();
+                        using (SqlDataReader reader = getOrder.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                itemId.Add(reader["Id"].ToString());
+                            }
+                            reader.Close();
+                        }
+
+                        foreach (string s in itemId)
+                        {
+                            SqlCommand getSetDish = new SqlCommand("GetOrderItem", sqlCon);
+                            getSetDish.CommandType = CommandType.StoredProcedure;
+                            getSetDish.Parameters.AddWithValue("@orderId", s);
+                            using (SqlDataReader reader = getSetDish.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    dgvOrder.Rows.Add(reader["dishId"].ToString(), reader["qty"].ToString(), reader["dishName"].ToString(), reader["dishOtherName"].ToString(),
+                                        reader["common"].ToString(), reader["price"].ToString(), reader["commonPrice"].ToString());
+                                    if (reader["isSet"].ToString() == "1")
+                                    {
+                                        dgvOrder.Rows[dgvOrder.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gold;
+                                    }
+                                    else if (reader["isSet"].ToString() == "2")
+                                    {
+                                        dgvOrder.Rows[dgvOrder.Rows.Count - 1].DefaultCellStyle.BackColor = Color.GreenYellow;
+                                    }
+                                }
+                                reader.Close();
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void btnSetMeal_Click(object sender, EventArgs e)
@@ -465,6 +538,10 @@ namespace TakeAwayPointOfSaleSystem
                                     addOrderItem.Parameters.AddWithValue("@common", row.Cells[4].Value);
                                     addOrderItem.Parameters.AddWithValue("@commonPrice", row.Cells[6].Value);
                                     if (row.DefaultCellStyle.BackColor == Color.GreenYellow)
+                                    {
+                                        addOrderItem.Parameters.AddWithValue("@isSet", 2);
+                                    }
+                                    else if(row.DefaultCellStyle.BackColor == Color.Gold)
                                     {
                                         addOrderItem.Parameters.AddWithValue("@isSet", 1);
                                     }

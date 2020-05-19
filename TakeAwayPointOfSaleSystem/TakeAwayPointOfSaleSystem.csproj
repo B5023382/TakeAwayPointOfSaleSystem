@@ -165,6 +165,12 @@
     <Compile Include="dialogSelectSetMealDish.Designer.cs">
       <DependentUpon>dialogSelectSetMealDish.cs</DependentUpon>
     </Compile>
+    <Compile Include="dialogViewAllOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogViewAllOrder.Designer.cs">
+      <DependentUpon>dialogViewAllOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="dish.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dialogSelectSetMealDish.resx">
       <DependentUpon>dialogSelectSetMealDish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogViewAllOrder.resx">
+      <DependentUpon>dialogViewAllOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
