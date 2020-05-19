@@ -24,9 +24,12 @@ namespace TakeAwayPointOfSaleSystem
             this.total = Convert.ToDecimal(total);
             if (!string.IsNullOrEmpty(deliverFee))
             {
-                btnDeliver.IdleBorderColor = Color.Crimson;
                 btnDeliver.IdleBorderThickness = 4;
                 this.deliver = true;
+            }
+            else
+            {
+                btnCollection.IdleBorderThickness = 4;
             }
             txtDeliverFee.Text = deliverFee;
             txtDeliverTime.Text = deliverTime;
@@ -57,14 +60,12 @@ namespace TakeAwayPointOfSaleSystem
         private void btnShop_Click(object sender, EventArgs e)
         {
             deliver = false;
-            btnShop.IdleBorderColor = Color.Crimson;
             btnShop.IdleBorderThickness = 4;
 
-            btnDeliver.IdleBorderColor = Color.DodgerBlue;
             btnDeliver.IdleBorderThickness = 1;
 
-            btnCollection.IdleBorderColor = Color.DodgerBlue;
             btnCollection.IdleBorderThickness = 1;
+            lblTotal.Text = calculateTotal().ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -79,27 +80,25 @@ namespace TakeAwayPointOfSaleSystem
             {
                 txtDeliverFee.Text = "1";
             }
-            btnShop.IdleBorderColor = Color.DodgerBlue;
             btnShop.IdleBorderThickness = 1;
 
-            btnDeliver.IdleBorderColor = Color.Crimson;
             btnDeliver.IdleBorderThickness = 4;
 
-            btnCollection.IdleBorderColor = Color.DodgerBlue;
             btnCollection.IdleBorderThickness = 1;
+
+            lblTotal.Text = calculateTotal().ToString();
         }
 
         private void btnCollection_Click(object sender, EventArgs e)
         {
             deliver = false;
-            btnShop.IdleBorderColor = Color.DodgerBlue;
             btnShop.IdleBorderThickness = 1;
 
-            btnDeliver.IdleBorderColor = Color.DodgerBlue;
             btnDeliver.IdleBorderThickness = 1;
 
-            btnCollection.IdleBorderColor = Color.Crimson;
             btnCollection.IdleBorderThickness = 4;
+
+            lblTotal.Text = calculateTotal().ToString();
         }
 
         private void txtDeliverTime_Click(object sender, EventArgs e)
@@ -138,8 +137,16 @@ namespace TakeAwayPointOfSaleSystem
         {
             if (!string.IsNullOrEmpty(txtDiscount.Text))
             {
-                discount = total * Convert.ToDecimal(txtDiscount.Text) / 100;
+                if (deliver)
+                {
+                    discount = (total + Convert.ToDecimal(txtDeliverFee.Text)) * Convert.ToDecimal(txtDiscount.Text) / 100;
+                }
+                else
+                {
+                    discount = total * Convert.ToDecimal(txtDiscount.Text) / 100;
+                }
             }
+
             lblTotal.Text = calculateTotal().ToString();
         }
 
@@ -159,20 +166,25 @@ namespace TakeAwayPointOfSaleSystem
 
         private void digitButton_click(object sender, EventArgs e)
         {
-            txtNewPrice.Focus();
-            BunifuButton btn = (BunifuButton)sender;
-            SendKeys.Send(btn.Text);
+            if(textBox != null)
+            {
+                textBox.Focus();
+                BunifuButton btn = (BunifuButton)sender;
+                SendKeys.Send(btn.Text);
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            txtNewPrice.Focus();
-            SendKeys.Send("{BACKSPACE}");
+            if (textBox != null)
+            {
+                textBox.Focus();
+                SendKeys.Send("{BACKSPACE}");
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            lblTotal.Text = total.ToString();
             lblPaid.Text = "0.00";
             lblBalance.Text = "0.00";
             lblChange.Text = "0.00";
@@ -180,6 +192,8 @@ namespace TakeAwayPointOfSaleSystem
             txtDiscount.Text = "";
             txtOtherFee.Text = "";
             txtNewPrice.Text = "";
+
+            lblTotal.Text = calculateTotal().ToString();
         }
 
         private void btn5Pound_Click(object sender, EventArgs e)
@@ -204,30 +218,50 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            decimal totalPirce = Convert.ToDecimal(lblTotal.Text);
-            decimal? paid = Convert.ToDecimal(lblPaid.Text);
-            decimal cash = Convert.ToDecimal(txtNewPrice.Text);
-            if(paid == null || paid == 0)
+            if (!string.IsNullOrEmpty(txtNewPrice.Text))
             {
-                paid = cash;
-                lblPaid.Text = cash.ToString();
-            }
-            else
-            {
-                paid = paid + cash;
+                decimal totalPirce = Convert.ToDecimal(lblTotal.Text);
+                decimal? paid = Convert.ToDecimal(lblPaid.Text);
+                decimal? cash = Convert.ToDecimal(txtNewPrice.Text);
+                if (paid == null || paid == 0)
+                {
+                    paid = cash;
+                    lblPaid.Text = cash.ToString();
+                }
+                else
+                {
+                    paid = paid + cash;
+                }
+
+                decimal change = (decimal)paid - totalPirce;
+
+                if (change < 0)
+                {
+                    lblBalance.Text = change.ToString();
+                    lblChange.Text = "0.00";
+                }
+                else
+                {
+                    lblBalance.Text = "0.00";
+                    lblChange.Text = change.ToString();
+                }
             }
 
-            decimal change = (decimal)paid - totalPirce;
+        }
 
-            if(change < 0)
+        private void txtDeliverFee_Click(object sender, EventArgs e)
+        {
+            using (dialogChangePrice d = new dialogChangePrice('.', "Change Delivery Fee", null, txtDeliverFee.Text))
             {
-                lblBalance.Text = change.ToString();
-                lblChange.Text = "0.00";
+                if (d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    txtDeliverFee.Text = d.newData;
+                }
             }
-            else
+
+            if (!string.IsNullOrEmpty(txtDeliverFee.Text))
             {
-                lblBalance.Text = "0.00";
-                lblChange.Text = change.ToString();
+                lblTotal.Text = calculateTotal().ToString();
             }
         }
     }

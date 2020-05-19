@@ -412,7 +412,7 @@ namespace TakeAwayPointOfSaleSystem
             {
                 lblDeliverFee.Text = "";
             }
-            using (dialogPayment p = new dialogPayment(lblDeliverFee.Text, lblTotal.Text, lblDeliverTime.Text))
+            using (dialogPayment p = new dialogPayment(lblDeliverFee.Text, lblTotal.Text.Substring(2), lblDeliverTime.Text))
             {
                 if (p.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
