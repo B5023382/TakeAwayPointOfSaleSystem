@@ -23,8 +23,8 @@ namespace TakeAwayPointOfSaleSystem
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
         private frmMenuEdit menuEdition = new frmMenuEdit();
-        BunifuButton delete = new BunifuButton();
-
+        private BunifuButton delete = new BunifuButton();
+        private int orderId = 0;
         public FrmMain(string username, string role)
         {
             InitializeComponent();
@@ -185,10 +185,6 @@ namespace TakeAwayPointOfSaleSystem
             {
                if(Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value) - 1 < 1)
                {
-                    //if(dgvOrder.Rows[dgvOrder.SelectedRows[0].Index].DefaultCellStyle.BackColor != Color.Empty)
-                    //{
-                    //    dgvOrder.Rows[dgvOrder.SelectedRows[0].Index].DefaultCellStyle.BackColor = Color.Empty;
-                    //}
                     dgvOrder.Rows.RemoveAt(dgvOrder.SelectedRows[0].Index);
                }
                else
@@ -303,7 +299,7 @@ namespace TakeAwayPointOfSaleSystem
                             {
                                 dgvOrder.Rows.Add(reader["dishNo"].ToString(), reader["QTY"].ToString(), reader["foodName"].ToString(), 
                                     reader["foodOtherName"].ToString(), "", reader["price"].ToString());
-                                dgvOrder.Rows[dgvOrder.Rows.Count - 1].DefaultCellStyle.BackColor = Color.GreenYellow;
+                                dgvOrder.Rows[dgvOrder.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Gold;
                             }
                         }
                         sqlCon.Close();
@@ -408,15 +404,94 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(lblAddress.Text))
+            if(dgvOrder.Rows.Count > 0)
             {
-                lblDeliverFee.Text = "";
-            }
-            using (dialogPayment p = new dialogPayment(lblDeliverFee.Text, lblTotal.Text.Substring(2), lblDeliverTime.Text))
-            {
-                if (p.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (string.IsNullOrEmpty(lblAddress.Text))
                 {
+                    lblDeliverFee.Text = "";
+                }
+                using (dialogPayment p = new dialogPayment(lblDeliverFee.Text, lblTotal.Text.Substring(2), lblDeliverTime.Text))
+                {
+                    if (p.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                        {
+                            string customerId = "";
+                            string orderTime = DateTime.Now.ToString("h:mm:ss tt");
+                            sqlCon.Open();
+                            if (!string.IsNullOrEmpty(lblTelphone.Text))
+                            {
+                                SqlCommand getCustomer = new SqlCommand("SELECT * FROM Customer WHERE phoneNumber = '" + lblTelphone.Text + "'", sqlCon);
+                                SqlDataReader sqlRead = getCustomer.ExecuteReader();
+                                if (sqlRead.HasRows && sqlRead.Read())
+                                {
+                                    customerId = sqlRead.GetValue(0).ToString();
+                                }
+                                sqlRead.Close();
+                            }
 
+                            if(orderId == 0)
+                            {
+                                SqlCommand sqlCommand = new SqlCommand("AddNewOrder", sqlCon);
+                                sqlCommand.CommandType = CommandType.StoredProcedure;
+                                sqlCommand.Parameters.AddWithValue("@customerId", customerId);
+                                sqlCommand.Parameters.AddWithValue("@orderTime", orderTime);
+                                sqlCommand.ExecuteNonQuery();
+
+                                SqlCommand getOrderId = new SqlCommand("SELECT Id FROM CustomerOrder ORDER BY Id DESC", sqlCon);
+                                SqlDataReader reader = getOrderId.ExecuteReader();
+                                if (reader.HasRows && reader.Read())
+                                {
+                                    orderId = Convert.ToInt32(reader.GetValue(0));
+                                }
+                                reader.Close();
+                            }
+                            else
+                            {
+                                SqlCommand deleteOrderItem = new SqlCommand("DELETE FROM OrderItem WHERE orderId = '" + orderId + "'", sqlCon);
+                                deleteOrderItem.ExecuteNonQuery();
+                            }
+
+                            foreach (DataGridViewRow row in dgvOrder.Rows)
+                            {
+                                using (SqlCommand addOrderItem = new SqlCommand("AddOrderItem", sqlCon))
+                                {
+                                    addOrderItem.CommandType = CommandType.StoredProcedure;
+
+                                    addOrderItem.Parameters.AddWithValue("@orderId", orderId);
+                                    addOrderItem.Parameters.AddWithValue("@dishId", row.Cells[0].Value);
+                                    addOrderItem.Parameters.AddWithValue("@price", row.Cells[5].Value);
+                                    addOrderItem.Parameters.AddWithValue("@qty", row.Cells[1].Value);
+                                    addOrderItem.Parameters.AddWithValue("@common", row.Cells[4].Value);
+                                    addOrderItem.Parameters.AddWithValue("@commonPrice", row.Cells[6].Value);
+                                    if (row.DefaultCellStyle.BackColor == Color.GreenYellow)
+                                    {
+                                        addOrderItem.Parameters.AddWithValue("@isSet", 1);
+                                    }
+                                    else
+                                    {
+                                        addOrderItem.Parameters.AddWithValue("@isSet", 0);
+                                    }
+                                    addOrderItem.ExecuteNonQuery();
+                                }
+                            }
+
+                            sqlCon.Close();
+                            orderId = 0;
+
+                            lblHouseNo.Text = "";
+                            lblAddress.Text = "";
+                            lblDeliverTime.Text = "";
+                            lblTelphone.Text = "";
+                            lblDeliverFee.Text = "1";
+                            lblPostcode.Text = "";
+                            lblName.Text = "";
+                            lblTotal.Text = "0.00";
+                            lblNote.Text = "";
+
+                            dgvOrder.Rows.Clear();
+                        }
+                    }
                 }
             }
         }
