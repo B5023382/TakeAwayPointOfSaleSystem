@@ -36,18 +36,17 @@ namespace TakeAwayPointOfSaleSystem
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -58,23 +57,14 @@ namespace TakeAwayPointOfSaleSystem
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.dgvFood = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dgvOrder = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.flpCommonCategory = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabEditDish = new System.Windows.Forms.TabPage();
-            this.dgvCommon = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.flpDishMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.pagMenuPage = new Bunifu.UI.WinForms.BunifuPages();
-            this.tapMenu = new System.Windows.Forms.TabPage();
-            this.dockMain = new Bunifu.UI.WinForms.BunifuFormDock();
             this.dishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sideOther = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvOrder = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.orderedDishNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderedDishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +72,23 @@ namespace TakeAwayPointOfSaleSystem
             this.dishCommon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPricePerDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commonPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flpCommonCategory = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabEditDish = new System.Windows.Forms.TabPage();
+            this.btnCloseCommon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishSwap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishNone = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnDishLess = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnLogout = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.sideName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sideOther = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flpDishMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAllDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pagMenuPage = new Bunifu.UI.WinForms.BunifuPages();
+            this.tapMenu = new System.Windows.Forms.TabPage();
+            this.dockMain = new Bunifu.UI.WinForms.BunifuFormDock();
             this.btnSetTime = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panAddressBar = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lblHouseNo = new Bunifu.UI.WinForms.BunifuLabel();
@@ -110,12 +117,6 @@ namespace TakeAwayPointOfSaleSystem
             this.lblDeliverTime = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel18 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnAllDish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnCloseCommon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishSwap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishNone = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnDishLess = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuLabel32 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnSetMeal = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -128,10 +129,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnAddQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnManagment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMinusQTY = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.tabEditDish.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.flpDishMenu.SuspendLayout();
             this.pagMenuPage.SuspendLayout();
             this.tapMenu.SuspendLayout();
@@ -213,6 +215,38 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvFood.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
             // 
+            // dishNo
+            // 
+            this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishNo.DataPropertyName = "Id";
+            this.dishNo.HeaderText = "Dish No.";
+            this.dishNo.Name = "dishNo";
+            this.dishNo.ReadOnly = true;
+            this.dishNo.Width = 94;
+            // 
+            // dishName
+            // 
+            this.dishName.DataPropertyName = "foodName";
+            this.dishName.HeaderText = "Dish Name";
+            this.dishName.Name = "dishName";
+            this.dishName.ReadOnly = true;
+            // 
+            // otherName
+            // 
+            this.otherName.DataPropertyName = "foodOtherName";
+            this.otherName.HeaderText = "Dish Other Name";
+            this.otherName.Name = "otherName";
+            this.otherName.ReadOnly = true;
+            // 
+            // dishPrice
+            // 
+            this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dishPrice.DataPropertyName = "price";
+            this.dishPrice.HeaderText = "Price";
+            this.dishPrice.Name = "dishPrice";
+            this.dishPrice.ReadOnly = true;
+            this.dishPrice.Width = 69;
+            // 
             // dgvOrder
             // 
             this.dgvOrder.AllowCustomTheming = false;
@@ -286,6 +320,61 @@ namespace TakeAwayPointOfSaleSystem
             this.dgvOrder.TabIndex = 47;
             this.dgvOrder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // orderedDishNo
+            // 
+            this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.orderedDishNo.HeaderText = "Dish No.";
+            this.orderedDishNo.Name = "orderedDishNo";
+            this.orderedDishNo.ReadOnly = true;
+            this.orderedDishNo.Width = 94;
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.quantity.HeaderText = "QTY";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            this.quantity.Width = 62;
+            // 
+            // orderedDishName
+            // 
+            this.orderedDishName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.orderedDishName.HeaderText = "Dish Name";
+            this.orderedDishName.Name = "orderedDishName";
+            this.orderedDishName.ReadOnly = true;
+            this.orderedDishName.Width = 111;
+            // 
+            // dishOtherName
+            // 
+            this.dishOtherName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dishOtherName.HeaderText = "Dish Other Name";
+            this.dishOtherName.Name = "dishOtherName";
+            this.dishOtherName.ReadOnly = true;
+            this.dishOtherName.Width = 157;
+            // 
+            // dishCommon
+            // 
+            this.dishCommon.HeaderText = "Common";
+            this.dishCommon.Name = "dishCommon";
+            this.dishCommon.ReadOnly = true;
+            // 
+            // totalPricePerDish
+            // 
+            this.totalPricePerDish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.totalPricePerDish.HeaderText = "Price";
+            this.totalPricePerDish.Name = "totalPricePerDish";
+            this.totalPricePerDish.ReadOnly = true;
+            this.totalPricePerDish.Width = 69;
+            // 
+            // commonPrice
+            // 
+            this.commonPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.commonPrice.HeaderText = "cmmonId";
+            this.commonPrice.Name = "commonPrice";
+            this.commonPrice.ReadOnly = true;
+            this.commonPrice.Visible = false;
+            this.commonPrice.Width = 103;
+            // 
             // flpCommonCategory
             // 
             this.flpCommonCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -304,7 +393,7 @@ namespace TakeAwayPointOfSaleSystem
             this.tabEditDish.Controls.Add(this.btnDishNone);
             this.tabEditDish.Controls.Add(this.btnDishAdd);
             this.tabEditDish.Controls.Add(this.btnDishLess);
-            this.tabEditDish.Controls.Add(this.dgvCommon);
+            this.tabEditDish.Controls.Add(this.btnLogout);
             this.tabEditDish.Location = new System.Drawing.Point(4, 4);
             this.tabEditDish.Name = "tabEditDish";
             this.tabEditDish.Padding = new System.Windows.Forms.Padding(3);
@@ -313,21 +402,376 @@ namespace TakeAwayPointOfSaleSystem
             this.tabEditDish.Text = "DishCommon";
             this.tabEditDish.UseVisualStyleBackColor = true;
             // 
-            // dgvCommon
+            // btnCloseCommon
             // 
-            this.dgvCommon.AllowCustomTheming = false;
-            this.dgvCommon.AllowUserToAddRows = false;
-            this.dgvCommon.AllowUserToDeleteRows = false;
+            this.btnCloseCommon.AllowToggling = false;
+            this.btnCloseCommon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseCommon.AnimationSpeed = 200;
+            this.btnCloseCommon.AutoGenerateColors = false;
+            this.btnCloseCommon.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloseCommon.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnCloseCommon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloseCommon.BackgroundImage")));
+            this.btnCloseCommon.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCloseCommon.ButtonText = "Close";
+            this.btnCloseCommon.ButtonTextMarginLeft = 0;
+            this.btnCloseCommon.ColorContrastOnClick = 45;
+            this.btnCloseCommon.ColorContrastOnHover = 45;
+            this.btnCloseCommon.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCloseCommon.CustomizableEdges = borderEdges1;
+            this.btnCloseCommon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCloseCommon.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnCloseCommon.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCloseCommon.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCloseCommon.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnCloseCommon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCloseCommon.ForeColor = System.Drawing.Color.White;
+            this.btnCloseCommon.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCloseCommon.IconMarginLeft = 11;
+            this.btnCloseCommon.IconPadding = 10;
+            this.btnCloseCommon.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCloseCommon.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnCloseCommon.IdleBorderRadius = 1;
+            this.btnCloseCommon.IdleBorderThickness = 1;
+            this.btnCloseCommon.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnCloseCommon.IdleIconLeftImage = null;
+            this.btnCloseCommon.IdleIconRightImage = null;
+            this.btnCloseCommon.IndicateFocus = false;
+            this.btnCloseCommon.Location = new System.Drawing.Point(380, 418);
+            this.btnCloseCommon.Name = "btnCloseCommon";
+            this.btnCloseCommon.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnCloseCommon.onHoverState.BorderRadius = 1;
+            this.btnCloseCommon.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCloseCommon.onHoverState.BorderThickness = 1;
+            this.btnCloseCommon.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnCloseCommon.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCloseCommon.onHoverState.IconLeftImage = null;
+            this.btnCloseCommon.onHoverState.IconRightImage = null;
+            this.btnCloseCommon.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnCloseCommon.OnIdleState.BorderRadius = 1;
+            this.btnCloseCommon.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCloseCommon.OnIdleState.BorderThickness = 1;
+            this.btnCloseCommon.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnCloseCommon.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnCloseCommon.OnIdleState.IconLeftImage = null;
+            this.btnCloseCommon.OnIdleState.IconRightImage = null;
+            this.btnCloseCommon.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCloseCommon.OnPressedState.BorderRadius = 1;
+            this.btnCloseCommon.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCloseCommon.OnPressedState.BorderThickness = 1;
+            this.btnCloseCommon.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCloseCommon.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnCloseCommon.OnPressedState.IconLeftImage = null;
+            this.btnCloseCommon.OnPressedState.IconRightImage = null;
+            this.btnCloseCommon.Size = new System.Drawing.Size(110, 50);
+            this.btnCloseCommon.TabIndex = 30;
+            this.btnCloseCommon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCloseCommon.TextMarginLeft = 0;
+            this.btnCloseCommon.UseDefaultRadiusAndThickness = true;
+            this.btnCloseCommon.Click += new System.EventHandler(this.btnCloseCommon_Click);
+            // 
+            // btnDishSwap
+            // 
+            this.btnDishSwap.AllowToggling = false;
+            this.btnDishSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDishSwap.AnimationSpeed = 200;
+            this.btnDishSwap.AutoGenerateColors = false;
+            this.btnDishSwap.BackColor = System.Drawing.Color.Transparent;
+            this.btnDishSwap.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnDishSwap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishSwap.BackgroundImage")));
+            this.btnDishSwap.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishSwap.ButtonText = "Swap";
+            this.btnDishSwap.ButtonTextMarginLeft = 0;
+            this.btnDishSwap.ColorContrastOnClick = 45;
+            this.btnDishSwap.ColorContrastOnHover = 45;
+            this.btnDishSwap.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnDishSwap.CustomizableEdges = borderEdges2;
+            this.btnDishSwap.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDishSwap.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnDishSwap.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDishSwap.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDishSwap.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDishSwap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDishSwap.ForeColor = System.Drawing.Color.White;
+            this.btnDishSwap.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishSwap.IconMarginLeft = 11;
+            this.btnDishSwap.IconPadding = 10;
+            this.btnDishSwap.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishSwap.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishSwap.IdleBorderRadius = 1;
+            this.btnDishSwap.IdleBorderThickness = 1;
+            this.btnDishSwap.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishSwap.IdleIconLeftImage = null;
+            this.btnDishSwap.IdleIconRightImage = null;
+            this.btnDishSwap.IndicateFocus = false;
+            this.btnDishSwap.Location = new System.Drawing.Point(285, 418);
+            this.btnDishSwap.Name = "btnDishSwap";
+            this.btnDishSwap.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishSwap.onHoverState.BorderRadius = 1;
+            this.btnDishSwap.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishSwap.onHoverState.BorderThickness = 1;
+            this.btnDishSwap.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishSwap.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDishSwap.onHoverState.IconLeftImage = null;
+            this.btnDishSwap.onHoverState.IconRightImage = null;
+            this.btnDishSwap.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishSwap.OnIdleState.BorderRadius = 1;
+            this.btnDishSwap.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishSwap.OnIdleState.BorderThickness = 1;
+            this.btnDishSwap.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishSwap.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDishSwap.OnIdleState.IconLeftImage = null;
+            this.btnDishSwap.OnIdleState.IconRightImage = null;
+            this.btnDishSwap.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishSwap.OnPressedState.BorderRadius = 1;
+            this.btnDishSwap.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishSwap.OnPressedState.BorderThickness = 1;
+            this.btnDishSwap.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishSwap.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDishSwap.OnPressedState.IconLeftImage = null;
+            this.btnDishSwap.OnPressedState.IconRightImage = null;
+            this.btnDishSwap.Size = new System.Drawing.Size(85, 50);
+            this.btnDishSwap.TabIndex = 29;
+            this.btnDishSwap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDishSwap.TextMarginLeft = 0;
+            this.btnDishSwap.UseDefaultRadiusAndThickness = true;
+            this.btnDishSwap.Click += new System.EventHandler(this.btnDishSwap_Click);
+            // 
+            // btnDishNone
+            // 
+            this.btnDishNone.AllowToggling = false;
+            this.btnDishNone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDishNone.AnimationSpeed = 200;
+            this.btnDishNone.AutoGenerateColors = false;
+            this.btnDishNone.BackColor = System.Drawing.Color.Transparent;
+            this.btnDishNone.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnDishNone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishNone.BackgroundImage")));
+            this.btnDishNone.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishNone.ButtonText = "None";
+            this.btnDishNone.ButtonTextMarginLeft = 0;
+            this.btnDishNone.ColorContrastOnClick = 45;
+            this.btnDishNone.ColorContrastOnHover = 45;
+            this.btnDishNone.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnDishNone.CustomizableEdges = borderEdges3;
+            this.btnDishNone.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDishNone.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnDishNone.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDishNone.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDishNone.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDishNone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDishNone.ForeColor = System.Drawing.Color.White;
+            this.btnDishNone.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishNone.IconMarginLeft = 11;
+            this.btnDishNone.IconPadding = 10;
+            this.btnDishNone.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishNone.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishNone.IdleBorderRadius = 1;
+            this.btnDishNone.IdleBorderThickness = 1;
+            this.btnDishNone.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishNone.IdleIconLeftImage = null;
+            this.btnDishNone.IdleIconRightImage = null;
+            this.btnDishNone.IndicateFocus = false;
+            this.btnDishNone.Location = new System.Drawing.Point(190, 418);
+            this.btnDishNone.Name = "btnDishNone";
+            this.btnDishNone.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishNone.onHoverState.BorderRadius = 1;
+            this.btnDishNone.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishNone.onHoverState.BorderThickness = 1;
+            this.btnDishNone.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishNone.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDishNone.onHoverState.IconLeftImage = null;
+            this.btnDishNone.onHoverState.IconRightImage = null;
+            this.btnDishNone.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishNone.OnIdleState.BorderRadius = 1;
+            this.btnDishNone.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishNone.OnIdleState.BorderThickness = 1;
+            this.btnDishNone.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishNone.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDishNone.OnIdleState.IconLeftImage = null;
+            this.btnDishNone.OnIdleState.IconRightImage = null;
+            this.btnDishNone.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishNone.OnPressedState.BorderRadius = 1;
+            this.btnDishNone.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishNone.OnPressedState.BorderThickness = 1;
+            this.btnDishNone.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishNone.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDishNone.OnPressedState.IconLeftImage = null;
+            this.btnDishNone.OnPressedState.IconRightImage = null;
+            this.btnDishNone.Size = new System.Drawing.Size(85, 50);
+            this.btnDishNone.TabIndex = 28;
+            this.btnDishNone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDishNone.TextMarginLeft = 0;
+            this.btnDishNone.UseDefaultRadiusAndThickness = true;
+            this.btnDishNone.Click += new System.EventHandler(this.btnDishNone_Click);
+            // 
+            // btnDishAdd
+            // 
+            this.btnDishAdd.AllowToggling = false;
+            this.btnDishAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDishAdd.AnimationSpeed = 200;
+            this.btnDishAdd.AutoGenerateColors = false;
+            this.btnDishAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnDishAdd.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnDishAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishAdd.BackgroundImage")));
+            this.btnDishAdd.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishAdd.ButtonText = "Add";
+            this.btnDishAdd.ButtonTextMarginLeft = 0;
+            this.btnDishAdd.ColorContrastOnClick = 45;
+            this.btnDishAdd.ColorContrastOnHover = 45;
+            this.btnDishAdd.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnDishAdd.CustomizableEdges = borderEdges4;
+            this.btnDishAdd.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDishAdd.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnDishAdd.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDishAdd.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDishAdd.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDishAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDishAdd.ForeColor = System.Drawing.Color.White;
+            this.btnDishAdd.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishAdd.IconMarginLeft = 11;
+            this.btnDishAdd.IconPadding = 10;
+            this.btnDishAdd.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishAdd.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishAdd.IdleBorderRadius = 1;
+            this.btnDishAdd.IdleBorderThickness = 1;
+            this.btnDishAdd.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishAdd.IdleIconLeftImage = null;
+            this.btnDishAdd.IdleIconRightImage = null;
+            this.btnDishAdd.IndicateFocus = false;
+            this.btnDishAdd.Location = new System.Drawing.Point(97, 418);
+            this.btnDishAdd.Name = "btnDishAdd";
+            this.btnDishAdd.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishAdd.onHoverState.BorderRadius = 1;
+            this.btnDishAdd.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishAdd.onHoverState.BorderThickness = 1;
+            this.btnDishAdd.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishAdd.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDishAdd.onHoverState.IconLeftImage = null;
+            this.btnDishAdd.onHoverState.IconRightImage = null;
+            this.btnDishAdd.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishAdd.OnIdleState.BorderRadius = 1;
+            this.btnDishAdd.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishAdd.OnIdleState.BorderThickness = 1;
+            this.btnDishAdd.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishAdd.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDishAdd.OnIdleState.IconLeftImage = null;
+            this.btnDishAdd.OnIdleState.IconRightImage = null;
+            this.btnDishAdd.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishAdd.OnPressedState.BorderRadius = 1;
+            this.btnDishAdd.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishAdd.OnPressedState.BorderThickness = 1;
+            this.btnDishAdd.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishAdd.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDishAdd.OnPressedState.IconLeftImage = null;
+            this.btnDishAdd.OnPressedState.IconRightImage = null;
+            this.btnDishAdd.Size = new System.Drawing.Size(85, 50);
+            this.btnDishAdd.TabIndex = 27;
+            this.btnDishAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDishAdd.TextMarginLeft = 0;
+            this.btnDishAdd.UseDefaultRadiusAndThickness = true;
+            this.btnDishAdd.Click += new System.EventHandler(this.btnDishAdd_Click);
+            // 
+            // btnDishLess
+            // 
+            this.btnDishLess.AllowToggling = false;
+            this.btnDishLess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDishLess.AnimationSpeed = 200;
+            this.btnDishLess.AutoGenerateColors = false;
+            this.btnDishLess.BackColor = System.Drawing.Color.Transparent;
+            this.btnDishLess.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnDishLess.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishLess.BackgroundImage")));
+            this.btnDishLess.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishLess.ButtonText = "Less";
+            this.btnDishLess.ButtonTextMarginLeft = 0;
+            this.btnDishLess.ColorContrastOnClick = 45;
+            this.btnDishLess.ColorContrastOnHover = 45;
+            this.btnDishLess.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnDishLess.CustomizableEdges = borderEdges5;
+            this.btnDishLess.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDishLess.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnDishLess.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDishLess.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDishLess.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDishLess.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDishLess.ForeColor = System.Drawing.Color.White;
+            this.btnDishLess.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishLess.IconMarginLeft = 11;
+            this.btnDishLess.IconPadding = 10;
+            this.btnDishLess.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDishLess.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishLess.IdleBorderRadius = 1;
+            this.btnDishLess.IdleBorderThickness = 1;
+            this.btnDishLess.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishLess.IdleIconLeftImage = null;
+            this.btnDishLess.IdleIconRightImage = null;
+            this.btnDishLess.IndicateFocus = false;
+            this.btnDishLess.Location = new System.Drawing.Point(3, 418);
+            this.btnDishLess.Name = "btnDishLess";
+            this.btnDishLess.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishLess.onHoverState.BorderRadius = 1;
+            this.btnDishLess.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishLess.onHoverState.BorderThickness = 1;
+            this.btnDishLess.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDishLess.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDishLess.onHoverState.IconLeftImage = null;
+            this.btnDishLess.onHoverState.IconRightImage = null;
+            this.btnDishLess.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishLess.OnIdleState.BorderRadius = 1;
+            this.btnDishLess.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishLess.OnIdleState.BorderThickness = 1;
+            this.btnDishLess.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnDishLess.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDishLess.OnIdleState.IconLeftImage = null;
+            this.btnDishLess.OnIdleState.IconRightImage = null;
+            this.btnDishLess.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishLess.OnPressedState.BorderRadius = 1;
+            this.btnDishLess.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDishLess.OnPressedState.BorderThickness = 1;
+            this.btnDishLess.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDishLess.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDishLess.OnPressedState.IconLeftImage = null;
+            this.btnDishLess.OnPressedState.IconRightImage = null;
+            this.btnDishLess.Size = new System.Drawing.Size(85, 50);
+            this.btnDishLess.TabIndex = 26;
+            this.btnDishLess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDishLess.TextMarginLeft = 0;
+            this.btnDishLess.UseDefaultRadiusAndThickness = true;
+            this.btnDishLess.Click += new System.EventHandler(this.btnDishLess_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.AllowCustomTheming = false;
+            this.btnLogout.AllowUserToAddRows = false;
+            this.btnLogout.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvCommon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnLogout.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvCommon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCommon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCommon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCommon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvCommon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.btnLogout.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.btnLogout.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogout.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.btnLogout.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.btnLogout.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -335,31 +779,31 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCommon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvCommon.ColumnHeadersHeight = 40;
-            this.dgvCommon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnLogout.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.btnLogout.ColumnHeadersHeight = 40;
+            this.btnLogout.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sideName,
             this.sideOther,
             this.Price,
             this.cId});
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvCommon.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCommon.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvCommon.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.Name = null;
-            this.dgvCommon.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvCommon.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvCommon.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvCommon.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvCommon.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.btnLogout.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.btnLogout.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.btnLogout.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.btnLogout.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.btnLogout.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.btnLogout.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogout.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.btnLogout.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.btnLogout.CurrentTheme.Name = null;
+            this.btnLogout.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.btnLogout.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.btnLogout.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -367,21 +811,54 @@ namespace TakeAwayPointOfSaleSystem
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCommon.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvCommon.EnableHeadersVisualStyles = false;
-            this.dgvCommon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvCommon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvCommon.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvCommon.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvCommon.Location = new System.Drawing.Point(0, 0);
-            this.dgvCommon.Name = "dgvCommon";
-            this.dgvCommon.ReadOnly = true;
-            this.dgvCommon.RowHeadersVisible = false;
-            this.dgvCommon.RowTemplate.Height = 40;
-            this.dgvCommon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommon.Size = new System.Drawing.Size(345, 412);
-            this.dgvCommon.TabIndex = 0;
-            this.dgvCommon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.btnLogout.DefaultCellStyle = dataGridViewCellStyle9;
+            this.btnLogout.EnableHeadersVisualStyles = false;
+            this.btnLogout.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.btnLogout.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogout.HeaderBgColor = System.Drawing.Color.Empty;
+            this.btnLogout.HeaderForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(0, 0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ReadOnly = true;
+            this.btnLogout.RowHeadersVisible = false;
+            this.btnLogout.RowTemplate.Height = 40;
+            this.btnLogout.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.btnLogout.Size = new System.Drawing.Size(345, 412);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // sideName
+            // 
+            this.sideName.DataPropertyName = "commonName";
+            this.sideName.HeaderText = "Side Name";
+            this.sideName.Name = "sideName";
+            this.sideName.ReadOnly = true;
+            // 
+            // sideOther
+            // 
+            this.sideOther.DataPropertyName = "commonOtherName";
+            this.sideOther.HeaderText = "Side Other Name";
+            this.sideOther.Name = "sideOther";
+            this.sideOther.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Price.DataPropertyName = "price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 69;
+            // 
+            // cId
+            // 
+            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cId.DataPropertyName = "Id";
+            this.cId.HeaderText = "cId";
+            this.cId.Name = "cId";
+            this.cId.ReadOnly = true;
+            this.cId.Visible = false;
+            this.cId.Width = 56;
             // 
             // flpDishMenu
             // 
@@ -393,6 +870,77 @@ namespace TakeAwayPointOfSaleSystem
             this.flpDishMenu.Name = "flpDishMenu";
             this.flpDishMenu.Size = new System.Drawing.Size(489, 401);
             this.flpDishMenu.TabIndex = 0;
+            // 
+            // btnAllDish
+            // 
+            this.btnAllDish.AllowToggling = false;
+            this.btnAllDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAllDish.AnimationSpeed = 200;
+            this.btnAllDish.AutoGenerateColors = false;
+            this.btnAllDish.BackColor = System.Drawing.Color.Transparent;
+            this.btnAllDish.BackColor1 = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAllDish.BackgroundImage")));
+            this.btnAllDish.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.ButtonText = "All Dish";
+            this.btnAllDish.ButtonTextMarginLeft = 0;
+            this.btnAllDish.ColorContrastOnClick = 45;
+            this.btnAllDish.ColorContrastOnHover = 45;
+            this.btnAllDish.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnAllDish.CustomizableEdges = borderEdges6;
+            this.btnAllDish.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAllDish.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnAllDish.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAllDish.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAllDish.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnAllDish.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAllDish.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAllDish.IconMarginLeft = 11;
+            this.btnAllDish.IconPadding = 10;
+            this.btnAllDish.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAllDish.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.IdleBorderRadius = 1;
+            this.btnAllDish.IdleBorderThickness = 1;
+            this.btnAllDish.IdleFillColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.IdleIconLeftImage = null;
+            this.btnAllDish.IdleIconRightImage = null;
+            this.btnAllDish.IndicateFocus = false;
+            this.btnAllDish.Location = new System.Drawing.Point(3, 3);
+            this.btnAllDish.Name = "btnAllDish";
+            this.btnAllDish.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAllDish.onHoverState.BorderRadius = 1;
+            this.btnAllDish.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.onHoverState.BorderThickness = 1;
+            this.btnAllDish.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAllDish.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.onHoverState.IconLeftImage = null;
+            this.btnAllDish.onHoverState.IconRightImage = null;
+            this.btnAllDish.OnIdleState.BorderColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.OnIdleState.BorderRadius = 1;
+            this.btnAllDish.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.OnIdleState.BorderThickness = 1;
+            this.btnAllDish.OnIdleState.FillColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAllDish.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.OnIdleState.IconLeftImage = null;
+            this.btnAllDish.OnIdleState.IconRightImage = null;
+            this.btnAllDish.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAllDish.OnPressedState.BorderRadius = 1;
+            this.btnAllDish.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAllDish.OnPressedState.BorderThickness = 1;
+            this.btnAllDish.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAllDish.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAllDish.OnPressedState.IconLeftImage = null;
+            this.btnAllDish.OnPressedState.IconRightImage = null;
+            this.btnAllDish.Size = new System.Drawing.Size(200, 90);
+            this.btnAllDish.TabIndex = 1;
+            this.btnAllDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAllDish.TextMarginLeft = 0;
+            this.btnAllDish.UseDefaultRadiusAndThickness = true;
+            this.btnAllDish.Click += new System.EventHandler(this.btnAllDish_Click);
             // 
             // pagMenuPage
             // 
@@ -481,126 +1029,6 @@ namespace TakeAwayPointOfSaleSystem
             this.dockMain.TitleBarOptions.TitleBarControl = null;
             this.dockMain.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // dishNo
-            // 
-            this.dishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dishNo.DataPropertyName = "Id";
-            this.dishNo.HeaderText = "Dish No.";
-            this.dishNo.Name = "dishNo";
-            this.dishNo.ReadOnly = true;
-            this.dishNo.Width = 94;
-            // 
-            // dishName
-            // 
-            this.dishName.DataPropertyName = "foodName";
-            this.dishName.HeaderText = "Dish Name";
-            this.dishName.Name = "dishName";
-            this.dishName.ReadOnly = true;
-            // 
-            // otherName
-            // 
-            this.otherName.DataPropertyName = "foodOtherName";
-            this.otherName.HeaderText = "Dish Other Name";
-            this.otherName.Name = "otherName";
-            this.otherName.ReadOnly = true;
-            // 
-            // dishPrice
-            // 
-            this.dishPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dishPrice.DataPropertyName = "price";
-            this.dishPrice.HeaderText = "Price";
-            this.dishPrice.Name = "dishPrice";
-            this.dishPrice.ReadOnly = true;
-            this.dishPrice.Width = 69;
-            // 
-            // sideName
-            // 
-            this.sideName.DataPropertyName = "commonName";
-            this.sideName.HeaderText = "Side Name";
-            this.sideName.Name = "sideName";
-            this.sideName.ReadOnly = true;
-            // 
-            // sideOther
-            // 
-            this.sideOther.DataPropertyName = "commonOtherName";
-            this.sideOther.HeaderText = "Side Other Name";
-            this.sideOther.Name = "sideOther";
-            this.sideOther.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Price.DataPropertyName = "price";
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            this.Price.Width = 69;
-            // 
-            // cId
-            // 
-            this.cId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.cId.DataPropertyName = "Id";
-            this.cId.HeaderText = "cId";
-            this.cId.Name = "cId";
-            this.cId.ReadOnly = true;
-            this.cId.Visible = false;
-            this.cId.Width = 56;
-            // 
-            // orderedDishNo
-            // 
-            this.orderedDishNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.orderedDishNo.HeaderText = "Dish No.";
-            this.orderedDishNo.Name = "orderedDishNo";
-            this.orderedDishNo.ReadOnly = true;
-            this.orderedDishNo.Width = 94;
-            // 
-            // quantity
-            // 
-            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.quantity.HeaderText = "QTY";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            this.quantity.Width = 62;
-            // 
-            // orderedDishName
-            // 
-            this.orderedDishName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.orderedDishName.HeaderText = "Dish Name";
-            this.orderedDishName.Name = "orderedDishName";
-            this.orderedDishName.ReadOnly = true;
-            this.orderedDishName.Width = 111;
-            // 
-            // dishOtherName
-            // 
-            this.dishOtherName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dishOtherName.HeaderText = "Dish Other Name";
-            this.dishOtherName.Name = "dishOtherName";
-            this.dishOtherName.ReadOnly = true;
-            this.dishOtherName.Width = 157;
-            // 
-            // dishCommon
-            // 
-            this.dishCommon.HeaderText = "Common";
-            this.dishCommon.Name = "dishCommon";
-            this.dishCommon.ReadOnly = true;
-            // 
-            // totalPricePerDish
-            // 
-            this.totalPricePerDish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.totalPricePerDish.HeaderText = "Price";
-            this.totalPricePerDish.Name = "totalPricePerDish";
-            this.totalPricePerDish.ReadOnly = true;
-            this.totalPricePerDish.Width = 69;
-            // 
-            // commonPrice
-            // 
-            this.commonPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.commonPrice.HeaderText = "cmmonId";
-            this.commonPrice.Name = "commonPrice";
-            this.commonPrice.ReadOnly = true;
-            this.commonPrice.Visible = false;
-            this.commonPrice.Width = 103;
-            // 
             // btnSetTime
             // 
             this.btnSetTime.AllowToggling = false;
@@ -616,11 +1044,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSetTime.ColorContrastOnClick = 45;
             this.btnSetTime.ColorContrastOnHover = 45;
             this.btnSetTime.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnSetTime.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnSetTime.CustomizableEdges = borderEdges8;
             this.btnSetTime.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSetTime.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnSetTime.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1086,432 +1514,6 @@ namespace TakeAwayPointOfSaleSystem
             this.bunifuLabel18.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel18.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // btnAllDish
-            // 
-            this.btnAllDish.AllowToggling = false;
-            this.btnAllDish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAllDish.AnimationSpeed = 200;
-            this.btnAllDish.AutoGenerateColors = false;
-            this.btnAllDish.BackColor = System.Drawing.Color.Transparent;
-            this.btnAllDish.BackColor1 = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAllDish.BackgroundImage")));
-            this.btnAllDish.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.ButtonText = "All Dish";
-            this.btnAllDish.ButtonTextMarginLeft = 0;
-            this.btnAllDish.ColorContrastOnClick = 45;
-            this.btnAllDish.ColorContrastOnHover = 45;
-            this.btnAllDish.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnAllDish.CustomizableEdges = borderEdges6;
-            this.btnAllDish.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAllDish.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnAllDish.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAllDish.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAllDish.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAllDish.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAllDish.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAllDish.IconMarginLeft = 11;
-            this.btnAllDish.IconPadding = 10;
-            this.btnAllDish.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAllDish.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.IdleBorderRadius = 1;
-            this.btnAllDish.IdleBorderThickness = 1;
-            this.btnAllDish.IdleFillColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.IdleIconLeftImage = null;
-            this.btnAllDish.IdleIconRightImage = null;
-            this.btnAllDish.IndicateFocus = false;
-            this.btnAllDish.Location = new System.Drawing.Point(3, 3);
-            this.btnAllDish.Name = "btnAllDish";
-            this.btnAllDish.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAllDish.onHoverState.BorderRadius = 1;
-            this.btnAllDish.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.onHoverState.BorderThickness = 1;
-            this.btnAllDish.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAllDish.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.onHoverState.IconLeftImage = null;
-            this.btnAllDish.onHoverState.IconRightImage = null;
-            this.btnAllDish.OnIdleState.BorderColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.OnIdleState.BorderRadius = 1;
-            this.btnAllDish.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.OnIdleState.BorderThickness = 1;
-            this.btnAllDish.OnIdleState.FillColor = System.Drawing.Color.DarkTurquoise;
-            this.btnAllDish.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.OnIdleState.IconLeftImage = null;
-            this.btnAllDish.OnIdleState.IconRightImage = null;
-            this.btnAllDish.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAllDish.OnPressedState.BorderRadius = 1;
-            this.btnAllDish.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAllDish.OnPressedState.BorderThickness = 1;
-            this.btnAllDish.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAllDish.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAllDish.OnPressedState.IconLeftImage = null;
-            this.btnAllDish.OnPressedState.IconRightImage = null;
-            this.btnAllDish.Size = new System.Drawing.Size(200, 90);
-            this.btnAllDish.TabIndex = 1;
-            this.btnAllDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAllDish.TextMarginLeft = 0;
-            this.btnAllDish.UseDefaultRadiusAndThickness = true;
-            this.btnAllDish.Click += new System.EventHandler(this.btnAllDish_Click);
-            // 
-            // btnCloseCommon
-            // 
-            this.btnCloseCommon.AllowToggling = false;
-            this.btnCloseCommon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseCommon.AnimationSpeed = 200;
-            this.btnCloseCommon.AutoGenerateColors = false;
-            this.btnCloseCommon.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseCommon.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnCloseCommon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloseCommon.BackgroundImage")));
-            this.btnCloseCommon.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCloseCommon.ButtonText = "Close";
-            this.btnCloseCommon.ButtonTextMarginLeft = 0;
-            this.btnCloseCommon.ColorContrastOnClick = 45;
-            this.btnCloseCommon.ColorContrastOnHover = 45;
-            this.btnCloseCommon.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnCloseCommon.CustomizableEdges = borderEdges1;
-            this.btnCloseCommon.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCloseCommon.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnCloseCommon.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCloseCommon.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnCloseCommon.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnCloseCommon.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCloseCommon.ForeColor = System.Drawing.Color.White;
-            this.btnCloseCommon.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnCloseCommon.IconMarginLeft = 11;
-            this.btnCloseCommon.IconPadding = 10;
-            this.btnCloseCommon.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnCloseCommon.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnCloseCommon.IdleBorderRadius = 1;
-            this.btnCloseCommon.IdleBorderThickness = 1;
-            this.btnCloseCommon.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnCloseCommon.IdleIconLeftImage = null;
-            this.btnCloseCommon.IdleIconRightImage = null;
-            this.btnCloseCommon.IndicateFocus = false;
-            this.btnCloseCommon.Location = new System.Drawing.Point(380, 418);
-            this.btnCloseCommon.Name = "btnCloseCommon";
-            this.btnCloseCommon.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnCloseCommon.onHoverState.BorderRadius = 1;
-            this.btnCloseCommon.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCloseCommon.onHoverState.BorderThickness = 1;
-            this.btnCloseCommon.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnCloseCommon.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCloseCommon.onHoverState.IconLeftImage = null;
-            this.btnCloseCommon.onHoverState.IconRightImage = null;
-            this.btnCloseCommon.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnCloseCommon.OnIdleState.BorderRadius = 1;
-            this.btnCloseCommon.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCloseCommon.OnIdleState.BorderThickness = 1;
-            this.btnCloseCommon.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnCloseCommon.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnCloseCommon.OnIdleState.IconLeftImage = null;
-            this.btnCloseCommon.OnIdleState.IconRightImage = null;
-            this.btnCloseCommon.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnCloseCommon.OnPressedState.BorderRadius = 1;
-            this.btnCloseCommon.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCloseCommon.OnPressedState.BorderThickness = 1;
-            this.btnCloseCommon.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnCloseCommon.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnCloseCommon.OnPressedState.IconLeftImage = null;
-            this.btnCloseCommon.OnPressedState.IconRightImage = null;
-            this.btnCloseCommon.Size = new System.Drawing.Size(110, 50);
-            this.btnCloseCommon.TabIndex = 30;
-            this.btnCloseCommon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCloseCommon.TextMarginLeft = 0;
-            this.btnCloseCommon.UseDefaultRadiusAndThickness = true;
-            this.btnCloseCommon.Click += new System.EventHandler(this.btnCloseCommon_Click);
-            // 
-            // btnDishSwap
-            // 
-            this.btnDishSwap.AllowToggling = false;
-            this.btnDishSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDishSwap.AnimationSpeed = 200;
-            this.btnDishSwap.AutoGenerateColors = false;
-            this.btnDishSwap.BackColor = System.Drawing.Color.Transparent;
-            this.btnDishSwap.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnDishSwap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishSwap.BackgroundImage")));
-            this.btnDishSwap.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishSwap.ButtonText = "Swap";
-            this.btnDishSwap.ButtonTextMarginLeft = 0;
-            this.btnDishSwap.ColorContrastOnClick = 45;
-            this.btnDishSwap.ColorContrastOnHover = 45;
-            this.btnDishSwap.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnDishSwap.CustomizableEdges = borderEdges2;
-            this.btnDishSwap.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDishSwap.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnDishSwap.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDishSwap.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDishSwap.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDishSwap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDishSwap.ForeColor = System.Drawing.Color.White;
-            this.btnDishSwap.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishSwap.IconMarginLeft = 11;
-            this.btnDishSwap.IconPadding = 10;
-            this.btnDishSwap.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishSwap.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishSwap.IdleBorderRadius = 1;
-            this.btnDishSwap.IdleBorderThickness = 1;
-            this.btnDishSwap.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishSwap.IdleIconLeftImage = null;
-            this.btnDishSwap.IdleIconRightImage = null;
-            this.btnDishSwap.IndicateFocus = false;
-            this.btnDishSwap.Location = new System.Drawing.Point(285, 418);
-            this.btnDishSwap.Name = "btnDishSwap";
-            this.btnDishSwap.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishSwap.onHoverState.BorderRadius = 1;
-            this.btnDishSwap.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishSwap.onHoverState.BorderThickness = 1;
-            this.btnDishSwap.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishSwap.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDishSwap.onHoverState.IconLeftImage = null;
-            this.btnDishSwap.onHoverState.IconRightImage = null;
-            this.btnDishSwap.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishSwap.OnIdleState.BorderRadius = 1;
-            this.btnDishSwap.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishSwap.OnIdleState.BorderThickness = 1;
-            this.btnDishSwap.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishSwap.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDishSwap.OnIdleState.IconLeftImage = null;
-            this.btnDishSwap.OnIdleState.IconRightImage = null;
-            this.btnDishSwap.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishSwap.OnPressedState.BorderRadius = 1;
-            this.btnDishSwap.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishSwap.OnPressedState.BorderThickness = 1;
-            this.btnDishSwap.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishSwap.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnDishSwap.OnPressedState.IconLeftImage = null;
-            this.btnDishSwap.OnPressedState.IconRightImage = null;
-            this.btnDishSwap.Size = new System.Drawing.Size(85, 50);
-            this.btnDishSwap.TabIndex = 29;
-            this.btnDishSwap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDishSwap.TextMarginLeft = 0;
-            this.btnDishSwap.UseDefaultRadiusAndThickness = true;
-            this.btnDishSwap.Click += new System.EventHandler(this.btnDishSwap_Click);
-            // 
-            // btnDishNone
-            // 
-            this.btnDishNone.AllowToggling = false;
-            this.btnDishNone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDishNone.AnimationSpeed = 200;
-            this.btnDishNone.AutoGenerateColors = false;
-            this.btnDishNone.BackColor = System.Drawing.Color.Transparent;
-            this.btnDishNone.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnDishNone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishNone.BackgroundImage")));
-            this.btnDishNone.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishNone.ButtonText = "None";
-            this.btnDishNone.ButtonTextMarginLeft = 0;
-            this.btnDishNone.ColorContrastOnClick = 45;
-            this.btnDishNone.ColorContrastOnHover = 45;
-            this.btnDishNone.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnDishNone.CustomizableEdges = borderEdges3;
-            this.btnDishNone.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDishNone.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnDishNone.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDishNone.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDishNone.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDishNone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDishNone.ForeColor = System.Drawing.Color.White;
-            this.btnDishNone.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishNone.IconMarginLeft = 11;
-            this.btnDishNone.IconPadding = 10;
-            this.btnDishNone.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishNone.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishNone.IdleBorderRadius = 1;
-            this.btnDishNone.IdleBorderThickness = 1;
-            this.btnDishNone.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishNone.IdleIconLeftImage = null;
-            this.btnDishNone.IdleIconRightImage = null;
-            this.btnDishNone.IndicateFocus = false;
-            this.btnDishNone.Location = new System.Drawing.Point(190, 418);
-            this.btnDishNone.Name = "btnDishNone";
-            this.btnDishNone.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishNone.onHoverState.BorderRadius = 1;
-            this.btnDishNone.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishNone.onHoverState.BorderThickness = 1;
-            this.btnDishNone.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishNone.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDishNone.onHoverState.IconLeftImage = null;
-            this.btnDishNone.onHoverState.IconRightImage = null;
-            this.btnDishNone.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishNone.OnIdleState.BorderRadius = 1;
-            this.btnDishNone.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishNone.OnIdleState.BorderThickness = 1;
-            this.btnDishNone.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishNone.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDishNone.OnIdleState.IconLeftImage = null;
-            this.btnDishNone.OnIdleState.IconRightImage = null;
-            this.btnDishNone.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishNone.OnPressedState.BorderRadius = 1;
-            this.btnDishNone.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishNone.OnPressedState.BorderThickness = 1;
-            this.btnDishNone.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishNone.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnDishNone.OnPressedState.IconLeftImage = null;
-            this.btnDishNone.OnPressedState.IconRightImage = null;
-            this.btnDishNone.Size = new System.Drawing.Size(85, 50);
-            this.btnDishNone.TabIndex = 28;
-            this.btnDishNone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDishNone.TextMarginLeft = 0;
-            this.btnDishNone.UseDefaultRadiusAndThickness = true;
-            this.btnDishNone.Click += new System.EventHandler(this.btnDishNone_Click);
-            // 
-            // btnDishAdd
-            // 
-            this.btnDishAdd.AllowToggling = false;
-            this.btnDishAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDishAdd.AnimationSpeed = 200;
-            this.btnDishAdd.AutoGenerateColors = false;
-            this.btnDishAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnDishAdd.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnDishAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishAdd.BackgroundImage")));
-            this.btnDishAdd.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishAdd.ButtonText = "Add";
-            this.btnDishAdd.ButtonTextMarginLeft = 0;
-            this.btnDishAdd.ColorContrastOnClick = 45;
-            this.btnDishAdd.ColorContrastOnHover = 45;
-            this.btnDishAdd.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnDishAdd.CustomizableEdges = borderEdges4;
-            this.btnDishAdd.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDishAdd.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnDishAdd.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDishAdd.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDishAdd.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDishAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDishAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDishAdd.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishAdd.IconMarginLeft = 11;
-            this.btnDishAdd.IconPadding = 10;
-            this.btnDishAdd.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishAdd.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishAdd.IdleBorderRadius = 1;
-            this.btnDishAdd.IdleBorderThickness = 1;
-            this.btnDishAdd.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishAdd.IdleIconLeftImage = null;
-            this.btnDishAdd.IdleIconRightImage = null;
-            this.btnDishAdd.IndicateFocus = false;
-            this.btnDishAdd.Location = new System.Drawing.Point(97, 418);
-            this.btnDishAdd.Name = "btnDishAdd";
-            this.btnDishAdd.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishAdd.onHoverState.BorderRadius = 1;
-            this.btnDishAdd.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishAdd.onHoverState.BorderThickness = 1;
-            this.btnDishAdd.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishAdd.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDishAdd.onHoverState.IconLeftImage = null;
-            this.btnDishAdd.onHoverState.IconRightImage = null;
-            this.btnDishAdd.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishAdd.OnIdleState.BorderRadius = 1;
-            this.btnDishAdd.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishAdd.OnIdleState.BorderThickness = 1;
-            this.btnDishAdd.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishAdd.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDishAdd.OnIdleState.IconLeftImage = null;
-            this.btnDishAdd.OnIdleState.IconRightImage = null;
-            this.btnDishAdd.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishAdd.OnPressedState.BorderRadius = 1;
-            this.btnDishAdd.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishAdd.OnPressedState.BorderThickness = 1;
-            this.btnDishAdd.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishAdd.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnDishAdd.OnPressedState.IconLeftImage = null;
-            this.btnDishAdd.OnPressedState.IconRightImage = null;
-            this.btnDishAdd.Size = new System.Drawing.Size(85, 50);
-            this.btnDishAdd.TabIndex = 27;
-            this.btnDishAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDishAdd.TextMarginLeft = 0;
-            this.btnDishAdd.UseDefaultRadiusAndThickness = true;
-            this.btnDishAdd.Click += new System.EventHandler(this.btnDishAdd_Click);
-            // 
-            // btnDishLess
-            // 
-            this.btnDishLess.AllowToggling = false;
-            this.btnDishLess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDishLess.AnimationSpeed = 200;
-            this.btnDishLess.AutoGenerateColors = false;
-            this.btnDishLess.BackColor = System.Drawing.Color.Transparent;
-            this.btnDishLess.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnDishLess.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDishLess.BackgroundImage")));
-            this.btnDishLess.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishLess.ButtonText = "Less";
-            this.btnDishLess.ButtonTextMarginLeft = 0;
-            this.btnDishLess.ColorContrastOnClick = 45;
-            this.btnDishLess.ColorContrastOnHover = 45;
-            this.btnDishLess.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnDishLess.CustomizableEdges = borderEdges5;
-            this.btnDishLess.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDishLess.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnDishLess.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDishLess.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDishLess.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDishLess.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDishLess.ForeColor = System.Drawing.Color.White;
-            this.btnDishLess.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishLess.IconMarginLeft = 11;
-            this.btnDishLess.IconPadding = 10;
-            this.btnDishLess.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDishLess.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishLess.IdleBorderRadius = 1;
-            this.btnDishLess.IdleBorderThickness = 1;
-            this.btnDishLess.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishLess.IdleIconLeftImage = null;
-            this.btnDishLess.IdleIconRightImage = null;
-            this.btnDishLess.IndicateFocus = false;
-            this.btnDishLess.Location = new System.Drawing.Point(3, 418);
-            this.btnDishLess.Name = "btnDishLess";
-            this.btnDishLess.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishLess.onHoverState.BorderRadius = 1;
-            this.btnDishLess.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishLess.onHoverState.BorderThickness = 1;
-            this.btnDishLess.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDishLess.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDishLess.onHoverState.IconLeftImage = null;
-            this.btnDishLess.onHoverState.IconRightImage = null;
-            this.btnDishLess.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishLess.OnIdleState.BorderRadius = 1;
-            this.btnDishLess.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishLess.OnIdleState.BorderThickness = 1;
-            this.btnDishLess.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDishLess.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDishLess.OnIdleState.IconLeftImage = null;
-            this.btnDishLess.OnIdleState.IconRightImage = null;
-            this.btnDishLess.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishLess.OnPressedState.BorderRadius = 1;
-            this.btnDishLess.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDishLess.OnPressedState.BorderThickness = 1;
-            this.btnDishLess.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDishLess.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnDishLess.OnPressedState.IconLeftImage = null;
-            this.btnDishLess.OnPressedState.IconRightImage = null;
-            this.btnDishLess.Size = new System.Drawing.Size(85, 50);
-            this.btnDishLess.TabIndex = 26;
-            this.btnDishLess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDishLess.TextMarginLeft = 0;
-            this.btnDishLess.UseDefaultRadiusAndThickness = true;
-            this.btnDishLess.Click += new System.EventHandler(this.btnDishLess_Click);
-            // 
             // bunifuGradientPanel4
             // 
             this.bunifuGradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1557,11 +1559,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSetMeal.ColorContrastOnClick = 45;
             this.btnSetMeal.ColorContrastOnHover = 45;
             this.btnSetMeal.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnSetMeal.CustomizableEdges = borderEdges8;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btnSetMeal.CustomizableEdges = borderEdges9;
             this.btnSetMeal.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSetMeal.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnSetMeal.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1580,7 +1582,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSetMeal.IdleIconLeftImage = null;
             this.btnSetMeal.IdleIconRightImage = null;
             this.btnSetMeal.IndicateFocus = false;
-            this.btnSetMeal.Location = new System.Drawing.Point(600, 548);
+            this.btnSetMeal.Location = new System.Drawing.Point(747, 548);
             this.btnSetMeal.Name = "btnSetMeal";
             this.btnSetMeal.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnSetMeal.onHoverState.BorderRadius = 1;
@@ -1628,11 +1630,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnDishCommon.ColorContrastOnClick = 45;
             this.btnDishCommon.ColorContrastOnHover = 45;
             this.btnDishCommon.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnDishCommon.CustomizableEdges = borderEdges9;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.btnDishCommon.CustomizableEdges = borderEdges10;
             this.btnDishCommon.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDishCommon.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnDishCommon.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1651,7 +1653,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnDishCommon.IdleIconLeftImage = null;
             this.btnDishCommon.IdleIconRightImage = null;
             this.btnDishCommon.IndicateFocus = false;
-            this.btnDishCommon.Location = new System.Drawing.Point(300, 548);
+            this.btnDishCommon.Location = new System.Drawing.Point(447, 548);
             this.btnDishCommon.Name = "btnDishCommon";
             this.btnDishCommon.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnDishCommon.onHoverState.BorderRadius = 1;
@@ -1699,11 +1701,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnPayment.ColorContrastOnClick = 45;
             this.btnPayment.ColorContrastOnHover = 45;
             this.btnPayment.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btnPayment.CustomizableEdges = borderEdges10;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btnPayment.CustomizableEdges = borderEdges11;
             this.btnPayment.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPayment.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnPayment.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1770,11 +1772,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnViewAll.ColorContrastOnClick = 45;
             this.btnViewAll.ColorContrastOnHover = 45;
             this.btnViewAll.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.btnViewAll.CustomizableEdges = borderEdges11;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btnViewAll.CustomizableEdges = borderEdges12;
             this.btnViewAll.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnViewAll.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnViewAll.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1793,7 +1795,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnViewAll.IdleIconLeftImage = null;
             this.btnViewAll.IdleIconRightImage = null;
             this.btnViewAll.IndicateFocus = false;
-            this.btnViewAll.Location = new System.Drawing.Point(155, 548);
+            this.btnViewAll.Location = new System.Drawing.Point(302, 548);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnViewAll.onHoverState.BorderRadius = 1;
@@ -1841,11 +1843,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSearch.ColorContrastOnClick = 45;
             this.btnSearch.ColorContrastOnHover = 45;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.btnSearch.CustomizableEdges = borderEdges12;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.btnSearch.CustomizableEdges = borderEdges13;
             this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSearch.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnSearch.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1864,7 +1866,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnSearch.IdleIconLeftImage = null;
             this.btnSearch.IdleIconRightImage = null;
             this.btnSearch.IndicateFocus = false;
-            this.btnSearch.Location = new System.Drawing.Point(450, 548);
+            this.btnSearch.Location = new System.Drawing.Point(597, 548);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnSearch.onHoverState.BorderRadius = 1;
@@ -1912,11 +1914,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnCancelOrder.ColorContrastOnClick = 45;
             this.btnCancelOrder.ColorContrastOnHover = 45;
             this.btnCancelOrder.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges13.BottomLeft = true;
-            borderEdges13.BottomRight = true;
-            borderEdges13.TopLeft = true;
-            borderEdges13.TopRight = true;
-            this.btnCancelOrder.CustomizableEdges = borderEdges13;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.btnCancelOrder.CustomizableEdges = borderEdges14;
             this.btnCancelOrder.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCancelOrder.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnCancelOrder.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1983,11 +1985,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnChangePrice.ColorContrastOnClick = 45;
             this.btnChangePrice.ColorContrastOnHover = 45;
             this.btnChangePrice.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges14.BottomLeft = true;
-            borderEdges14.BottomRight = true;
-            borderEdges14.TopLeft = true;
-            borderEdges14.TopRight = true;
-            this.btnChangePrice.CustomizableEdges = borderEdges14;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.btnChangePrice.CustomizableEdges = borderEdges15;
             this.btnChangePrice.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnChangePrice.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnChangePrice.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2054,11 +2056,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnAddQTY.ColorContrastOnClick = 45;
             this.btnAddQTY.ColorContrastOnHover = 45;
             this.btnAddQTY.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges15.BottomLeft = true;
-            borderEdges15.BottomRight = true;
-            borderEdges15.TopLeft = true;
-            borderEdges15.TopRight = true;
-            this.btnAddQTY.CustomizableEdges = borderEdges15;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.btnAddQTY.CustomizableEdges = borderEdges16;
             this.btnAddQTY.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAddQTY.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddQTY.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2125,11 +2127,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnManagment.ColorContrastOnClick = 45;
             this.btnManagment.ColorContrastOnHover = 45;
             this.btnManagment.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges16.BottomLeft = true;
-            borderEdges16.BottomRight = true;
-            borderEdges16.TopLeft = true;
-            borderEdges16.TopRight = true;
-            this.btnManagment.CustomizableEdges = borderEdges16;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.btnManagment.CustomizableEdges = borderEdges17;
             this.btnManagment.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnManagment.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnManagment.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2148,7 +2150,7 @@ namespace TakeAwayPointOfSaleSystem
             this.btnManagment.IdleIconLeftImage = null;
             this.btnManagment.IdleIconRightImage = null;
             this.btnManagment.IndicateFocus = false;
-            this.btnManagment.Location = new System.Drawing.Point(10, 548);
+            this.btnManagment.Location = new System.Drawing.Point(157, 548);
             this.btnManagment.Name = "btnManagment";
             this.btnManagment.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnManagment.onHoverState.BorderRadius = 1;
@@ -2196,11 +2198,11 @@ namespace TakeAwayPointOfSaleSystem
             this.btnMinusQTY.ColorContrastOnClick = 45;
             this.btnMinusQTY.ColorContrastOnHover = 45;
             this.btnMinusQTY.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges17.BottomLeft = true;
-            borderEdges17.BottomRight = true;
-            borderEdges17.TopLeft = true;
-            borderEdges17.TopRight = true;
-            this.btnMinusQTY.CustomizableEdges = borderEdges17;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.btnMinusQTY.CustomizableEdges = borderEdges18;
             this.btnMinusQTY.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMinusQTY.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMinusQTY.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2252,12 +2254,84 @@ namespace TakeAwayPointOfSaleSystem
             this.btnMinusQTY.UseDefaultRadiusAndThickness = true;
             this.btnMinusQTY.Click += new System.EventHandler(this.btnMinusQTY_Click);
             // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.AllowToggling = false;
+            this.bunifuButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuButton1.AnimationSpeed = 200;
+            this.bunifuButton1.AutoGenerateColors = false;
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.Crimson;
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.ButtonText = "Log Out";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.ColorContrastOnClick = 45;
+            this.bunifuButton1.ColorContrastOnHover = 45;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges7;
+            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconMarginLeft = 11;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.IdleBorderRadius = 1;
+            this.bunifuButton1.IdleBorderThickness = 1;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.Crimson;
+            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.IndicateFocus = false;
+            this.bunifuButton1.Location = new System.Drawing.Point(11, 548);
+            this.bunifuButton1.Name = "bunifuButton1";
+            this.bunifuButton1.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuButton1.onHoverState.BorderRadius = 1;
+            this.bunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.onHoverState.BorderThickness = 1;
+            this.bunifuButton1.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.onHoverState.IconLeftImage = null;
+            this.bunifuButton1.onHoverState.IconRightImage = null;
+            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.OnIdleState.BorderRadius = 1;
+            this.bunifuButton1.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.OnIdleState.BorderThickness = 1;
+            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.Color.Crimson;
+            this.bunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.OnIdleState.IconLeftImage = null;
+            this.bunifuButton1.OnIdleState.IconRightImage = null;
+            this.bunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton1.OnPressedState.BorderRadius = 1;
+            this.bunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.OnPressedState.BorderThickness = 1;
+            this.bunifuButton1.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.OnPressedState.IconLeftImage = null;
+            this.bunifuButton1.OnPressedState.IconRightImage = null;
+            this.bunifuButton1.Size = new System.Drawing.Size(140, 65);
+            this.bunifuButton1.TabIndex = 65;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.TextMarginLeft = 0;
+            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1284, 639);
+            this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.btnSetTime);
             this.Controls.Add(this.panAddressBar);
             this.Controls.Add(this.dgvFood);
@@ -2284,7 +2358,7 @@ namespace TakeAwayPointOfSaleSystem
             ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.tabEditDish.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.flpDishMenu.ResumeLayout(false);
             this.pagMenuPage.ResumeLayout(false);
             this.tapMenu.ResumeLayout(false);
@@ -2337,7 +2411,7 @@ namespace TakeAwayPointOfSaleSystem
         private System.Windows.Forms.TabPage tabEditDish;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDishAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDishLess;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvCommon;
+        private Bunifu.UI.WinForms.BunifuDataGridView btnLogout;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAllDish;
         private System.Windows.Forms.FlowLayoutPanel flpDishMenu;
         private Bunifu.UI.WinForms.BunifuPages pagMenuPage;
@@ -2372,5 +2446,6 @@ namespace TakeAwayPointOfSaleSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn dishCommon;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPricePerDish;
         private System.Windows.Forms.DataGridViewTextBoxColumn commonPrice;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }

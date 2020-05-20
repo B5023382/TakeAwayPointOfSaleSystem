@@ -14,8 +14,9 @@ namespace TakeAwayPointOfSaleSystem
     public partial class dialogViewAllOrder : Form
     {
         public int orderNo;
-        private string connectionString =
-    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
+        // private string connectionString =
+        // "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
 
         public dialogViewAllOrder()
         {

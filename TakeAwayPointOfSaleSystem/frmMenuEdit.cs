@@ -15,9 +15,9 @@ namespace TakeAwayPointOfSaleSystem
 {
     public partial class frmMenuEdit : Form
     {
-        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
+        //private string connectionString =
+        //    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
 
         private gridSetting  gridSet = new gridSetting();
         private int category1 = 0;

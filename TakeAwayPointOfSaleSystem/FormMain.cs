@@ -17,9 +17,9 @@ namespace TakeAwayPointOfSaleSystem
     public partial class FrmMain : Form
     {
         
-        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
+        //private string connectionString =
+        //    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
         private frmMenuEdit menuEdition = new frmMenuEdit();
@@ -143,7 +143,7 @@ namespace TakeAwayPointOfSaleSystem
                 DataSet categoryDataSet = new DataSet();
                 getCategory.Fill(categoryDataSet);
                 sqlCon.Close();
-                dgvCommon.DataSource = categoryDataSet.Tables[0];
+                btnLogout.DataSource = categoryDataSet.Tables[0];
             }
         }
 
@@ -389,28 +389,28 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnDishLess_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
+            if (btnLogout.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
                 dgvOrder.SelectedRows[0].Cells[4].Value = (string) dgvOrder.SelectedRows[0].Cells[4].Value
                                                           + "/" + "Less " +
-                                                          (string) dgvCommon.SelectedRows[0].Cells["sideName"].Value;
+                                                          (string) btnLogout.SelectedRows[0].Cells["sideName"].Value;
             }
         }
 
         private void btnDishAdd_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
+            if (btnLogout.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
                 dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value
                                                           + "/" + "Add " +
-                                                          (string)dgvCommon.SelectedRows[0].Cells["sideName"].Value;
+                                                          (string)btnLogout.SelectedRows[0].Cells["sideName"].Value;
 
                     dgvOrder.SelectedRows[0].Cells[6].Value = (string)dgvOrder.SelectedRows[0].Cells[6].Value
-                          + "/" + dgvCommon.SelectedRows[0].Cells["Price"].Value.ToString();
+                          + "/" + btnLogout.SelectedRows[0].Cells["Price"].Value.ToString();
                 
 
                 decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
-                dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(dgvCommon.SelectedRows[0].Cells["Price"].Value))
+                dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(btnLogout.SelectedRows[0].Cells["Price"].Value))
                     * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
 
                 lblTotal.Text = "£ " + calculateTotal();
@@ -419,27 +419,27 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnDishNone_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
+            if (btnLogout.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
                 dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value
                                                           + "/" + "No " +
-                                                          (string)dgvCommon.SelectedRows[0].Cells["sideName"].Value;
+                                                          (string)btnLogout.SelectedRows[0].Cells["sideName"].Value;
             }
         }
 
         private void btnDishSwap_Click(object sender, EventArgs e)
         {
-            if (dgvCommon.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
+            if (btnLogout.SelectedRows.Count > 0 && dgvOrder.SelectedRows.Count > 0)
             {
                 dgvOrder.SelectedRows[0].Cells[4].Value = (string)dgvOrder.SelectedRows[0].Cells[4].Value
                                                           + "/" + "Swap to" +
-                                                          (string)dgvCommon.SelectedRows[0].Cells["sideName"].Value;
+                                                          (string)btnLogout.SelectedRows[0].Cells["sideName"].Value;
 
                 dgvOrder.SelectedRows[0].Cells[6].Value = (string)dgvOrder.SelectedRows[0].Cells[6].Value
-                          + "/" + dgvCommon.SelectedRows[0].Cells["Price"].Value.ToString();
+                          + "/" + btnLogout.SelectedRows[0].Cells["Price"].Value.ToString();
 
                 decimal single = Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[5].Value) / Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
-                dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(dgvCommon.SelectedRows[0].Cells["Price"].Value))
+                dgvOrder.SelectedRows[0].Cells[5].Value = (single + Convert.ToDecimal(btnLogout.SelectedRows[0].Cells["Price"].Value))
                     * Convert.ToDecimal(dgvOrder.SelectedRows[0].Cells[1].Value);
 
                 lblTotal.Text = "£ " + calculateTotal();
@@ -621,6 +621,14 @@ namespace TakeAwayPointOfSaleSystem
                 total = total + Convert.ToDecimal(row.Cells[5].Value);
             }
             return total;
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            var login = new frmLogin();
+            Program.SetActiveForm(login);
+            Program.ShowForm();
+            this.Close();
         }
     }
 }
