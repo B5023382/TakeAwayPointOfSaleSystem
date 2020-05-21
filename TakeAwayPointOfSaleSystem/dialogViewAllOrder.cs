@@ -14,11 +14,12 @@ namespace TakeAwayPointOfSaleSystem
     public partial class dialogViewAllOrder : Form
     {
         public int orderNo;
-        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        // private string connectionString =
-        // "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string role;
+        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
+         private string connectionString =
+         "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
 
-        public dialogViewAllOrder()
+        public dialogViewAllOrder(string r)
         {
             InitializeComponent();
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -30,6 +31,7 @@ namespace TakeAwayPointOfSaleSystem
                 sqlCon.Close();
                 dgvCategory.DataSource = categoryDataSet.Tables[0];
             }
+            role = r;
         }
 
         private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -96,7 +98,12 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            if(dgvCategory.SelectedRows.Count > 0)
+            if (!role.Equals("admin"))
+            {
+                MessageBox.Show("You are not usuing admin account, so is not allow to later order", "Error", MessageBoxButtons.OK,
+    MessageBoxIcon.Error);
+            }
+            else if(dgvCategory.SelectedRows.Count > 0)
             {
                 orderNo = (int)dgvCategory.SelectedRows[0].Cells[0].Value;
                 this.DialogResult = DialogResult.OK;

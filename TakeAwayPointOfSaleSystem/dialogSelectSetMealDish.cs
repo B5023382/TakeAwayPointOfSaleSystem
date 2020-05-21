@@ -14,9 +14,9 @@ namespace TakeAwayPointOfSaleSystem
     public partial class dialogSelectSetMealDish : Form
     {
         private dish d;
-        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        //private string connectionString =
-        //    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
+        private string connectionString =
+            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         public dialogSelectSetMealDish()
         {
             InitializeComponent();

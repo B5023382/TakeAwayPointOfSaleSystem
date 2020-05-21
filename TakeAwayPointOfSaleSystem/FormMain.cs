@@ -17,9 +17,9 @@ namespace TakeAwayPointOfSaleSystem
     public partial class FrmMain : Form
     {
         
-        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        //private string connectionString =
-        //    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
+        private string connectionString =
+            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
         private frmMenuEdit menuEdition = new frmMenuEdit();
@@ -32,7 +32,7 @@ namespace TakeAwayPointOfSaleSystem
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlCommand addCustomer = new SqlCommand("SELECT categoryName FROM FoodCategory", sqlCon);
+                SqlCommand addCustomer = new SqlCommand("SELECT categoryName, buttonColor FROM FoodCategory", sqlCon);
                 addCustomer.CommandType = CommandType.Text;
 
                 using (SqlDataReader reader = addCustomer.ExecuteReader())
@@ -41,13 +41,14 @@ namespace TakeAwayPointOfSaleSystem
                     {
                         BunifuButton b = new BunifuButton();
                         b.Text = reader["categoryName"].ToString();
+                        b.IdleFillColor = Color.FromArgb(Convert.ToInt32(reader["buttonColor"]));
                         b.Size = new Size(200, 90);
                         b.Click += dishButton_click;
                         flpDishMenu.Controls.Add(b);
                     }
                 }
 
-                SqlCommand getCommonCategory = new SqlCommand("SELECT commonCategory FROM CommonCategory", sqlCon);
+                SqlCommand getCommonCategory = new SqlCommand("SELECT commonCategory, buttonColor FROM CommonCategory", sqlCon);
                 getCommonCategory.CommandType = CommandType.Text;
 
                 using (SqlDataReader reader = getCommonCategory.ExecuteReader())
@@ -56,6 +57,7 @@ namespace TakeAwayPointOfSaleSystem
                     {
                         BunifuButton b = new BunifuButton();
                         b.Text = reader["commonCategory"].ToString();
+                        b.IdleFillColor = Color.FromArgb(Convert.ToInt32(reader["buttonColor"]));
                         b.Size = new Size(110, 50);
                         b.Click += common_button_click;
                         flpCommonCategory.Controls.Add(b);
@@ -67,6 +69,7 @@ namespace TakeAwayPointOfSaleSystem
 
             delete.Text = "Delete";
             delete.Size = new Size(110, 50);
+            delete.IdleFillColor = Color.Crimson;
             delete.Click += deleteCommon_click;
             flpCommonCategory.Controls.Add(delete);
 
@@ -274,7 +277,7 @@ namespace TakeAwayPointOfSaleSystem
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-            using (dialogViewAllOrder d = new dialogViewAllOrder())
+            using (dialogViewAllOrder d = new dialogViewAllOrder(lblRole.Text.Trim()))
             {
                 if(d.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
