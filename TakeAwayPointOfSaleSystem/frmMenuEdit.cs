@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,8 @@ namespace TakeAwayPointOfSaleSystem
 {
     public partial class frmMenuEdit : Form
     {
-        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString;
+           
 
         private gridSetting  gridSet = new gridSetting();
         private int category1 = 0;
@@ -30,6 +30,10 @@ namespace TakeAwayPointOfSaleSystem
 
         public frmMenuEdit()
         {
+            string workingDriectory = Environment.CurrentDirectory;
+            string projectDrictory = Directory.GetParent(workingDriectory).Parent.FullName;
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + projectDrictory + "\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+
             InitializeComponent();
             onKeyboard = new onScreenKeyboard(btnLeftShift, btnRightShift);
             lblCategoryOne.Text = "";

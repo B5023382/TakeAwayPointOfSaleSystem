@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,13 @@ namespace TakeAwayPointOfSaleSystem
         onScreenKeyboard onKeyboard;
         private DataTable dt;
 
-        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString;
         public frmAddress()
         {
+            string workingDriectory = Environment.CurrentDirectory;
+            string projectDrictory = Directory.GetParent(workingDriectory).Parent.FullName;
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + projectDrictory + "\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+
             InitializeComponent();
             onKeyboard = new onScreenKeyboard(btnLeftShift, btnRightShift);
         }

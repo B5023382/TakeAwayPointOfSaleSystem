@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,7 @@ namespace TakeAwayPointOfSaleSystem
 {
     public partial class FrmMain : Form
     {
-        
-        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        private string connectionString =
-            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString;
         Timer myTimer = new Timer{Interval = 1000};
         private frmAddress addressForm = new frmAddress();
         private frmMenuEdit menuEdition = new frmMenuEdit();
@@ -27,6 +25,10 @@ namespace TakeAwayPointOfSaleSystem
         private int orderId = 0;
         public FrmMain(string username, string role)
         {
+            string workingDriectory = Environment.CurrentDirectory;
+            string projectDrictory = Directory.GetParent(workingDriectory).Parent.FullName;
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + projectDrictory + "\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+
             InitializeComponent();
 
             using (SqlConnection sqlCon = new SqlConnection(connectionString))

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,14 @@ namespace TakeAwayPointOfSaleSystem
 {
     public partial class dialogGetSetMeal : Form
     {
-        //private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
         private dish d;
-        private string connectionString =
-    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+        private string connectionString;
         public dialogGetSetMeal()
         {
+            string workingDriectory = Environment.CurrentDirectory;
+            string projectDrictory = Directory.GetParent(workingDriectory).Parent.FullName;
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + projectDrictory + "\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+
             InitializeComponent();
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {

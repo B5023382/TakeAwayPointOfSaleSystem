@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
-
+using System.IO;
 
 namespace TakeAwayPointOfSaleSystem
 {
     public partial class frmLogin : Form
     {
-        private string connectionString = Properties.Settings.Default.LocalDatabaseConnectionString;
-        //private string connectionString =
-        //    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Homework\\Project\\TakeAwayPointOfSaleSystem\\TakeAwayPointOfSaleSystem\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
+
+        private string connectionString;
+
 
 
         private string productKey = "ABCDEF";
@@ -30,6 +30,9 @@ namespace TakeAwayPointOfSaleSystem
             dockLogin.SubscribeControlToDragEvents(tabLogin);
             dockLogin.SubscribeControlToDragEvents(tabRegister);
 
+            string workingDriectory = Environment.CurrentDirectory;
+            string projectDrictory = Directory.GetParent(workingDriectory).Parent.FullName;
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + projectDrictory + "\\PointOfSaleLocalDatabase.mdf;Integrated Security=True";
         }
 
 
